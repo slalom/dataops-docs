@@ -36,6 +36,7 @@ The scripts below will install everything you need to get started, including: Gi
     choco install -y ^
         azure-cli ^
         chocolateygui ^
+        dbeaver ^
         docker-desktop ^
         powerbi ^
         python3 ^

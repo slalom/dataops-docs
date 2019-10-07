@@ -19,6 +19,7 @@ choco install -y ^
     7zip ^
     azure-cli ^
     chocolateygui ^
+    dbeaver ^
     docker-desktop ^
     microsoftazurestorageexplorer ^
     powerbi ^
