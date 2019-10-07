@@ -7,15 +7,19 @@ REM Chocolatey install complete.
 REM Performing choco software installs...
 
 REM Windows feature installs
-choco install -y --source windowsfeatures ^
+choco install -y --no-progress --source windowsfeatures ^
     Microsoft-Windows-Subsystem-Linux ^
     Microsoft-Hyper-V-All
 
 REM Restart may be required at this point. Attempting to continue anyway without restarting...
 REM If you experience problems, simply restart your machine and then rerun this script.
 
-REM Software installs
-choco install -y ^
+REM Custom Git Install
+choco install --no-progress -y ^
+    git.install --params "/GitOnlyOnPath /SChannel /NoAutoCrlf /WindowsTerminal"
+
+REM Software Installs (Other)
+choco install --no-progress -y ^
     7zip ^
     azure-cli ^
     chocolateygui ^
@@ -29,9 +33,6 @@ choco install -y ^
     terraform ^
     vscode ^
     wsl-ubuntu-1804
-REM Custom Git Install
-choco install -y ^
-    git.install --params "/GitOnlyOnPath /SChannel /NoAutoCrlf /WindowsTerminal"
 
 REM Python packages
 python -m pip install -y ^
