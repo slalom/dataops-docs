@@ -1,10 +1,16 @@
 # Windows Development QuickStart
 
-## Fully-Automated Option
+## Option A: Fully-Automated
 
-_For a fully automated execution, simply run the script [windows_setup_script.bat](windows_setup_script.bat) from any adminstratrive command prompt and then restart your machine._
+For a **fully automated execution**, simply download and run any or all of the below scripts:
 
-## Manual Walk-through Option
+- [windows_setup_script.bat](windows_setup_script.bat) _(run this first)_
+- [windows_install_wsl.bat](windows_setup_script.bat)
+- [windows_install_ssms.bat](windows_setup_script.bat)
+
+**Note:** these scripts require admin rights in order to install the needed software.
+
+## Option B: Installation Walkthrough
 
 _The manual walthrough option below will walk you through the install process one step at a time. Use this option if you want to observe the process or have more control over which tools are installed._
 
