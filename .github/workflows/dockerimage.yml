@@ -12,3 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docs\windows_setup_script.bat
+    - uses: actions/upload-artifact@master
+      with:
+        name: chocolatey.log
+        path: C:\ProgramData\chocolatey\logs\chocolatey.log
