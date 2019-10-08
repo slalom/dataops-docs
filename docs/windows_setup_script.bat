@@ -35,7 +35,7 @@ choco install --no-progress -y ^
     wsl-ubuntu-1804
 
 REM Python packages
-python -m pip install -y ^
+python -m pip install ^
     awscli ^
     pylama ^
     pytest ^
