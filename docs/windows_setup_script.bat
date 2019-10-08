@@ -8,7 +8,6 @@ REM Performing choco software installs...
 
 REM Windows feature installs
 choco install -y --no-progress --source windowsfeatures ^
-    Microsoft-Windows-Subsystem-Linux ^
     Microsoft-Hyper-V-All
 
 REM Restart may be required at this point. Attempting to continue anyway without restarting...
@@ -30,8 +29,7 @@ choco install --no-progress -y ^
     python3 ^
     r-project ^
     terraform ^
-    vscode ^
-    wsl-ubuntu-1804
+    vscode
 
 REM Python packages
 python -m pip install ^
@@ -42,12 +40,10 @@ python -m pip install ^
     nose ^
     s3fs
 
-REM Debug - SSMS Timing out
-choco install --no-progress -y ^
-    sql-server-management-studio
-    
-
-REM Installs complete. If this is your first time installing, a manual restart is required at this point.
+REM Note: additional scripts are available for SQL Sever Management Studio and WSL:
+REM       `windows_install_wsl.bat`, `windows_install_ssms.bat`
+REM
+REM Install script complete. If this is your first time installing, a manual restart is required at this point.
 REM If you experience any problems after restarting, you can always rerun this script.
 
 pause
