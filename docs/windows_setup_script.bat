@@ -29,7 +29,6 @@ choco install --no-progress -y ^
     powerbi ^
     python3 ^
     r-project ^
-    sql-server-management-studio ^
     terraform ^
     vscode ^
     wsl-ubuntu-1804
@@ -43,7 +42,12 @@ python -m pip install ^
     nose ^
     s3fs
 
+REM Debug - SSMS Timing out
+choco install --no-progress -y ^
+    sql-server-management-studio
+    
+
 REM Installs complete. If this is your first time installing, a manual restart is required at this point.
 REM If you experience any problems after restarting, you can always rerun this script.
 
-REM pause
+pause
