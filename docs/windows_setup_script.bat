@@ -46,4 +46,4 @@ python -m pip install ^
 REM Installs complete. If this is your first time installing, a manual restart is required at this point.
 REM If you experience any problems after restarting, you can always rerun this script.
 
-pause
+REM pause
