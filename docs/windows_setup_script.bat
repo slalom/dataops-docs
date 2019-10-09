@@ -4,13 +4,9 @@ REM Installing Chocolatey - "The package manager for Windows"...
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 REM Chocolatey install complete.
 
-REM Performing choco software installs...
-
-REM Showing available Windows features...
-Dism /online /Get-Features
 REM Installing Windows features....
 choco install -y --no-progress --source windowsfeatures ^
-    Microsoft-Hyper-V-All
+    Microsoft-Hyper-V
 
 REM Restart may be required at this point. Attempting to continue anyway without restarting...
 REM If you experience problems, simply restart your machine and then rerun this script.
@@ -26,12 +22,19 @@ choco install --no-progress -y ^
     chocolateygui ^
     dbeaver ^
     docker-desktop ^
+    filezilla ^
+    github-desktop ^
+    microsoft-teams.install ^
+    microsoft-windows-console ^
     microsoftazurestorageexplorer ^
-    powerbi ^
     python3 ^
-    r-project ^
     terraform ^
     vscode
+
+REM Temporary availability issues (404 errors)
+choco install --no-progress -y ^
+    r-project ^
+    powerbi
 
 REM Python packages
 python -m pip install ^

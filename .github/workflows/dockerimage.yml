@@ -5,9 +5,7 @@ on: [push]
 jobs:
 
   test_setup:
- 
     runs-on: windows-2016
- 
     steps:
     - uses: actions/checkout@v1
     - name: Test setup script
@@ -17,28 +15,31 @@ jobs:
         name: chocolatey.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
-  test_ssms:
- 
-    runs-on: windows-2016
- 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Test SSMS install script
-      run: docs\windows_install_ssms.bat
-    - uses: actions/upload-artifact@master
-      with:
-        name: chocolatey.log
-        path: C:\ProgramData\chocolatey\logs\chocolatey.log
+  # FAILING (timeout error during install):
+  # test_ssms:
+  #   runs-on: windows-2016
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Test SSMS install script
+  #     run: docs\windows_install_ssms.bat
+  #   - uses: actions/upload-artifact@master
+  #     with:
+  #       name: chocolatey-ssms.log
+  #       path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
   test_wsl:
- 
     runs-on: windows-2016
- 
     steps:
     - uses: actions/checkout@v1
     - name: Test WSL install script
       run: docs\windows_install_wsl.bat
     - uses: actions/upload-artifact@master
       with:
-        name: chocolatey.log
+        name: chocolatey-wsl.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
+
+  print_debug_info: 
+    runs-on: windows-2016
+    steps:
+    - name: Print available Windows features
+      run: Dism /online /Get-Features
