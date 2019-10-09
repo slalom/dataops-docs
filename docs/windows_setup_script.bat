@@ -6,7 +6,9 @@ REM Chocolatey install complete.
 
 REM Performing choco software installs...
 
-REM Windows feature installs
+REM Showing available Windows features...
+Dism /online /Get-Features
+REM Installing Windows features....
 choco install -y --no-progress --source windowsfeatures ^
     Microsoft-Hyper-V-All
 
