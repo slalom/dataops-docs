@@ -9,7 +9,7 @@ on:
 jobs:
 
   test_setup:
-    runs-on: windows-2016
+    runs-on: windows-2019
     steps:
     - uses: actions/checkout@v1
     - name: Test setup script
@@ -33,7 +33,7 @@ jobs:
   #       path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
   test_wsl:
-    runs-on: windows-2016
+    runs-on: windows-2019
     steps:
     - uses: actions/checkout@v1
     - name: Test WSL install script
@@ -45,7 +45,7 @@ jobs:
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
   print_debug_info: 
-    runs-on: windows-2016
+    runs-on: windows-2019
     steps:
     - name: Print available Windows features
       run: Dism /online /Get-Features
