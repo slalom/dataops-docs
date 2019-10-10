@@ -6,5 +6,4 @@ REM Chocolatey install complete.
 
 REM Install SQL Server Management Studio
 REM Override timeout default (90min vs 45min default)
-choco install --no-progress -y --execution-timeout 5400‬ ^
-    sql-server-management-studio
+choco install --no-progress -y --execution-timeout=5400‬ sql-server-management-studio 
