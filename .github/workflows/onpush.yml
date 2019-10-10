@@ -1,6 +1,10 @@
-name: Docker Image CI
+name: CI tests for dataops-quickstart
 
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - docs/**.md
+      - "*.md"
 
 jobs:
 
@@ -11,6 +15,7 @@ jobs:
     - name: Test setup script
       run: docs\windows_setup_script.bat
     - uses: actions/upload-artifact@master
+      if: always()
       with:
         name: chocolatey.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
@@ -34,6 +39,7 @@ jobs:
     - name: Test WSL install script
       run: docs\windows_install_wsl.bat
     - uses: actions/upload-artifact@master
+      if: always()
       with:
         name: chocolatey-wsl.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
