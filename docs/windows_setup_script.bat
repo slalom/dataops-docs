@@ -25,7 +25,7 @@ choco install --no-progress -y ^
     filezilla ^
     github-desktop ^
     microsoft-teams.install ^
-    microsoft-windows-console ^
+    microsoft-windows-terminal ^
     microsoftazurestorageexplorer ^
     python3 ^
     terraform ^
