@@ -41,6 +41,7 @@ The scripts below will install everything you need to get started, including: Gi
     ```cmd
     choco install -y ^
         azure-cli ^
+        choco-protocol-support ^
         chocolateygui ^
         dbeaver ^
         docker-desktop ^
@@ -75,3 +76,12 @@ choco install microsoftazurestorageexplorer
 choco install r-project
 choco install sql-server-management-studio
 ```
+
+Or after installing the choco protocol `choco install choco-protocol-support`, click on any of these links:
+
+- choco://7zip
+- choco://sql-server-management-studio
+- choco://r-project
+- choco://anaconda3
+- choco://miniconda
+- choco://GoogleChrome
