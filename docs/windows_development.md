@@ -79,9 +79,9 @@ choco install sql-server-management-studio
 
 Or after installing the choco protocol `choco install choco-protocol-support`, click on any of these links:
 
-- choco://7zip
-- choco://sql-server-management-studio
-- choco://r-project
-- choco://anaconda3
-- choco://miniconda
-- choco://GoogleChrome
+- [choco://7zip](choco://7zip)
+- [choco://sql-server-management-studio](choco://sql-server-management-studio)
+- [choco://r-project](choco://r-project)
+- [choco://anaconda3](choco://anaconda3)
+- [choco://miniconda](choco://miniconda)
+- [choco://GoogleChrome](choco://GoogleChrome)
