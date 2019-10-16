@@ -1,10 +1,16 @@
 # Windows Development QuickStart
 
-## Fully-Automated Option
+## Option A: Fully-Automated
 
-_For a fully automated execution, simply run the script [windows_setup_script.bat](windows_setup_script.bat) from any adminstratrive command prompt and then restart your machine._
+For a **fully automated execution**, simply download and run any or all of the below scripts:
 
-## Manual Walk-through Option
+- [windows_setup_script.bat](windows_setup_script.bat) _(run this first)_
+- [windows_install_wsl.bat](windows_setup_script.bat)
+- [windows_install_ssms.bat](windows_setup_script.bat)
+
+**Note:** these scripts require admin rights in order to install the needed software.
+
+## Option B: Installation Walkthrough
 
 _The manual walthrough option below will walk you through the install process one step at a time. Use this option if you want to observe the process or have more control over which tools are installed._
 
@@ -35,6 +41,7 @@ The scripts below will install everything you need to get started, including: Gi
     ```cmd
     choco install -y ^
         azure-cli ^
+        choco-protocol-support ^
         chocolateygui ^
         dbeaver ^
         docker-desktop ^
@@ -69,3 +76,12 @@ choco install microsoftazurestorageexplorer
 choco install r-project
 choco install sql-server-management-studio
 ```
+
+Or after installing the choco protocol `choco install choco-protocol-support`, click on any of these links:
+
+- choco://7zip
+- choco://sql-server-management-studio
+- choco://r-project
+- choco://anaconda3
+- choco://miniconda
+- choco://GoogleChrome
