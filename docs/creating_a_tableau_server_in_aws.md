@@ -45,7 +45,7 @@ _**TK - add instructions to download the terraform IAC modules.**_
     ```bash
     cd infra
     terraform init
-    terraform apply -y
+    terraform apply -auto-approve
     ```
 
 1. Launch an Tableau Server EC2 instance using the following settings:
@@ -58,4 +58,4 @@ _**TK - add instructions to download the terraform IAC modules.**_
 
 ## Config and Test
 
-
+TK - Instructions on configuring and testing the Tableau Server
