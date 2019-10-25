@@ -3,8 +3,7 @@ name: CI tests for dataops-quickstart
 on:
   push:
     paths-ignore:
-      - docs/**.md
-      - "*.md"
+      - "**.md"
 
 jobs:
 
