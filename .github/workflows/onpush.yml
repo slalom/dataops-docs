@@ -1,4 +1,4 @@
-name: Windows Installers CI/CD
+name: Windows Installer Tests
 
 on:
   push:
