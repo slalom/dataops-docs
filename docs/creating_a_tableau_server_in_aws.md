@@ -17,7 +17,7 @@ _This walkthrough is broken into thress parts:
 
     _[TK] This step will likely be required in order to remote into your Tableau Server and perform administrative tasks._
 
-3. **Store secrets securely in AWS**
+3. **Store secrets securely into AWS**
 
     * Login to AWS and navigate to the "Secrets Manager" service.
     * *Important:* ensure you are logging into the AWS region you selected in the step above. (Secrets are regionalized by AWS.)
@@ -25,6 +25,7 @@ _This walkthrough is broken into thress parts:
     * Select "Other type of secrets" and enter the following secrets:
 
         ```yaml
+        TK - Update which secrets should go here.
         AWS_ACCESS_KEY_ID:     123456***
         AWS_SECRET_ACCESS_KEY: adfc1!***
         ```
@@ -33,4 +34,28 @@ _This walkthrough is broken into thress parts:
     * Click "Next" and name the secret collection as `TableauServer/demo` or similar.
     * The remaining settings should use their provided defaults. Click "Next" until you have completed the wizard.
 
-4. 
+## Installation
+
+_**TK - add instructions to download the terraform IAC modules.**_
+
+1. Customize the installation by editing `infra/settings.yml` to match your desired setup.
+
+1. Create the infrastructure using [terraform](https://terraform.io).
+
+    ```bash
+    cd infra
+    terraform init
+    terraform apply -y
+    ```
+
+1. Launch an Tableau Server EC2 instance using the following settings:
+
+    ```yaml
+    TK - confirm these EC2 settings
+    instance_type:  m5.xlarge
+    OS:             Windows
+    ```
+
+## Config and Test
+
+
