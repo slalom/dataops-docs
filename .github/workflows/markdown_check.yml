@@ -1,4 +1,4 @@
-name: CI tests for dataops-quickstart
+name: Documentation Checks
 
 on:
   push:

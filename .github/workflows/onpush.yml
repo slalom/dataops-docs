@@ -1,4 +1,4 @@
-name: CI tests for dataops-quickstart
+name: Windows Installer CI/CD
 
 on:
   push:
