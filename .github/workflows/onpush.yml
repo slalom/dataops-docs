@@ -1,9 +1,9 @@
-name: Windows Installer CI/CD
+name: Windows Installers CI/CD
 
 on:
   push:
-    paths-ignore:
-      - "**.md"
+    paths:
+      - "**.bat"
 
 jobs:
 
