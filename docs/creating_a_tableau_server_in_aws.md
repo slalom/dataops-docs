@@ -48,6 +48,7 @@ _**TK - add instructions to download the terraform IAC modules.**_
     terraform apply -auto-approve
     ```
 
+
 1. Launch an Tableau Server EC2 instance using the following settings:
 
     ```yaml
