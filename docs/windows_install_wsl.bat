@@ -5,9 +5,10 @@ REM Installing Chocolatey - "The package manager for Windows"...
 REM Chocolatey install complete.
 
 REM Enabling Windows feature...
-Dism /online /Enable-Feature /NoRestart /FeatureName:Microsoft-Windows-Subsystem-Linux
+choco install --no-progress -y wsl
+REM Dism /online /Enable-Feature /NoRestart /FeatureName:Microsoft-Windows-Subsystem-Linux
 
 
 REM Installing Ubuntu...
-choco install --no-progress -y ^
+choco install --no-progress --verbose -y ^
     wsl-ubuntu-1804
