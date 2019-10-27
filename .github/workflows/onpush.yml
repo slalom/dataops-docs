@@ -19,19 +19,6 @@ jobs:
         name: chocolatey.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
-  # FAILING (timeout error during install):
-  test_ssms:
-    runs-on: windows-2019
-    steps:
-    - uses: actions/checkout@v1
-    - name: Test SSMS install script
-      run: docs\windows_install_ssms.bat
-    - uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: chocolatey-ssms.log
-        path: C:\ProgramData\chocolatey\logs\chocolatey.log
-
   test_wsl:
     runs-on: windows-2019
     steps:

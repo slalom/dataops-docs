@@ -47,10 +47,6 @@ python -m pip install ^
     nose ^
     s3fs
 
-REM Note: additional scripts are available for SQL Sever Management Studio and WSL:
-REM     - 'windows_install_wsl.bat`  - choco://wsl
-REM     - `windows_install_ssms.bat` - choco://sql-server-management-studio
-REM
 REM Install script complete. If this is your first time installing, a manual restart is required at this point.
 REM If you experience any problems after restarting, you can always rerun this script.
 
