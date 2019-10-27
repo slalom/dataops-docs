@@ -18,16 +18,12 @@ choco install --no-progress -y ^
 REM Software Installs (Other)
 choco install --no-progress -y ^
     7zip ^
-    azure-cli ^
     choco-protocol-support ^
     chocolateygui ^
     dbeaver ^
     docker-desktop ^
-    filezilla ^
     github-desktop ^
     microsoft-teams.install ^
-    microsoftazurestorageexplorer ^
-    powerbi ^
     python3 ^
     r.project ^
     sudo ^
@@ -48,5 +44,13 @@ python -m pip install ^
 
 REM Install script complete. If this is your first time installing, a manual restart is required at this point.
 REM If you experience any problems after restarting, you can always rerun this script.
+
+REM Install optional components:
+REM     choco://azure-cli
+REM     choco://filezilla
+REM     choco://microsoftazurestorageexplorer
+REM     choco://powerbi
+REM     choco://wsl
+REM     choco://wsl-ubuntu-1804
 
 pause

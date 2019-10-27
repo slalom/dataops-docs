@@ -21,16 +21,16 @@ jobs:
         name: chocolatey.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
-  test_wsl:
-    runs-on: windows-2019
-    steps:
-    - uses: actions/checkout@v1
-    - name: Test WSL install script
-      run: docker build -f ./.tests/wsl-install-test.Dockerfile .
-      # run: docs\windows_install_wsl.bat
-
   print_debug_info: 
     runs-on: windows-2019
     steps:
     - name: Print available Windows features
       run: Dism /online /Get-Features
+
+  # test_wsl:
+  #   runs-on: windows-2019
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Test WSL install script
+  #     run: docker build -f ./.tests/wsl-install-test.Dockerfile .
+  #     # run: docs\windows_install_wsl.bat
