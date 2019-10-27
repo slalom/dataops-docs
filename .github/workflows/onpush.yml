@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test WSL install script
-      run: docker build -f ./.tests/wsl-install-test.Dockerfile
+      run: docker build -f ./.tests/wsl-install-test.Dockerfile .
       # run: docs\windows_install_wsl.bat
 
   print_debug_info: 
