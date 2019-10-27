@@ -24,12 +24,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test WSL install script
-      run: docs\windows_install_wsl.bat
-    - uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: chocolatey-wsl.log
-        path: C:\ProgramData\chocolatey\logs\chocolatey.log
+      run: docker build -f ./.tests/wsl-install-test.Dockerfile
+      # run: docs\windows_install_wsl.bat
 
   print_debug_info: 
     runs-on: windows-2019
