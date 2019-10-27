@@ -27,15 +27,14 @@ choco install --no-progress -y ^
     github-desktop ^
     microsoft-teams.install ^
     microsoftazurestorageexplorer ^
+    powerbi ^
     python3 ^
     r.project ^
     sudo ^
     terraform ^
     vscode
 
-REM Temporary availability issues (404 errors)
-choco install --no-progress -y powerbi
-REM Requires windows updates ()
+REM Requires windows updates
 choco install --no-progress -y microsoft-windows-terminal
 
 REM Python packages
