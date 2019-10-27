@@ -8,6 +8,7 @@ REM Enabling Windows feature...
 choco install --no-progress -y wsl
 REM Dism /online /Enable-Feature /NoRestart /FeatureName:Microsoft-Windows-Subsystem-Linux
 
+refreshenv
 
 REM Installing Ubuntu...
 choco install --no-progress --verbose -y ^
