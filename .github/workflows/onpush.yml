@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "**.bat"
-      - "**.onpush.yml"
+      - "**onpush.yml"
       - "**Dockerfile"
 
 jobs:
