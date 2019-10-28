@@ -14,7 +14,28 @@ _**Time Requirement:** 20 minutes_
 
 _**Overview:** This section walks through the various AWS-related prerequisites. Complete this section before continuing to the next section._
 
-1. **Select an AWS region for your project.** 
+1. **Install Dev Tools**
+    * Install minimal toolset from Command Prompt as administator (via [Chocolatey](chocolatey.org)):
+
+        ```bat
+        @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+        ```
+
+        ```bat
+        choco install -y awscli terraform vscode
+        ```
+
+    * Or install the full set of recommended tools using the [Windows Development Quickstart](windows_development.md)
+
+1. **Clone the git repo: `dataops-tools`**
+    * The following commands will clone the dataops-tools repo into `c:\Files\Source\dataops-tools`:
+
+        ```bash
+        cd / && mkdir Files & cd Files & mkdir Source & cd Source
+        git clone https://github.com/slalom-ggp/dataops-tools.git
+        ```
+
+1. **Select an AWS region for your project.**
     * Because of better pricing and availability, `us-west-2 (Oregon)` is recommended for most use cases. The next best option is usually `us-east-2 (Ohio)` for clients and offices running on the East coast.
     * _**Note:** While it's good practice to put the server on the same coast as the targeted end-users, the more important latency to optimize for is the distance between your BI server and your relational database or data warehouse. For instance, if you are pulling large amounts of data from Redshift, first find out which region that instance resides in and try to match that region if at all possible. This traffic will represent the largest factor in network performance._
 
