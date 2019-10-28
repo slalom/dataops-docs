@@ -158,7 +158,6 @@ _**NOTE:** No secrets are currently needed for the install process itself._
 * Select "Other type of secrets" and enter the following secrets:
 
     ```yaml
-    TK - Update which secrets should go here.
     AWS_ACCESS_KEY_ID:     123456***
     AWS_SECRET_ACCESS_KEY: adfc1!***
     ```
