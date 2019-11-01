@@ -6,7 +6,6 @@ For a **fully automated execution**, simply download and run any or all of the b
 
 - [windows_setup_script.bat](windows_setup_script.bat) _(run this first)_
 - [windows_install_wsl.bat](windows_setup_script.bat)
-- [windows_install_ssms.bat](windows_setup_script.bat)
 
 **Note:** these scripts require admin rights in order to install the needed software.
 
@@ -80,8 +79,7 @@ choco install sql-server-management-studio
 Or after installing the choco protocol `choco install choco-protocol-support`, click on any of these links:
 
 - [choco://7zip](choco://7zip)
-- [choco://sql-server-management-studio](choco://sql-server-management-studio)
+- [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)
 - [choco://r-project](choco://r-project)
-- [choco://anaconda3](choco://anaconda3)
-- [choco://miniconda](choco://miniconda)
 - [choco://GoogleChrome](choco://GoogleChrome)
+- [choco://sql-server-management-studio](choco://sql-server-management-studio)

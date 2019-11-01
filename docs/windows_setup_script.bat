@@ -18,24 +18,19 @@ choco install --no-progress -y ^
 REM Software Installs (Other)
 choco install --no-progress -y ^
     7zip ^
-    azure-cli ^
     choco-protocol-support ^
     chocolateygui ^
     dbeaver ^
     docker-desktop ^
-    filezilla ^
     github-desktop ^
     microsoft-teams.install ^
-    microsoftazurestorageexplorer ^
     python3 ^
     r.project ^
     sudo ^
     terraform ^
     vscode
 
-REM Temporary availability issues (404 errors)
-choco install --no-progress -y powerbi
-REM Requires windows updates ()
+REM Requires windows updates
 choco install --no-progress -y microsoft-windows-terminal
 
 REM Python packages
@@ -47,11 +42,15 @@ python -m pip install ^
     nose ^
     s3fs
 
-REM Note: additional scripts are available for SQL Sever Management Studio and WSL:
-REM     - 'windows_install_wsl.bat`  - choco://wsl
-REM     - `windows_install_ssms.bat` - choco://sql-server-management-studio
-REM
 REM Install script complete. If this is your first time installing, a manual restart is required at this point.
 REM If you experience any problems after restarting, you can always rerun this script.
+
+REM Install optional components:
+REM     choco://azure-cli
+REM     choco://filezilla
+REM     choco://microsoftazurestorageexplorer
+REM     choco://powerbi
+REM     choco://wsl
+REM     choco://wsl-ubuntu-1804
 
 pause

@@ -1,10 +1,11 @@
-name: CI tests for dataops-quickstart
+name: Windows Installer Tests
 
 on:
   push:
-    paths-ignore:
-      - docs/**.md
-      - "*.md"
+    paths:
+      - "**.bat"
+      - "**onpush.yml"
+      - "**Dockerfile"
 
 jobs:
 
@@ -20,33 +21,16 @@ jobs:
         name: chocolatey.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
-  # FAILING (timeout error during install):
-  test_ssms:
-    runs-on: windows-2019
-    steps:
-    - uses: actions/checkout@v1
-    - name: Test SSMS install script
-      run: docs\windows_install_ssms.bat
-    - uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: chocolatey-ssms.log
-        path: C:\ProgramData\chocolatey\logs\chocolatey.log
-
-  test_wsl:
-    runs-on: windows-2019
-    steps:
-    - uses: actions/checkout@v1
-    - name: Test WSL install script
-      run: docs\windows_install_wsl.bat
-    - uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: chocolatey-wsl.log
-        path: C:\ProgramData\chocolatey\logs\chocolatey.log
-
   print_debug_info: 
     runs-on: windows-2019
     steps:
     - name: Print available Windows features
       run: Dism /online /Get-Features
+
+  # test_wsl:
+  #   runs-on: windows-2019
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Test WSL install script
+  #     run: docker build -f ./.tests/wsl-install-test.Dockerfile .
+  #     # run: docs\windows_install_wsl.bat

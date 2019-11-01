@@ -1,0 +1,21 @@
+name: Documentation Checks
+
+on:
+  push:
+    paths:
+      - "**.md"
+
+jobs:
+
+  test_setup:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Looking for unfinished marker ('TK') in markdown scripts
+      run: |
+        UNFINISHED_LINES=$(find . -name "*.md" | xargs grep TK)
+        NUM_UNFINISHED=$(echo "$UNFINISHED_LINES" | wc -l)
+        echo -e "\nSearching for unfinished lines marked by 'TK'...\n\tFor more info - https://en.wikipedia.org/wiki/To_come_%28publishing%29"
+        echo -e "\nFound $NUM_UNFINISHED unfinished lines in markdown files"
+        echo -e "\n\n$UNFINISHED_LINES"
+        exit $NUM_UNFINISHED
