@@ -4,10 +4,10 @@ This walkthrough is divided into four parts:
 
 * [Install Prereqs](#Install%20Prereqs) _(20 minutes)_
 * [Deploy](#Deploy) _(10 minutes)_
-* [Config and Test](#Config%20and%20Test) _(30 minutes)_
+* [Config and Test](#Config%20and%20Test) _(10 minutes)_
 * [Shut it Down](#Shut%20It%20Down) _(1 minute)_
 
-_**Time Requirement:** 60 minutes total_
+_**Time Requirement:** <45 minutes (total)_
 
 ## Install Prereqs
 
@@ -45,9 +45,10 @@ _**Overview:** This section walks through getting software installed and getting
         ```
 
     * Edit or confirm the following four settings:
-        * `tableau_server`: `true` - otherwise no Tableau server will be launched.
+        * `tableau_windows_servers`: `1`
+        * `tableau_linux_servers`: `1`
         * `region`: `us-east-2` (match your selected region if not using the default)
-        * `project_shortname`: preferrably something short and unique like `AJTableau` `TableauTest` (special characters not allowed)
+        * `project_shortname`: preferrably something short and unique like `AlexTableau` `TableauTest` (special characters not allowed)
         * `prefer_fargate`: `true` (otherwise will cause charges related to an always-on ECS cluster)
 
 1. **Configure AWS on your local machine**
@@ -73,7 +74,7 @@ _**Overview:** This section walks through getting software installed and getting
 
 ## Deploy
 
-_**Time Requirement:** 10 minutes_
+_**Time Requirement:** 5 minutes_
 
 _**Overview:** This section covers the configuration and deployment of Terraform "Infrastructure as Code" (IAC)._
 
@@ -84,7 +85,7 @@ _**Overview:** This section covers the configuration and deployment of Terraform
     code config.yml
     ```
 
-1. Deploy the infrastructure using [terraform](https://terraform.io).
+2. Deploy the infrastructure using [terraform](https://terraform.io).
 
     ```bat
     cd C:\Files\Source\dataops-tools\infra
@@ -93,24 +94,23 @@ _**Overview:** This section covers the configuration and deployment of Terraform
     terraform apply -auto-approve
     ```
 
-## Config and Test
+3. Watch and wait...
 
-_**Expected Time:** 30 minutes_
+    * The `terraform apply` statement should take **2-3 minutes**, and afterwards will print login information for how to connect to the AWS instances. If you need to see these again, simply run `terraform output` which will print the outputs again without changing the deployment.
+    * After the instance is started, Tableau takes another **15-20 minutes** to fully configure and install. Go get a coffee, and/or watch the logs by jumping ahead to the next step and following banner instructions to monitor (aka "tail") the setup logs.
 
-_**Overview:** After `terraform apply` is successfully executed, the next step is to log into the EC2 instance and complete server setup._
+## Connect and Test
 
-* **NOTE:** Future updates to the Terraform scripts will significantly reduce the number of steps needed in this section.
+_**Expected Time:** 10 minutes_
+
+_**Overview:** After `terraform apply` is successfully executed (2-3 minutes) and after the tableau install scripts have completed (another 15-20 minutes), you should be able to log into the new EC2 instance and complete server setup._
 
 1. **Connect to the remote EC2 instance.**
-    * After running either `terraform apply` or `terraform output`, copy either `tableau_server_windows_rdp_command` (Windows) or `tableau_server_linux_ssh_command` (Linux).
+    * After running either `terraform apply` (or `terraform output`), copy `tableau_server_windows_rdp_command` (Windows) or `tableau_server_linux_ssh_command` (Linux) into your terminal and press enter.
+    * Once logged in, follow the instructions in the banner message to tail the install log. If everything runs successfully, you will see two marker files in the scrips folder: `_INIT_STARTED_` and `_INIT_COMPLETE_`. (You can check the timestamps on these files in order to calculate how long the scripts ran, generally around 16 minutes.)
     * Paste the command into a terminal and run from your local machine. This will connect you to the new Tableau server via an RDP session (Windows) or an ssh terminal session (Linux).
-        * _NOTE: You can also run `terraform output tableau_server_windows_rdp_command` or `terraform output tableau_server_linux_ssh_command` to quickly print just the command you need._
-2. **Install and Configure Tableau Server**
-    * Navigate to the `tableau` folder containing the installers and configuration scripts for Tableau Server. This folder is located at `C:\Users\Administator\tableau` on Windows and `/home/ubuntu/tableau` on Linux.
-    * If Tableau is not yet installed, run the desired version of the installer.
-    * On Windows, login to https://localhost:8850 after installing to configure Tableau Server Manager (TSM) and launch the server.
-3. **Connect and test from your local workstation**
-    * After completing the above, you should now be able to connect to Tableau Server via the provided public ip address. If you have difficulties connecting, try again using both `http://` and `https://` prefixes before the IP address. You should not need to specify a port number in the URL but the default port is port 80.
+2. **Connect and test from your local workstation**
+    * After the automated install completes, you should be able to connect to Tableau Server via the provided public ip address. By default, TSM uses `https://[my_ip]:8850` and the Tableau Server itself uses `http://[my_ip]`
 
 ## Shut It Down
 
@@ -118,7 +118,7 @@ _**Expected Time:** 1 minute_
 
 _**Overview:** Once your testing is complete, don't forget to shut down the resources and avoid large AWS bill. Luckily, this only takes a single command to shut everything off._
 
-1. Run `terraform destroy`
+1. Run `terraform destroy` OR reduce instance counts.
 
     ```bat
     cd c:\Files\Source\dataops-tools\infra
@@ -147,6 +147,17 @@ This section contains additional info which might be helpful, but is not require
 
 * To get a better understanding of how this works to deploy a full environment in terraform, explore the code files in the `infra` folder of the `dataops-tools` repo, starting the files `infra/main.tf` and `infra/modules/aws-tableau/main.tf`.
 * For information specifically on the Tableau Server config, see `infra/modules/aws-tableau/userdata_win.bat` (Windows) and `infra/modules/aws-tableau/userdata_lin.sh` (Linux).
+
+### Testing different versions of the setup scripts
+
+Whenever you modify the setup scripts in `infra/modules/aws-tableau` and then run `terraform apply`, terraform will detect the change to the script and will automatically rebuild the environment using the updated scripts. This means you can test different script options and configurations and rebuild everything in a single command.
+
+**Proceed with Caution:** While fully rebuilding the environment from scratch is extremely powerful, it also means you will be starting over from scratch each time. You will lose all settings, tableau workbooks, and data files which you may have deployed to the server(s).
+
+### Customizing the Server Config
+
+* Log in to the instance using ssh or rdp, as described above
+* Follow the instructions in the welcome banner to locate the correct files for configuration.
 
 ### Securely storing secrets within AWS (Optional Step)
 
