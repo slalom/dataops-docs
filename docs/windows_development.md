@@ -24,6 +24,7 @@ These scripts leverage [Chocolatey](https://chocolatey.org), the package manager
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     ```
 
+
 ### Step 2: Install the Core Tools
 
 The scripts below will install everything you need to get started, including: Git, VS Code, Python, Power BI, Docker, and the AWS and Azure CLIs.
