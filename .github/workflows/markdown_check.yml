@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "**.md"
+      - .github/workflows/*.yml
 
 jobs:
 
