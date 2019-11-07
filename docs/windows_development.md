@@ -2,11 +2,10 @@
 
 <!-- markdownlint-disable MD033 - no-inline-html -->
 
-<table border=0>
-<tbody>
-<tr>
-<td> These scripts leverage Chocolatey, the package manager for windows. <a href="https://chocolatey.org/why-chocolatey">Click here</a> to learn more about Chocolatey. </td><td>  <img src="https://chocolatey.org/content/images/logo_square.svg" alt="drawing" width="300"/> </td>
-</tr></tbody></table>
+<a href="chocolatey.org"><img src="https://chocolatey.org/content/images/logo_square.svg" alt="drawing" width="100" style="float: right"/></a>
+
+_These scripts leverage Chocolatey, the package manager for windows. [Click here](https://chocolatey.org/why-chocolatey) to learn more about Chocolatey._
+
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 <!-- markdownlint-restore -->
@@ -21,6 +20,8 @@
     ```cmd
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     ```
+
+    <a href="https://git-scm.com/"><img src="https://git-scm.com/images/logo@2x.png" alt="drawing" width="45" style="float: right"/></a>
 
 3. Install git.
 
