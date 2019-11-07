@@ -25,7 +25,7 @@ These scripts leverage [Chocolatey](https://chocolatey.org), the package manager
     choco install -y choco-protocol-support chocolateygui docker-desktop python3 sudo terraform vscode
     ```
 
-## Step 2: Install additional tools
+## Installing additional tools
 
 Click to install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages).
 
