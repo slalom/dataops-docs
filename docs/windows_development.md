@@ -73,5 +73,3 @@ Click on any of these links to install automatically:
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
 - [choco://wsl](choco://wsl)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
-
-TK - test

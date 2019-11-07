@@ -13,6 +13,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Looking for unfinished marker ('TK') in markdown scripts
       run: |
+        set +e
+        set -v
         find . -name "*.md"
         find . -name "*.md" | xargs grep TK
         UNFINISHED_LINES=$(find . -name "*.md" | xargs grep TK)
