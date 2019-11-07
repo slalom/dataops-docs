@@ -1,6 +1,15 @@
 # Windows Development QuickStart
 
-These scripts leverage [Chocolatey](https://chocolatey.org), the package manager for windows. To learn more about Chocolatey, [click here](https://chocolatey.org/why-chocolatey).
+<!-- markdownlint-disable MD033 - no-inline-html -->
+
+<table border=0>
+<tbody>
+<tr>
+<td> These scripts leverage Chocolatey, the package manager for windows. <a href="https://chocolatey.org/why-chocolatey">Click here</a> to learn more about Chocolatey. </td><td>  <img src="https://chocolatey.org/content/images/logo_square.svg" alt="drawing" width="300"/> </td>
+</tr></tbody></table>
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
 
 ## Installing Chocolatey and Core Tools
 
