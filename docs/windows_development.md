@@ -1,17 +1,13 @@
 # Windows Development QuickStart
 
-**Note:** these scripts require admin rights in order to install the needed software.
+These scripts leverage [Chocolatey](https://chocolatey.org), the package manager for windows. To learn more about Chocolatey, [click here](https://chocolatey.org/why-chocolatey).
 
-_The walthrough option below will walk you through the install process one step at a time. Use this option if you want to observe the process or have more control over which tools are installed._
+## Installing Chocolatey and Core Tools
 
-These scripts leverage [Chocolatey](https://chocolatey.org), the package manager for windows. To install Chocolatey:
+* _**NOTE:** You can alternatively [click there]((windows_setup_script.bat)) to download and run the automated Windows Setup script, which will run these steps automatically._
 
-## Step 1: Install the Installer and Core Tools
-
-* _**NOTE:** You can download and run [windows_setup_script.bat](windows_setup_script.bat) to complete this step automatically._
-
-1. Open "cmd.exe" an adminstrator.
-2. Paste and run [the install script](https://chocolatey.org/docs/installation#install-with-cmdexe):
+1. Open "cmd.exe" as an adminstrator.
+2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:
 
     ```cmd
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
