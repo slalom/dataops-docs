@@ -15,7 +15,6 @@ jobs:
     - name: Looking for unfinished marker ('TK') in markdown scripts
       run: |
         set +e
-        set -v
         echo "Testing find result:"
         find . -name "*.md"
         echo "Testing grep result:"
