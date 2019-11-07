@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "**.md"
+      - .github/workflows/*.yml
 
 jobs:
 
@@ -13,9 +14,19 @@ jobs:
     - uses: actions/checkout@v1
     - name: Looking for unfinished marker ('TK') in markdown scripts
       run: |
+        set +e
+        echo "Testing find result:"
+        find . -name "*.md"
+        echo "Testing grep result:"
+        find . -name "*.md" | xargs grep TK
+        echo "Collecting data..."
         UNFINISHED_LINES=$(find . -name "*.md" | xargs grep TK)
-        NUM_UNFINISHED=$(echo "$UNFINISHED_LINES" | wc -l)
+        NUM_CHARS=0 && NUM_UNFINISHED=0
+        NUM_CHARS=$(echo "$UNFINISHED_LINES" | wc --chars)
+        NUM_UNFINISHED=$(echo "$UNFINISHED_LINES" | wc --lines)
         echo -e "\nSearching for unfinished lines marked by 'TK'...\n\tFor more info - https://en.wikipedia.org/wiki/To_come_%28publishing%29"
-        echo -e "\nFound $NUM_UNFINISHED unfinished lines in markdown files"
+        echo -e "Result char count is $NUM_CHARS"
+        if [[ $NUM_CHARS -lt 2 ]]; then exit 0; fi
+        echo -e "\nFound $NUM_UNFINISHED unfinished lines in markdown files:"
         echo -e "\n\n$UNFINISHED_LINES"
         exit $NUM_UNFINISHED

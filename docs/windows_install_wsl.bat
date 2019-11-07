@@ -1,3 +1,17 @@
+echo "Checking if script already has admin rights..."
+
+NET SESSION
+IF %ERRORLEVEL% NEQ 0 GOTO ELEVATE
+GOTO ADMIN
+
+:ELEVATE
+echo "Attempting to obtain admin rights..."
+CD /d %~dp0
+MSHTA "javascript: var shell = new ActiveXObject('shell.application'); shell.ShellExecute('%~nx0', '', '', 'runas', 1);close();"
+EXIT
+
+:ADMIN
+echo "Continuing script (with admin rights)..."
 echo on
 
 REM Installing Chocolatey - "The package manager for Windows"...
