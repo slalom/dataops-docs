@@ -18,31 +18,31 @@ _**Overview:** This section walks through getting software installed and getting
 1. **Install Dev Tools**
     * Install minimal toolset from Command Prompt as administator (via [Chocolatey](chocolatey.org)):
 
-        ```bat
-        @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-        ```
+      ```bat
+      @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+      ```
 
-        ```bat
-        choco install -y awscli terraform vscode
-        ```
+      ```bat
+      choco install -y awscli terraform vscode
+      ```
 
     * Or install the full set of recommended tools using the [Windows Development Quickstart](windows_development.md)
 
 1. **Clone the git repo: `dataops-tools`**
     * The following commands will clone the dataops-tools repo into `c:\Files\Source\dataops-tools`:
 
-        ```bash
-        cd / && mkdir Files & cd Files & mkdir Source & cd Source
-        git clone https://github.com/slalom-ggp/dataops-tools.git
-        ```
+      ```bash
+      cd / && mkdir Files & cd Files & mkdir Source & cd Source
+      git clone https://github.com/slalom-ggp/dataops-tools.git
+      ```
 
 1. **Customize deployment settings**
     * In the newly cloned repo, edit `infra/settings.yml` to match your desired setup:
 
-        ```bat
-        cd C:\Files\Source\dataops-tools\infra
-        code config.yml
-        ```
+      ```bat
+      cd C:\Files\Source\dataops-tools\infra
+      code config.yml
+      ```
 
     * Edit or confirm the following four settings:
         * `tableau_windows_servers`: `1`
@@ -57,17 +57,17 @@ _**Overview:** This section walks through getting software installed and getting
     * As part of this install, you should create one text file called `credentials` and one called `config` in an `.aws` subfolder within your local user profile folder
         * The `~/.aws/credentials` file should look like:
 
-            ```ini
-            AWS_ACCESS_KEY_ID=123132a******
-            AWS_SECRET_ACCESS_KEY=asdfasdfasd*****
-            ```
+          ```ini
+          AWS_ACCESS_KEY_ID=123132a******
+          AWS_SECRET_ACCESS_KEY=asdfasdfasd*****
+          ```
 
         * The `~/.aws/config` file should look like:
 
-            ```ini
-            [default]
-            AWS_DEFAULT_REGION=us-west-2
-            ```
+          ```ini
+          [default]
+          AWS_DEFAULT_REGION=us-west-2
+          ```
 
         * To find the profile folder on Windows: `Win+R`>`%USERPROFILE%`>`<ENTER>`
     * If you do not yet have a user credential pair, you will need to create a new AWS user before you can continue to the next step.
@@ -80,10 +80,9 @@ _**Overview:** This section covers the configuration and deployment of Terraform
 
 1. Confirm the settings configured in the previous step.
 
-    ```bat
-    cd C:\Files\Source\dataops-tools\infra
-    code config.yml
-    ```
+  ```bat
+  cd C:\Files\Source\dataops-tools\infra & code config.yml
+  ```
 
 2. Deploy the infrastructure using [terraform](https://terraform.io).
 
@@ -120,10 +119,10 @@ _**Overview:** Once your testing is complete, don't forget to shut down the reso
 
 1. Run `terraform destroy` OR reduce instance counts.
 
-    ```bat
-    cd c:\Files\Source\dataops-tools\infra
-    terraform destroy -auto-approve
-    ```
+  ```bat
+  cd c:\Files\Source\dataops-tools\infra
+  terraform destroy -auto-approve
+  ```
 
 2. **You're done!** (There is no step 2.) 😎
 
@@ -168,10 +167,10 @@ _**NOTE:** No secrets are currently needed for the install process itself._
 * Select the option to "Store a new secret"
 * Select "Other type of secrets" and enter the following secrets:
 
-    ```yaml
-    AWS_ACCESS_KEY_ID:     123456***
-    AWS_SECRET_ACCESS_KEY: adfc1!***
-    ```
+  ```yaml
+  AWS_ACCESS_KEY_ID:     123456***
+  AWS_SECRET_ACCESS_KEY: adfc1!***
+  ```
 
 * Use the default encryption key unless you have another encryption key you prefer.
 * Click "Next" and name the secret collection as `TableauServer/demo` or similar.
