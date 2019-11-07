@@ -38,23 +38,7 @@ The scripts below will install everything you need to get started, including: Gi
 2. Install core tools:
 
     ```cmd
-    choco install -y ^
-        azure-cli ^
-        choco-protocol-support ^
-        chocolateygui ^
-        dbeaver ^
-        docker-desktop ^
-        powerbi ^
-        python3 ^
-        terraform ^
-        vscode
-    python -m pip install ^
-        awscli ^
-        pylama ^
-        pytest ^
-        pytest-cov ^
-        nose ^
-        s3fs
+    choco install -y choco-protocol-support chocolateygui docker-desktop python3 sudo terraform vscode
     ```
 
 ### Step 3: Install WSL (Windows Subsystem for Linux)
@@ -65,21 +49,26 @@ Install WSL to run Linux programs and scripts natively on your windows machine.
 choco install wsl-ubuntu-1804
 ```
 
-### Step 4: Find additional tools
+* One-click install: [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+
+### Step 4: Install additional tools
 
 Install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages)
 
-```cmd
-choco install 7zip
-choco install microsoftazurestorageexplorer
-choco install r-project
-choco install sql-server-management-studio
-```
-
-Or after installing the choco protocol `choco install choco-protocol-support`, click on any of these links:
+Click on any of these links to install automatically:
 
 - [choco://7zip](choco://7zip)
 - [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)
-- [choco://r-project](choco://r-project)
+- [choco://awscli](choco://awscli)
+- [choco://azure-cli](choco://azure-cli)
+- [choco://dbeaver](choco://dbeaver)
+- [choco://filezilla](choco://filezilla)
+- [choco://github-desktop](choco://github-desktop)
 - [choco://GoogleChrome](choco://GoogleChrome)
+- [choco://microsoft-teams.install](choco://microsoft-teams.install)
+- [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
+- [choco://powerbi](choco://powerbi)
+- [choco://r.project](choco://r.project)
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
+- [choco://wsl](choco://wsl)
+- [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
