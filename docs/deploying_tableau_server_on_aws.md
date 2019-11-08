@@ -1,5 +1,7 @@
 # Deploying a Secure Tableau Server on AWS
 
+<!-- markdownlint-disable MD033 - no-inline-html -->
+
 This walkthrough is divided into four parts:
 
 * [Install Prereqs](#Install%20Prereqs) _(20 minutes)_
@@ -80,9 +82,9 @@ _**Overview:** This section covers the configuration and deployment of Terraform
 
 1. Confirm the settings configured in the previous step.
 
-  ```bat
-  cd C:\Files\Source\dataops-tools\infra & code config.yml
-  ```
+    ```bat
+    cd C:\Files\Source\dataops-tools\infra & code config.yml
+    ```
 
 2. Deploy the infrastructure using [terraform](https://terraform.io).
 
@@ -119,10 +121,10 @@ _**Overview:** Once your testing is complete, don't forget to shut down the reso
 
 1. Run `terraform destroy` OR reduce instance counts.
 
-  ```bat
-  cd c:\Files\Source\dataops-tools\infra
-  terraform destroy -auto-approve
-  ```
+    ```bat
+    cd c:\Files\Source\dataops-tools\infra
+    terraform destroy -auto-approve
+    ```
 
 2. **You're done!** (There is no step 2.) 😎
 
@@ -140,25 +142,43 @@ _**Overview:** Once your testing is complete, don't forget to shut down the reso
 
 ## Appendix
 
-This section contains additional info which might be helpful, but is not required for all users or use cases.
+_This section contains additional information which might be helpful, but is not required for all users or use cases._
 
-### Understanding how this works
+<details><summary>
+<b>Understanding how this works</b>
+</summary>
+<p><p>
 
 * To get a better understanding of how this works to deploy a full environment in terraform, explore the code files in the `infra` folder of the `dataops-tools` repo, starting the files `infra/main.tf` and `infra/modules/aws-tableau/main.tf`.
 * For information specifically on the Tableau Server config, see `infra/modules/aws-tableau/userdata_win.bat` (Windows) and `infra/modules/aws-tableau/userdata_lin.sh` (Linux).
 
-### Testing different versions of the setup scripts
+</details>
+
+<details><summary>
+<b>Testing different versions of the setup scripts</b>
+</summary>
+<p><p>
 
 Whenever you modify the setup scripts in `infra/modules/aws-tableau` and then run `terraform apply`, terraform will detect the change to the script and will automatically rebuild the environment using the updated scripts. This means you can test different script options and configurations and rebuild everything in a single command.
 
 **Proceed with Caution:** While fully rebuilding the environment from scratch is extremely powerful, it also means you will be starting over from scratch each time. You will lose all settings, tableau workbooks, and data files which you may have deployed to the server(s).
 
-### Customizing the Server Config
+</details>
+
+<details><summary>
+<b>Customizing the Server Config</b>
+</summary>
+<p><p>
 
 * Log in to the instance using ssh or rdp, as described above
 * Follow the instructions in the welcome banner to locate the correct files for configuration.
 
-### Securely storing secrets within AWS (Optional Step)
+</details>
+
+<details><summary>
+<b>Securely storing secrets within AWS (Optional Step)</b>
+</summary>
+<p><p>
 
 _**NOTE:** No secrets are currently needed for the install process itself._
 
@@ -176,8 +196,15 @@ _**NOTE:** No secrets are currently needed for the install process itself._
 * Click "Next" and name the secret collection as `TableauServer/demo` or similar.
 * The remaining settings should use their provided defaults. Click "Next" until you have completed the wizard.
 
-## Selecting an AWS region for your project
+</details>
+
+<details><summary>
+<b>Selecting an AWS region for your project</b>
+</summary>
+<p><p>
 
 Due to better pricing and availability, `us-west-2 (Oregon)` is generally recommended for most use cases. The next best option is usually `us-east-2 (Ohio)` for clients and offices running on the East coast.
 
 * _**Note:** While it's good practice to put the server on the same coast as the targeted end-users, the more important latency to optimize for is the distance between your BI server and your relational database or data warehouse. For instance, if you are pulling large amounts of data from Redshift, first find out which region that instance resides in and try to match that region if at all possible. This traffic will represent the largest factor in network performance._
+
+</details>
