@@ -8,7 +8,7 @@ Before you proceed, you will need a few things, specifically: Git, Docker, Pytho
 
 ## Launching Spark on your local machine
 
-_There are three options. Pick your favorite, or choose the first and recommended option.
+_There a several options to launching the Spark clusters. If you aren't sure which to use, we recommend starting with the first option._
 
 ### Option 1: Use `slalom.dataops` python library (recommended)
 
@@ -30,4 +30,4 @@ After launching the server, you can connect spark applications using the followi
 * Spark applications: `localhost:7077`
 * SQL queries via JDBC: `localhost:10000`
 
-Note: To quickly run SQL queries, you can download the DBeaver SQL application via `choco install dbeaver` and then connect with either the `Hive` or `Spark` jdbc drivers.
+_**Note:** To quickly run SQL queries, you can download the DBeaver SQL application via `choco install dbeaver` and then connect with either the `Hive` or `Spark` jdbc drivers. For more information, click [here](windows_development.md)_
