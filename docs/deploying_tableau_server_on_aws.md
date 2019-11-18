@@ -153,6 +153,7 @@ _This section contains additional information which might be helpful, but is not
 * For information specifically on the Tableau Server config, see `infra/modules/aws-tableau/userdata_win.bat` (Windows) and `infra/modules/aws-tableau/userdata_lin.sh` (Linux).
 
 </details>
+<p>
 
 <details><summary>
 <b>Testing different versions of the setup scripts</b>
@@ -164,6 +165,7 @@ Whenever you modify the setup scripts in `infra/modules/aws-tableau` and then ru
 **Proceed with Caution:** While fully rebuilding the environment from scratch is extremely powerful, it also means you will be starting over from scratch each time. You will lose all settings, tableau workbooks, and data files which you may have deployed to the server(s).
 
 </details>
+<p>
 
 <details><summary>
 <b>Customizing the Server Config</b>
@@ -174,6 +176,7 @@ Whenever you modify the setup scripts in `infra/modules/aws-tableau` and then ru
 * Follow the instructions in the welcome banner to locate the correct files for configuration.
 
 </details>
+<p>
 
 <details><summary>
 <b>Securely storing secrets within AWS (Optional Step)</b>
@@ -197,6 +200,7 @@ _**NOTE:** No secrets are currently needed for the install process itself._
 * The remaining settings should use their provided defaults. Click "Next" until you have completed the wizard.
 
 </details>
+<p>
 
 <details><summary>
 <b>Selecting an AWS region for your project</b>
