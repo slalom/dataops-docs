@@ -12,7 +12,7 @@ _These scripts leverage Chocolatey, the package manager for windows. [Click here
 
 ## Installing Chocolatey and Core Tools
 
-* _**NOTE:** You can alternatively [click here](windows_setup_script.bat) to download and run the automated setup script, which will execute the below steps automatically._
+* _**NOTE:** You can alternatively [click here](choco_devops.bat) to download and run the automated setup script, which will execute the below steps automatically._
 
 1. Open "cmd.exe" as an adminstrator.
 2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:

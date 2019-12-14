@@ -14,7 +14,7 @@ _There a several options to launching the Spark clusters. If you aren't sure whi
 
 ```bash
 pip install --upgrade slalom.dataops
-python -m slalom.dataops.sparkutils start_server --dockerized=True
+s-spark start_server --dockerized=True
 ```
 
 ### Option 2: Use `docker run` on `slalomgg/dataops`
