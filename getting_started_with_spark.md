@@ -45,13 +45,20 @@ _This quick tutorial shows you how to run Spark as a SQL database and connect an
    * If you have not yet installed chocolatey, you can install it now from [https://docs.dataops.tk/choco_min.bat](choco_min.bat) or click [here](windows_development.md) for more information.
 2. After installing the DBeaver app, create a new "Spark" connection and connect to `localhost:10000` with a blank username and password.
 3. Open a new query window and try executing the following SQL commands:
-    * ```SHOW DATABASES```
-    * ```CREATE DATABASE mydb```
-    * ```USE DATABASE mydb```
-    * ```CREATE TABLE mytable as SELECT 42 AS the_answer, null as the_question```
-    * ```SELECT * FROM mydb.mytable```
-    * ```DESCRIBE TABLE mytable```
-    * ```SHOW TABLES IN mydb```
+
+    ```sql
+    CREATE DATABASE mydb;
+    SHOW DATABASES;
+    USE mydb;
+
+    CREATE TABLE mytable AS
+    SELECT 4 AS the_answer, CAST(null as string) AS the_question;
+
+    SELECT * FROM mydb.mytable;
+
+    DESCRIBE TABLE mytable;
+    SHOW TABLES IN mydb;
+    ```
 
 ### Tutorial 02: Play an ML-Based Dungeon Adventure Game, on Jupyter
 
