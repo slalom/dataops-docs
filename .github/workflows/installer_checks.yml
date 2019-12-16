@@ -3,13 +3,24 @@ name: Windows Installer Tests
 on:
   push:
     paths:
-      - "**.bat"
-      - "**onpush.yml"
+      - .github/workflows/*.yml
       - "**Dockerfile"
+      - "**.bat"
 
 jobs:
+  test_setup_min:
+    runs-on: windows-2019
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test setup script
+      run: ./choco_min.bat
+    - uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: choco_min.bat.log
+        path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
-  test_setup:
+  test_setup_full:
     runs-on: windows-2019
     steps:
     - uses: actions/checkout@v1
@@ -18,7 +29,7 @@ jobs:
     - uses: actions/upload-artifact@master
       if: always()
       with:
-        name: chocolatey.log
+        name: choco_devops.bat.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
   print_debug_info: 
@@ -26,11 +37,3 @@ jobs:
     steps:
     - name: Print available Windows features
       run: Dism /online /Get-Features
-
-  # test_wsl:
-  #   runs-on: windows-2019
-  #   steps:
-  #   - uses: actions/checkout@v1
-  #   - name: Test WSL install script
-  #     run: docker build -f ./.tests/wsl-install-test.Dockerfile .
-  #     # run: ./choco_devops.bat
