@@ -3,11 +3,10 @@ name: Documentation Checks
 on:
   push:
     paths:
-      - "**.md"
       - .github/workflows/*.yml
+      - "**.md"
 
 jobs:
-
   test_setup:
     runs-on: ubuntu-latest
     steps:
