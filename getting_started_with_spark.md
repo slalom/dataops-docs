@@ -10,12 +10,19 @@ Before you proceed, you will need a few things, specifically: Git, Docker, Pytho
 
 ## Launching Spark on your local machine
 
-_There a several options to launching the Spark clusters. If you aren't sure which to use, we recommend starting with the first option._
+The `slalom.dataops` library makes it quick and easy to launch a new spark server:
 
-```bash
-pip install --upgrade slalom.dataops
-s-spark start_server --with_jupyter
-```
+1. Install the python library:
+
+    ```bash
+    pip install --upgrade slalom.dataops
+    ```
+
+2. Launch the spark server:
+
+    ```bash
+    s-spark start_server --with_jupyter
+    ```
 
 ## Connect to the Spark server
 
@@ -30,7 +37,7 @@ After launching the server, you can connect spark applications using the followi
 
 ## Tutorials
 
-### Tutorial 01: Running SparkSQL as a Virtual DB
+### Tutorial 01: Running SparkSQL as a Virtual Database
 
 _This quick tutorial shows you how to run Spark as a SQL database and connect and run queries using a GUI JDBC-compliant query tool._
 
@@ -46,7 +53,7 @@ _This quick tutorial shows you how to run Spark as a SQL database and connect an
     * ```DESCRIBE TABLE mytable```
     * ```SHOW TABLES IN mydb```
 
-### Tutorial 02: A Dungeon Adventure in AI, on Jupyter
+### Tutorial 02: Play an ML-Based Dungeon Adventure Game, on Jupyter
 
 _This fun tutorial introduces you to Jupyter notebooks by way of an ML-based text adventure game called [AIDungeon_2](https://www.theverge.com/tldr/2019/12/6/20998993/ai-dungeon-2-choose-your-own-adventure)._
 
@@ -58,14 +65,22 @@ _This fun tutorial introduces you to Jupyter notebooks by way of an ML-based tex
 
 -------------------------
 
-## Appendix
+## Additional Info and FAQ
+
+<!-- markdownlint-disable MD026 - no-trailing-punctuation -->
 
 -------------------------
 
-### Appendix A. Running Spark without the `slalom.dataops` python library
+### Q. Can I run Spark without the `slalom.dataops` python library?
 
-If you do not have the python library installed, or if you want additional control over the local docker container, you can run the following command to manually launch the spark cluster using Docker:
+A. Yes. If you do not have the python library installed, or if you want additional control over the local docker container, you can run the following command to manually launch the spark cluster using Docker:
 
 ```bash
-docker run -it --rm -p 4040:4040 -p 10000:10000 -p 7077:7077 -p 8888:8888 slalomggp/dataops:latest-dev spark start_server --with_jupyter
+docker run -it --rm \
+    -p 4040:4040 \
+    -p 7077:7077 \
+    -p 8888:8888 \
+    -p 10000:10000 \
+    slalomggp/dataops:latest-dev \
+    spark start_server --with_jupyter
 ```
