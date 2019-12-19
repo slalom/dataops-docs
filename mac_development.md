@@ -44,7 +44,6 @@ Copy-paste from the below to install any additional programs which would be usef
 
 * `brew install awscli`
 * `brew install azure-cli`
-* `brew install zip`
 * `brew cask install anaconda`
 * `brew cask install dbeaver-community`
 * `brew cask install github`

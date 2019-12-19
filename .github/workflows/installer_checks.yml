@@ -32,12 +32,12 @@ jobs:
       run: |
         brew install \
         awscli azure-cli docker git \
-        python3 terraform zip 
+        python3 terraform
     - name: Test cask installs
       run: |
         brew cask install \
         anaconda dbeaver github google-chrome \
-        microsoft-teams r visual-studio-code 
+        microsoft-teams r visual-studio-code
 
 
   test_setup_full:
@@ -52,7 +52,7 @@ jobs:
         name: choco_devops.bat.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
-  print_debug_info: 
+  print_debug_info:
     runs-on: windows-2019
     steps:
     - name: Print available Windows features
