@@ -35,13 +35,12 @@ jobs:
     - name: Test brew installs (upgrade)
       run: |
         brew upgrade \
-        azure-cli git python3
+        azure-cli cask git python3
     - name: Test cask installs
       run: |
         brew cask install --force \
         anaconda dbeaver-community github google-chrome \
         microsoft-teams r visual-studio-code
-
 
   test_setup_full:
     runs-on: windows-2019

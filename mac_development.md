@@ -4,7 +4,7 @@
 
 <a href="https://brew.sh"><img src="https://brew.sh/assets/img/linuxbrew.png" alt="drawing" width="100" style="float: right"/></a>
 
-_These scripts leverage Homebrew, the package manager for Mac. [Click here](https://homebrew[TK].org/why-homebrew[TK]) to learn more about Homebrew._
+_These scripts leverage Homebrew, the package manager for Mac. [Click here](https://brew.sh) to learn more about Homebrew._
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
@@ -34,7 +34,7 @@ _**NOTE:**_
 4. Install core tools:
 
     ```cmd
-    brew install docker python3 terraform
+    brew install cask docker python3 terraform
     brew cask install visual-studio-code
     ```
 
