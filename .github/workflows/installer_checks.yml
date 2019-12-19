@@ -39,7 +39,7 @@ jobs:
     - name: Test cask installs
       run: |
         brew cask install --force \
-        anaconda dbeaver github google-chrome \
+        anaconda dbeaver-community github google-chrome \
         microsoft-teams r visual-studio-code
 
 
