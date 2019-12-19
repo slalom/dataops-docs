@@ -31,11 +31,11 @@ jobs:
     - name: Test brew installs
       run: |
         brew install \
-        awscli docker terraform
+        awscli cask docker terraform
     - name: Test brew installs (upgrade)
       run: |
         brew upgrade \
-        azure-cli cask git python3
+        azure-cli git python3
     - name: Test cask installs
       run: |
         brew cask install --force \
