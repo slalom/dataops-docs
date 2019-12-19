@@ -34,14 +34,15 @@ _**NOTE:**_
 4. Install core tools:
 
     ```cmd
-    brew install docker python3 terraform visual-studio-code
+    brew install docker python3 terraform
+    brew cask install visual-studio-code
     ```
 
 ## Installing additional tools
 
 Copy-paste from the below to install any additional programs which would be useful for your project, or find additional packages at [https://brew.sh](https://brew.sh).
 
-* `brew install 7zip`
+* `brew install zip`
 * `brew install anaconda3`
 * `brew install awscli`
 * `brew install azure-cli`

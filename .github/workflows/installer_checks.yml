@@ -32,7 +32,7 @@ jobs:
       run: |
         brew install \
         git docker python3 terraform \
-        7zip anaconda3 awscli azure-cli dbeaver filezilla \
+        zip anaconda3 awscli azure-cli dbeaver filezilla \
         github-desktop GoogleChrome microsoft-teams r.project
     - name: Test brew cask installs
       run: |
