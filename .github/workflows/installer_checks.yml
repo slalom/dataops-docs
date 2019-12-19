@@ -31,7 +31,7 @@ jobs:
     - name: Test brew installs
       run: |
         brew install \
-        anaconda3 awscli azure-cli docker git \
+        anaconda awscli azure-cli docker git \
         python3 terraform zip 
     - name: Test cask installs
       run: |
