@@ -30,9 +30,12 @@ jobs:
         ./brew_install.sh
     - name: Test brew installs
       run: |
-        brew install --force \
-        awscli azure-cli docker git \
-        python3 terraform
+        brew install \
+        awscli docker terraform
+    - name: Test brew installs (upgrade)
+      run: |
+        brew upgrade \
+        azure-cli git python3
     - name: Test cask installs
       run: |
         brew cask install --force \
