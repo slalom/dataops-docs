@@ -30,12 +30,12 @@ jobs:
         ./brew_install.sh
     - name: Test brew installs
       run: |
-        brew install \
+        brew install --force \
         awscli azure-cli docker git \
         python3 terraform
     - name: Test cask installs
       run: |
-        brew cask install \
+        brew cask install --force \
         anaconda dbeaver github google-chrome \
         microsoft-teams r visual-studio-code
 
