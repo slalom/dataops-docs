@@ -26,6 +26,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Test brew script
       run: |
+        chmod 777 ./brew_install.sh
         ./brew_install.sh
     - name: Test bew installs
       run: |
