@@ -18,7 +18,7 @@ _**Time Requirement:** 20 minutes_
 _**Overview:** This section walks through getting software installed and getting AWS-related credentials stored correctly. **These steps only need to be done once.** Complete this section before continuing to the next section._
 
 1. **Install Dev Tools**
-    * Install minimal toolset from Command Prompt as administator (via [Chocolatey](chocolatey.org)):
+    * Install minimal toolset from Command Prompt as administator (via [Chocolatey](https://chocolatey.org)):
 
       ```bat
       @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
