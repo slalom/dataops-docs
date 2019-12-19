@@ -42,10 +42,10 @@ _**NOTE:**_
 
 Copy-paste from the below to install any additional programs which would be useful for your project, or find additional packages at [https://brew.sh](https://brew.sh).
 
-* `brew install anaconda`
 * `brew install awscli`
 * `brew install azure-cli`
 * `brew install zip`
+* `brew cask install anaconda`
 * `brew cask install dbeaver-community`
 * `brew cask install github`
 * `brew cask install google-chrome`

@@ -31,12 +31,12 @@ jobs:
     - name: Test brew installs
       run: |
         brew install \
-        anaconda awscli azure-cli docker git \
+        awscli azure-cli docker git \
         python3 terraform zip 
     - name: Test cask installs
       run: |
         brew cask install \
-        dbeaver github google-chrome \
+        anaconda dbeaver github google-chrome \
         microsoft-teams r visual-studio-code 
 
 
