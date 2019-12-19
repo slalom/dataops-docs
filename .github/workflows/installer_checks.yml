@@ -25,9 +25,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test brew script
-      run: ./brew_install.sh
-    - name: Test brew script
-      run: ./brew_install.sh
+      run: |
+        ./brew_install.sh
     - name: Test bew installs
       run: |
         brew install \
