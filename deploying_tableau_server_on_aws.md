@@ -4,10 +4,10 @@
 
 This walkthrough is divided into four parts:
 
-* [Install Prereqs](#Install%20Prereqs) _(20 minutes)_
-* [Deploy](#Deploy) _(10 minutes)_
-* [Config and Test](#Config%20and%20Test) _(10 minutes)_
-* [Shut it Down](#Shut%20It%20Down) _(1 minute)_
+- [Install Prereqs](#install-prereqs) _(20 minutes)_
+- [Deploy](#deploy) _(5 minutes)_
+- [Connect and Test](#connect-and-test) _(10 minutes)_
+- [Shut It Down](#shut-it-down) _(1 minute)_
 
 _**Time Requirement:** <45 minutes (total)_
 
@@ -18,7 +18,7 @@ _**Time Requirement:** 20 minutes_
 _**Overview:** This section walks through getting software installed and getting AWS-related credentials stored correctly. **These steps only need to be done once.** Complete this section before continuing to the next section._
 
 1. **Install Dev Tools**
-    * Install minimal toolset from Command Prompt as administator (via [Chocolatey](chocolatey.org)):
+    * Install minimal toolset from Command Prompt as administator (via [Chocolatey](https://chocolatey.org)):
 
       ```bat
       @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"

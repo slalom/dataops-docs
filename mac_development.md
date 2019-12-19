@@ -35,12 +35,14 @@ _**NOTE:**_
 
     ```cmd
     brew install cask docker python3 terraform
-    brew cask install visual-studio-code
+    brew cask install cakebrew visual-studio-code
     ```
 
 ## Installing additional tools
 
-Copy-paste from the below to install any additional programs which would be useful for your project, or find additional packages at [https://brew.sh](https://brew.sh).
+After following the instructions from the above, you should now have the **Cakebrew** app installed, which gives a friendly GUI on top of the Homebrew installer.
+
+To install any additional programs, either open the **Cakebrew** app or copy-paste the below samples into a Terminal window. (You can also find additional packages at [https://brew.sh](https://brew.sh).)
 
 * `brew install awscli`
 * `brew install azure-cli`
