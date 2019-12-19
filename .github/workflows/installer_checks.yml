@@ -28,12 +28,17 @@ jobs:
       run: |
         chmod 777 ./brew_install.sh
         ./brew_install.sh
-    - name: Test bew installs
+    - name: Test brew installs
       run: |
         brew install \
-        git docker python3 terraform visual-studio-code \
+        git docker python3 terraform \
         7zip anaconda3 awscli azure-cli dbeaver filezilla \
         github-desktop GoogleChrome microsoft-teams r.project
+    - name: Test brew cask installs
+      run: |
+        brew cask install \
+        visual-studio-code
+
 
   test_setup_full:
     runs-on: windows-2019
