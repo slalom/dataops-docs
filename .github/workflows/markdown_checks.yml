@@ -29,3 +29,9 @@ jobs:
         echo -e "\nFound $NUM_UNFINISHED unfinished lines in markdown files:"
         echo -e "\n\n$UNFINISHED_LINES"
         exit $NUM_UNFINISHED
+    - name: Install npm
+      run: apt-get install npm
+    - name: Install link validator
+      run: npm install --global remark-cli remark-validate-links
+    - name: Check for broken links (404 errors)
+      run: remark -u validate-links .
