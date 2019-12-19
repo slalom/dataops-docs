@@ -20,6 +20,21 @@ jobs:
         name: choco_min.bat.log
         path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
+  test_mac_installs:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test brew script
+      run: ./brew_install.sh
+    - name: Test brew script
+      run: ./brew_install.sh
+    - name: Test bew installs
+      run: |
+        brew install \
+        git docker python3 terraform visual-studio-code \
+        7zip anaconda3 awscli azure-cli dbeaver filezilla \
+        github-desktop GoogleChrome microsoft-teams r.project
+
   test_setup_full:
     runs-on: windows-2019
     steps:

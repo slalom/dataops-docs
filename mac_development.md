@@ -50,5 +50,4 @@ Copy-paste from the below to install any additional programs which would be usef
 * `brew install github-desktop`
 * `brew install GoogleChrome`
 * `brew install microsoft-teams`
-* `brew install powerbi`
 * `brew install r.project`
