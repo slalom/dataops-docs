@@ -6,7 +6,9 @@ The tools and documentation provided here are designed to accelerate data and an
 
 ## Guides and Documentation
 
-* [Windows Quickstart Guide](windows_development.md) - Quickly get started with DevOps tools and best practices for building modern data solutions.
+* **Developer Quickstart Guides** - Quickly get started with DevOps tools and best practices for building modern data solutions:
+  * [Windows Quickstart](windows_development.md)
+  * [Mac Quickstart](mac_development.md) ***(NEW!)***
 * [Deploying Tableau Server on AWS](deploying_tableau_server_on_aws.md) - Walkthough of an IAC ("Infrastructure as Code") approach to Tableau Server deployment.
 * [SQL 101](sql101.md) - Quick SQL intro for data and analytics.
 

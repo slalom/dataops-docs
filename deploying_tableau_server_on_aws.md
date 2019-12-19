@@ -4,10 +4,10 @@
 
 This walkthrough is divided into four parts:
 
-* [Install Prereqs](#Install%20Prereqs) _(20 minutes)_
-* [Deploy](#Deploy) _(10 minutes)_
-* [Config and Test](#Config%20and%20Test) _(10 minutes)_
-* [Shut it Down](#Shut%20It%20Down) _(1 minute)_
+- [Install Prereqs](#install-prereqs) _(20 minutes)_
+- [Deploy](#deploy) _(5 minutes)_
+- [Connect and Test](#connect-and-test) _(10 minutes)_
+- [Shut It Down](#shut-it-down) _(1 minute)_
 
 _**Time Requirement:** <45 minutes (total)_
 
