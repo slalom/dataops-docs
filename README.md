@@ -8,8 +8,9 @@ The tools and documentation provided here are designed to accelerate data and an
 
 * **Developer Quickstart Guides** - Quickly get started with DevOps tools and best practices for building modern data solutions:
   * [Windows Quickstart](windows_development.md)
-  * [Mac Quickstart](mac_development.md) ***(NEW!)***
+  * [Mac Quickstart](mac_development.md) ***(New!)***
 * [Deploying Tableau Server on AWS](deploying_tableau_server_on_aws.md) - Walkthough of an IAC ("Infrastructure as Code") approach to Tableau Server deployment.
+* [Power BI Themes](powerbi_themes.md) - Guide to formatting Power BI reports using themes.
 * [SQL 101](sql101.md) - Quick SQL intro for data and analytics.
 
 ## Other Importand Links
