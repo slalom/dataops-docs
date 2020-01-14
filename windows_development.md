@@ -14,9 +14,9 @@ _These scripts leverage Chocolatey, the package manager for windows. [Click here
 
 _**NOTE:**_
 
-* _You can alternatively click any of the URLs below to download and run the automated setup:_
-  * [https://docs.dataops.tk/choco_min.bat](choco_min.bat) - Installs the bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
-  * [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) - Installs the above, plus additional development tools: `vscode`, `terraform`, and `docker`
+- _You can alternatively click any of the URLs below to download and run the automated setup:_
+  - [https://docs.dataops.tk/choco_min.bat](choco_min.bat) - Installs the bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
+  - [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) - Installs the above, plus additional development tools: `vscode`, `terraform`, and `docker`
 
 1. Open "cmd.exe" as an adminstrator.
 2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:
@@ -43,19 +43,23 @@ _**NOTE:**_
 
 Click to install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages).
 
-* [choco://7zip](choco://7zip)
-* [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)
-* [choco://awscli](choco://awscli)
-* [choco://azure-cli](choco://azure-cli)
-* [choco://dbeaver](choco://dbeaver)
-* [choco://filezilla](choco://filezilla)
-* [choco://github-desktop](choco://github-desktop)
-* [choco://GoogleChrome](choco://GoogleChrome)
-* [choco://gradle](choco://gradle)
-* [choco://microsoft-teams.install](choco://microsoft-teams.install)
-* [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
-* [choco://powerbi](choco://powerbi)
-* [choco://r.project](choco://r.project)
-* [choco://sql-server-management-studio](choco://sql-server-management-studio)
-* [choco://wsl](choco://wsl)
-* [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+- [choco://7zip](choco://7zip)
+- [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)
+- [choco://awscli](choco://awscli)
+- [choco://azure-cli](choco://azure-cli)
+- [choco://dbeaver](choco://dbeaver)
+- [choco://filezilla](choco://filezilla)
+- [choco://github-desktop](choco://github-desktop)
+- [choco://GoogleChrome](choco://GoogleChrome)
+- [choco://gradle](choco://gradle)
+- [choco://microsoft-teams.install](choco://microsoft-teams.install)
+- [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
+- [choco://powerbi](choco://powerbi)
+- [choco://r.project](choco://r.project)
+- [choco://sql-server-management-studio](choco://sql-server-management-studio)
+- [choco://wsl](choco://wsl)
+- [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+
+## Related Links
+
+- [Mac Development](mac_development.md)
