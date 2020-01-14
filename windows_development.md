@@ -13,9 +13,10 @@ _These scripts leverage Chocolatey, the package manager for windows. [Click here
 ## Installing Chocolatey and Core Tools
 
 _**NOTE:**_
+
 * _You can alternatively click any of the URLs below to download and run the automated setup:_
-    * [https://docs.dataops.tk/choco_min.bat](choco_min.bat) - Installs the bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
-    * [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) - Installs the above, plus additional development tools: `vscode`, `terraform`, and `docker`
+  * [https://docs.dataops.tk/choco_min.bat](choco_min.bat) - Installs the bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
+  * [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) - Installs the above, plus additional development tools: `vscode`, `terraform`, and `docker`
 
 1. Open "cmd.exe" as an adminstrator.
 2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:
@@ -50,6 +51,7 @@ Click to install any of the below that would be useful for your project, or find
 * [choco://filezilla](choco://filezilla)
 * [choco://github-desktop](choco://github-desktop)
 * [choco://GoogleChrome](choco://GoogleChrome)
+* [choco://gradle](choco://gradle)
 * [choco://microsoft-teams.install](choco://microsoft-teams.install)
 * [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
 * [choco://powerbi](choco://powerbi)
