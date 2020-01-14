@@ -14,7 +14,7 @@ _These scripts leverage Homebrew, the package manager for Mac. [Click here](http
 
 _**NOTE:**_
 
-* _You can alternatively click here ([https://docs.dataops.tk/brew_install.sh](brew_install.sh)) to download and run the automated Homebrew install script._
+- _You can alternatively click here ([https://docs.dataops.tk/brew_install.sh](brew_install.sh)) to download and run the automated Homebrew install script._
 
 1. Open "Terminal".
 2. Paste and run the [Homebrew](https://brew.sh) install script:
@@ -44,12 +44,16 @@ After following the instructions from the above, you should now have the **Cakeb
 
 To install any additional programs, either open the **Cakebrew** app or copy-paste the below samples into a Terminal window. (You can also find additional packages at [https://brew.sh](https://brew.sh).)
 
-* `brew install awscli`
-* `brew install azure-cli`
-* `brew install gradle`
-* `brew cask install anaconda`
-* `brew cask install dbeaver-community`
-* `brew cask install github`
-* `brew cask install google-chrome`
-* `brew cask install microsoft-teams`
-* `brew cask install r`
+- `brew install awscli`
+- `brew install azure-cli`
+- `brew install gradle`
+- `brew cask install anaconda`
+- `brew cask install dbeaver-community`
+- `brew cask install github`
+- `brew cask install google-chrome`
+- `brew cask install microsoft-teams`
+- `brew cask install r`
+
+## Related Links
+
+- [Windows Development](windows_development.md)
