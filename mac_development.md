@@ -28,7 +28,7 @@ _**NOTE:**_
 3. Install git.
 
     ```cmd
-    brew install git"
+    brew install git
     ```
 
 4. Install core tools:
