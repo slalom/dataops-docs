@@ -14,6 +14,10 @@ The tools and documentation provided here are designed to accelerate data and an
 * [Power BI Themes](powerbi_themes.md) - Guide to formatting Power BI reports using themes.
 * [SQL 101](sql101.md) - Quick SQL intro for data and analytics.
 
+## Labs
+
+* [DevOps Intro Lab](lab.md) - 30-minute lab, walks through using Git, creating a Pull Request, leveraging VS Code as IDE, and exercising basic CI/CD concepts.
+
 ## Other Importand Links
 
 * [dataops-tools](https://github.com/slalom-ggp/dataops-tools) - The primary DataOps git repo for tools mentioned here in these docs.
