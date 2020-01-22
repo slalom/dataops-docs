@@ -18,16 +18,15 @@ _This lab will walk you through the process of implementing a new DataOps projec
 
 To complete this lab, you will at least need the following components installed on your local machine:
 
-- Terraform
 - VS Code
 - Git
 - GitHub Desktop
-- WSL (For Windows Users)
 
 The following are also recommended but not required:
 
 - Docker
-- [TK...]
+- WSL (For Windows Users)
+- Terraform
 
 ### How-To
 
