@@ -53,6 +53,7 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install google-chrome`
 - `brew cask install microsoft-teams`
 - `brew cask install r`
+- `brew install elasticsearch`
 
 ## Related Links
 
