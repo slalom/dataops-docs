@@ -46,6 +46,7 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 
 - `brew install awscli`
 - `brew install azure-cli`
+- `brew install elasticsearch`
 - `brew install gradle`
 - `brew cask install anaconda`
 - `brew cask install dbeaver-community`
@@ -53,7 +54,6 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install google-chrome`
 - `brew cask install microsoft-teams`
 - `brew cask install r`
-- `brew install elasticsearch`
 
 ## Related Links
 
