@@ -45,7 +45,7 @@ The following are also recommended but not required:
 
 ## Create a new branch
 
-1. Within VS Code, press `ctl+shift+p` to open the command prompt. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
+1. Within VS Code, press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command pallete. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
 2. In the command prompt, type 'create branch' and select the `Git: create branch...` option.
 3. Give your branch a name (e.g. `feat/myname-update`)
 

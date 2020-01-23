@@ -48,6 +48,7 @@ Click to install any of the below that would be useful for your project, or find
 - [choco://awscli](choco://awscli)
 - [choco://azure-cli](choco://azure-cli)
 - [choco://dbeaver](choco://dbeaver)
+- [choco://firefox](choco://firefox)
 - [choco://filezilla](choco://filezilla)
 - [choco://github-desktop](choco://github-desktop)
 - [choco://GoogleChrome](choco://GoogleChrome)
