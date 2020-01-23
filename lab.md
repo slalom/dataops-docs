@@ -32,8 +32,8 @@ The following are also recommended but not required:
 
 1. To install these on your local workstation, follow the instructions located at the following links:
 
-- Mac OSX: https://docs.dataops.tk/brew
-- Windows: https://docs.dataops.tk/choco
+- Mac OSX: [docs.dataops.tk/brew](https://docs.dataops.tk/brew)
+- Windows: [docs.dataops.tk/choco](https://docs.dataops.tk/choco)
 
 ## Clone this repo and open in VS Code
 
@@ -69,3 +69,4 @@ A pull request tells the repo maintainers that you are ready for them to review 
 
 ## Wait for your PR to be approved
 
+Once your PR is approved, the code will be automatically merged into master and released into the production website.
