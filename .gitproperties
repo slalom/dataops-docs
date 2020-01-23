@@ -1,0 +1,5 @@
+# All files except .bat files should use 
+# unix-style line endings
+
+* text eol=lf
+*.bat text eol=crlf
