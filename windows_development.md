@@ -59,6 +59,7 @@ Click to install any of the below that would be useful for your project, or find
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
 - [choco://wsl](choco://wsl)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+- [choco://firefox](choco://firefox)
 
 ## Related Links
 
