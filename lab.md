@@ -2,15 +2,15 @@
 
 _This lab will walk you through the process of implementing a new DataOps project._
 
-1. [Install Prereqs](#install-prereqs)
-   1. [Overview](#overview)
-   2. [How-To](#how-to)
-2. [Clone this repo and open in VS Code](#clone-this-repo-and-open-in-vs-code)
-3. [Create a new branch](#create-a-new-branch)
-4. [Make some changes](#make-some-changes)
-5. [Commit your changes](#commit-your-changes)
-6. [Create a new Pull Request (PR)](#create-a-new-pull-request-pr)
-7. [Wait for your PR to be approved](#wait-for-your-pr-to-be-approved)
+- [Install Prereqs](#install-prereqs)
+  - [Overview](#overview)
+  - [How-To](#how-to)
+- [Clone this repo and open in VS Code](#clone-this-repo-and-open-in-vs-code)
+- [Create a new branch](#create-a-new-branch)
+- [Make some changes](#make-some-changes)
+- [Commit your changes](#commit-your-changes)
+- [Create a new Pull Request (PR)](#create-a-new-pull-request-pr)
+- [Wait for your PR to be approved](#wait-for-your-pr-to-be-approved)
 
 ## Install Prereqs
 
@@ -45,7 +45,7 @@ The following are also recommended but not required:
 
 ## Create a new branch
 
-1. Press `ctl+shift+p` to open the command prompt. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
+1. Press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command pallete. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
 2. In the command prompt, type 'create branch' and select the `Git: create branch...` option.
 3. Give your branch a name (e.g. `feat/myname-update`)
 
