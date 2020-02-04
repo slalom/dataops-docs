@@ -4,8 +4,12 @@
     "markdown.extension.preview.autoShowPreviewToSide": true,
     "cSpell.words": [
         "dataops",
+        "markdownlint",
         "pardot",
+        "powerbi",
         "prereqs",
-        "shortname"
+        "quickstart",
+        "shortname",
+        "walkthough"
     ]
 }

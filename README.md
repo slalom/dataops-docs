@@ -1,6 +1,10 @@
 # [Slalom GGP - DataOps Docs](https://docs.dataops.tk)
 
+<!-- markdownlint-disable - no-trailing-punctuation -->
+
 ## Welcome to the `dataops docs` site!
+
+<!-- markdownlint-restore -->
 
 The tools and documentation provided here are designed to accelerate data and analytics projects for the [Slalom Team](https://www.slalom.com/who-we-are) and our clients.
 
@@ -22,7 +26,7 @@ The tools and documentation provided here are designed to accelerate data and an
 
 * [DevOps Intro Lab](lab.md) - 30-minute lab, walks through using Git, creating a Pull Request, leveraging VS Code as IDE, and exercising basic CI/CD concepts.
 
-## Other Importand Links
+## Other Important Links
 
 * [dataops-tools](https://github.com/slalom-ggp/dataops-tools) - The primary DataOps git repo for tools mentioned here in these docs.
 * [dataops-docs](https://github.com/slalom-ggp/dataops-docs) - Link to this documentation repo. _(Submit documentation bugs and enhancement request here!)_
