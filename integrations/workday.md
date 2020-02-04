@@ -12,9 +12,13 @@ This guide will explain the various options for securely extracting data from Wo
 
 ## Export Options
 
+**_Note:_**
+
+* _EIB is generally preferred over API access, since direct pulls from the API require significant coding effort. Pulling from APIs requires direct permissions into the Workday system._
+
 ### Option A - EIB Push to SFTP (Recommended for Azure Environments)
 
-The recommended option for Azure environments is to push data into an SFTP site. The SFTP site can be hosted on Azure following these steps (link TK). This file can optionally be secured with PGP encryption prior to sending.
+The recommended option for Azure environments is to push data into an SFTP site. Files can optionally be secured with PGP encryption prior to sending.
 
 ### Option B - EIB Push to S3 (Recommended for AWS Environments)
 
@@ -24,6 +28,13 @@ The recommended option for AWS environments is to push data into an S3 bucket.Th
 
 After registering a report as a RaaS endpoint, you can then pull from that report using custom code which connects to the REST or SOAP APIs.
 
-**Note:**
+## Additional Info
 
-* EIB is generally preferred over API access, since direct pulls from the API require significant coding effort, and the solution requires direct permissions into the Workday system.
+### Standard Disclaimer
+
+_**Note:** Any "recommended" options are recommended solely by the author and come with no guarantees. If you know a better way, or if you have a suggestion to improve this page, please [create a pull request](../../CONTRIBUTING.md)."_
+
+### Additional Links
+
+* [Using Workday RaaS to Extract Data](https://community.snaplogic.com/t/using-workday-raas-to-extract-data/176)
+* [AWS Hosted SFTP Service](https://aws.amazon.com/sftp/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)

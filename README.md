@@ -11,6 +11,8 @@ The tools and documentation provided here are designed to accelerate data and an
   * [Mac Quickstart](mac_development.md) ***(New!)***
 * [Deploying Tableau Server on AWS](deploying_tableau_server_on_aws.md) - Walkthough of an IAC ("Infrastructure as Code") approach to Tableau Server deployment.
 * [Infrastructure Catalog Guide](infra_catalog.md) - Overview of how to get started with the D&A Infrastructure Catalog.
+* [Integration Guides](integrations/README.md) - Quickly get started integrating a new data source:
+  * [Workday](integrations/workday.md)
 * [Power BI Themes](powerbi_themes.md) - Guide to formatting Power BI reports using themes.
 * [SQL 101](sql101.md) - Quick SQL intro for data and analytics.
 
