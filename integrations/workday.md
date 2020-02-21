@@ -32,7 +32,7 @@ After registering a report as a RaaS endpoint, you can then pull from that repor
 
 ### Standard Disclaimer
 
-_**Note:** Any "recommended" options are recommended solely by the author and come with no guarantees. If you know a better way, or if you have a suggestion to improve this page, please [create a pull request](../../CONTRIBUTING.md)."_
+_**Note:** Any "recommended" options are recommended solely by the author and come with no guarantees. If you know a better way, or if you have a suggestion to improve this page, please [create a pull request](/CONTRIBUTING.md)."_
 
 ### Additional Links
 
