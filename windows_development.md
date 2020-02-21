@@ -22,7 +22,7 @@ _**NOTE:**_
 2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:
 
     ```cmd
-    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     ```
 
     <a href="https://git-scm.com/"><img src="https://git-scm.com/images/logo@2x.png" alt="drawing" width="45" style="float: right"/></a>
@@ -38,6 +38,8 @@ _**NOTE:**_
     ```cmd
     choco install -y choco-protocol-support chocolateygui docker-desktop python3 sudo terraform vscode
     ```
+
+- **NOTE:** See the [Troubleshooting](#troubleshooting) tips below if you run into any difficulties during this process.
 
 ## Installing additional tools
 
@@ -60,6 +62,14 @@ Click to install any of the below that would be useful for your project, or find
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
 - [choco://wsl](choco://wsl)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+
+## Troubleshooting
+
+If you run into issues during this process, here are some tips which might help:
+
+1. If the batch script approach does not appear to be working, it may be caused by security protections. Try the manual approach of copy-pasting the needed install command, and also make sure you are running the command prompt "as administrator".
+2. If the manual approach still does not work, try again to copy-paste the command [from here](https://chocolatey.org/docs/installation#install-with-cmdexe) on the Chocolatey.org website. _(The install command does not change often, but very occasionally there are security patches which require small adjustments to that process.)_
+3. If all else fails or if you find a bug in this documentation, please [click here to report the issue as a bug](https://github.com/slalom-ggp/dataops-docs/issues/new). So that we can provide the fastest response possible, please be sure to paste your error message and any other symptoms which may help in the debugging process.
 
 ## Related Links
 
