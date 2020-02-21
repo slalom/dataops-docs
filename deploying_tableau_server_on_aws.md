@@ -21,7 +21,7 @@ _**Overview:** This section walks through getting software installed and getting
     - Install minimal toolset from Command Prompt as administator (via [Chocolatey](https://chocolatey.org)):
 
       ```bat
-      @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+      @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
       ```
 
       ```bat
@@ -149,8 +149,8 @@ _This section contains additional information which might be helpful, but is not
 </summary>
 <p><p>
 
-- To get a better understanding of how this works to deploy a full environment in terraform, explore the code files in the `infra` folder of the `dataops-tools` repo, starting the files `infra/main.tf` and `infra/modules/aws-tableau/main.tf`.
-- For information specifically on the Tableau Server config, see `infra/modules/aws-tableau/userdata_win.bat` (Windows) and `infra/modules/aws-tableau/userdata_lin.sh` (Linux).
+- To get a better understanding of how this works to deploy a full environment in terraform, explore the code files in the `infra` folder of the `dataops-tools` repo, starting the files `infra/main.tf` and `infra/components/aws-tableau/main.tf`.
+- For information specifically on the Tableau Server config, see `infra/components/aws-tableau/userdata_win.bat` (Windows) and `infra/components/aws-tableau/userdata_lin.sh` (Linux).
 
 </details>
 <p>
@@ -160,7 +160,7 @@ _This section contains additional information which might be helpful, but is not
 </summary>
 <p><p>
 
-Whenever you modify the setup scripts in `infra/modules/aws-tableau` and then run `terraform apply`, terraform will detect the change to the script and will automatically rebuild the environment using the updated scripts. This means you can test different script options and configurations and rebuild everything in a single command.
+Whenever you modify the setup scripts in `infra/components/aws-tableau` and then run `terraform apply`, terraform will detect the change to the script and will automatically rebuild the environment using the updated scripts. This means you can test different script options and configurations and rebuild everything in a single command.
 
 **Proceed with Caution:** While fully rebuilding the environment from scratch is extremely powerful, it also means you will be starting over from scratch each time. You will lose all settings, tableau workbooks, and data files which you may have deployed to the server(s).
 
