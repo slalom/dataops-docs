@@ -1,4 +1,4 @@
-# Workday Data Integration Guide
+# [Docs](../README.md) > [Integrations](./README.md) > Workday Data Integration Guide
 
 This guide will explain the various options for securely extracting data from Workday.
 

@@ -1,4 +1,4 @@
-# Deploying a Secure Tableau Server on AWS
+# [Docs](./README.md) > Deploying a Secure Tableau Server on AWS
 
 <!-- markdownlint-disable MD033 - no-inline-html -->
 

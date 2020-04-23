@@ -1,4 +1,4 @@
-# Spark "Getting Started" Guide
+# [Docs](./README.md) > Spark "Getting Started" Guide
 
 _This document will walk you through how to quickly get started with local development using Apache Spark._
 

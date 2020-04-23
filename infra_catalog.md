@@ -1,4 +1,4 @@
-# Infrastructure Catalog Guide
+# [Docs](./README.md) > Infrastructure Catalog Guide
 
 _**NOTE:** This is an early preview of the D&A Infrastucture catalog. Additional components and capabilities will be released in the coming weeks and months._
 

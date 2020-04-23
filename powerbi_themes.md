@@ -1,4 +1,4 @@
-# Power BI Themes
+# [Docs](./README.md) > Power BI Themes
 
 Power BI Theme files are stored in JSON format and allow a developer to "skin" an entire report with consistent font styles, color themes, and other formatting elements.
 
