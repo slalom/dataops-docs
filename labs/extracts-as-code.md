@@ -23,4 +23,4 @@ _**Under Construction**_
 
 ## See Also
 
-* Original Lab Text: https://github.com/slalom-ggp/dataops-infra/issues/86
+- [Original Lab Text](https://github.com/slalom-ggp/dataops-infra/issues/86)
