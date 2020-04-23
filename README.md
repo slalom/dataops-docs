@@ -18,7 +18,7 @@ The tools and documentation provided here are designed to accelerate data and an
 
 ## Labs
 
-* [DevOps Intro Lab](lab.md) - 30-minute lab, walks through using Git, creating a Pull Request, leveraging VS Code as IDE, and exercising basic CI/CD concepts.
+See the [Labs Page](./labs) for all of the **Slalom DataOps Labs**.
 
 ## Other Importand Links
 

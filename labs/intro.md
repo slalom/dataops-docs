@@ -1,6 +1,6 @@
-# Intro to DataOps Lab
+# Intro to DevOps Lab
 
-_This lab will walk you through the process of implementing a new DataOps project._
+**You will:** Learn GitHub and CI/CD by directly updating this website.
 
 - [Install Prereqs](#install-prereqs)
   - [Overview](#overview)
