@@ -1,8 +1,8 @@
-# Extracts-as-Code - Populate the data Lake with an open source pipeline
+# [Docs](../README.md) > [Labs](./index.md) > **Extracts-as-Code - Populate the data Lake with an open source pipeline**
 
 `A Slalom DataOps Lab`
 
-_**Under Construction**_
+> _**WARNING: Lab Still Under Construction**_
 
 ## Step 1: Configure Extracts
 

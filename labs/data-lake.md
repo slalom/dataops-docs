@@ -1,8 +1,8 @@
-# IAC Intro - Deploying a Data Lake on AWS
+# [Docs](../README.md) > [Labs](./index.md) > **IAC Intro - Deploying a Data Lake on AWS**
 
 `A Slalom DataOps Lab`
 
-_**Under Construction**_
+> _**WARNING: Lab Still Under Construction**_
 
 ## Lab Objectives
 

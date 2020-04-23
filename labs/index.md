@@ -1,4 +1,4 @@
-# Slalom DataOps Labs
+# [Docs](../README.md) > Slalom DataOps Labs
 
 1. [DataOps Tools QuickStart](../setup.html)
    * **Duration:** _30m_

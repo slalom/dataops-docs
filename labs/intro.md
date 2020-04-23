@@ -1,6 +1,12 @@
-# Intro to DevOps Lab
+# [Docs](../README.md) > [Labs](./index.md) > **Intro to DevOps Lab**
 
-**You will:** Learn GitHub and CI/CD by directly updating this website.
+_Learn GitHub and CI/CD by directly updating this website._
+
+`A Slalom DataOps Lab`
+
+> _**WARNING: Lab Still Under Construction**_
+
+**Table of Contents:**
 
 1. [Install Prereqs](#install-prereqs)
    1. [Overview](#overview)
