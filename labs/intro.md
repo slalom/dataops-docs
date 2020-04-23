@@ -2,15 +2,16 @@
 
 **You will:** Learn GitHub and CI/CD by directly updating this website.
 
-- [Install Prereqs](#install-prereqs)
-  - [Overview](#overview)
-  - [How-To](#how-to)
-- [Clone this repo and open in VS Code](#clone-this-repo-and-open-in-vs-code)
-- [Create a new branch](#create-a-new-branch)
-- [Make some changes](#make-some-changes)
-- [Commit your changes](#commit-your-changes)
-- [Create a new Pull Request (PR)](#create-a-new-pull-request-pr)
-- [Wait for your PR to be approved](#wait-for-your-pr-to-be-approved)
+1. [Install Prereqs](#install-prereqs)
+   1. [Overview](#overview)
+   2. [How-To](#how-to)
+2. [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
+3. [Clone your repo and open it in VS Code](#clone-your-repo-and-open-it-in-vs-code)
+4. [Create a new branch](#create-a-new-branch)
+5. [Make some changes](#make-some-changes)
+6. [Commit your changes](#commit-your-changes)
+7. [Create a new Pull Request (PR)](#create-a-new-pull-request-pr)
+8. [Wait for your PR to be approved](#wait-for-your-pr-to-be-approved)
 
 ## Install Prereqs
 
@@ -35,9 +36,13 @@ The following are also recommended but not required:
 - Mac OSX: [docs.dataops.tk/brew](https://docs.dataops.tk/brew)
 - Windows: [docs.dataops.tk/choco](https://docs.dataops.tk/choco)
 
-## Clone this repo and open in VS Code
+## Fork your own personal copy of the repo
 
-1. Navigate to [github.com/slalom-ggp/dataops-docs](https://github.com/slalom-ggp/dataops-docs) and select `Clone or Download` > `Open in Desktop`.
+> TIP: A "fork" of a repo is a full and complete copy of the upstream code, which we can then safely update with our own changes. The upstream repo ("the upstream" for short) will not be affected by any of our changes in the fork, and we do not require any special permissions on the upstream repo in order to fork it.
+
+## Clone your repo and open it in VS Code
+
+1. Navigate to your new fork in GitHub and select `Clone or Download` > `Open in Desktop`. (DO NOT select `Download Zip`, as this will not properly register the git repo for changes.)
 2. Follow the wizard to clone the repo to your local machine. If this is the first time you've used GitHub Desktop, you might want to override the default clone location. (Creating a new folder named `Source` is generally a good idea, e.g. `c:\Source` or `c:\Files\Source`)
 3. Open the newly cloned `dataops-docs` folder in VS Code. If you don't see an `Open in VS Code` option in GitHub Desktop, you can launch VS Code directly and select `Open Folder`.
 4. The first time you open the repo, VS Code should prompt you to install recommended plugins. Review the recommendations and then install each one. These add recommended functionality to VS Code for this project, each developer has similar user interface and similar development experience.
@@ -62,6 +67,8 @@ _Now you are ready to make your own changes. Go ahead and make changes to any fi
 ## Create a new Pull Request (PR)
 
 A pull request tells the repo maintainers that you are ready for them to review your proposed changes.
+
+> TIP: The name "pull request" comes from the fact that we often do not have permissions to "push" code to a production site. Instead, we send the maintainers of the repo a request that they "pull" our changes into their main branch. The pull request ("PR" for short) will only be merged into production if the maintainers decide to accept our changes and merge our changes into the main branch. The process of merging in our code is fully automated - the maintainers simply need to click on a button in GitHub to approve and merge the PR changes.
 
 1. Return to the browser window and navigate to: [github.com/slalom-ggp/dataops-docs/pulls](https://github.com/slalom-ggp/dataops-docs/pulls)
 2. Select "New Pull Request" and follow the prompts to submit your proposed changes in a new PR.
