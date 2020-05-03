@@ -58,20 +58,21 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
 2. Follow the wizard to clone the repo to your local machine. If this is the first time you've used GitHub Desktop, you might want to override the default clone location.
    - Recommended source code root location on Windows is `c:\Source`.
 3. Open your newly cloned `dataops-docs` folder in VS Code. You should see an `Open in VS Code` option in **GitHub Desktop**, but if not, you can also open **VS Code** directly and select `Open Folder`.
-4. The first time you open the repo, VS Code should prompt you to install recommended plugins. Review the recommendations and then install each one. These add recommended functionality to VS Code for this project, each developer has similar user interface and similar development experience.
+4. The first time you open the repo, VS Code should prompt you to install recommended plugins (aka "extensions"). Review the recommendations and then install each one. These add recommended functionality to VS Code for this project, each developer has similar user interface and similar development experience.
 5. To test the markdown preview feature, open any file ending in `.md` and look on the right hand side for the preview window. If you don't see a preview, click the magnifying glass at the top right of the file pane.
+   - If you still are not able to preview the Markdown, try going back to step 4 (recommended plugins) or just search VS Code extensions for "Markdown" and install the top result.
 
 ## Create a new branch
 
 1. Within VS Code, press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command pallete. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
-2. In the command prompt, type 'create branch' and select the `Git: create branch...` option.
-3. Give your branch a name, for example `janesmith-cool-new-updates`.
+2. In the command prompt, type `create branch` and then select the option entitled `Git: create branch...`.
+3. Give your branch a name. For example, how about `janesmith-cool-new-updates`?
 
 ## Now... Make some changes!
 
-_You are ready to make your own changes to the code of this website. Go ahead and make changes to any files you want. Remember to save them and use the preview feature to see if the result looks like you expected. When you are done, go ahead to the next step._
+_You are now ready to make your own changes to the code of this website. Go ahead and make changes to any files you want. Remember to save them and use the preview feature to see if the result looks like you expected. When you are done, go ahead to the next step._
 
-> Tip: The vast majority of software documentation runs on 'markdown' - which is a lightweight, easy-to-read way to add formatting to plain text. If you aren't familiar with Markdown, there's a quick 2-minute tutorial [here](TK).
+> **Tip:** The vast majority of software documentation runs on a text formatting language called "markdown" - which is a lightweight, easy-to-read way to add formatting to plain text. If you aren't familiar with Markdown, or if it's been a while, there's a helpful Markdown CheatSheet [here](https://res.cloudinary.com/practicaldev/image/fetch/s--2rTn_7XO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/5zhubbpov3m3ly9a1t9c.png).
 
 ### What will you change?
 
@@ -105,13 +106,13 @@ Everything on docs.dataops.tk is auto-published from this repo. How about submit
 
 ## Extra Credit
 
-**Want to see a CI/CD test fail?**
+**Want to see what happens when the CI/CD tests fail?**
 
-As an experiment, try committing a change with the text `[TK]` anywhere on a markdown page. The text "[TK](https://en.wikipedia.org/wiki/To_come_(publishing))" is short for "to come" in the publishing world, and it serves like a "TODO" marker to signal that your page is not yet ready to publish.
+As an experiment, try committing a change with the uppercase text "T<!--- splitter -->K" anywhere on a markdown page. The text "[T<!--- splitter -->K](https://en.wikipedia.org/wiki/To_come_(publishing))" is short for "to come" in the publishing world, and it serves like a "To-Do" marker which signals that your page is not yet ready to publish.
 
 If the CI/CD engine finds this text anywhere in your change, it will fail tests and prevent your code from being merged. The same type of CI/CD failure would occur if you try to include a broken URL or a bad web link.
 
-*Just don't forget to remove the "`TK`" text afterwards so your PR does not stay blocked!*
+*👉 Just don't forget to remove the "T<!--- splitter -->K" text afterwards so your PR does not stay blocked!*
 
 ## Commit your changes
 
@@ -119,7 +120,7 @@ If the CI/CD engine finds this text anywhere in your change, it will fail tests 
 2. In the 'Message' box, provide a short description and then click the check icon to commit your change.
 3. Finally, push your branch containing the new changes to git using the `Push` option in the drop-down menu.
 
-## Create a new Pull Request (PR)
+## Create a PR (Pull Request)
 
 A pull request tells the repo maintainers that you are ready for them to review your proposed changes.
 
