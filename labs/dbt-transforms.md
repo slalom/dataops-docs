@@ -9,7 +9,7 @@
 * **Prep:** For this lab, you'll need:
   1. [Installed DevOps Tools](../setup.html):
      * VS Code, Python, Docker, and Terraform
-  2. [A GitHub account](./intro)
+  2. [A GitHub account](./intro.md)
 * **Prereqs:**
   * This module starts off where the previous module ended. To get caught up, go to the
     [previous lab](rds-database.md) or go back to the [main labs page](./index.md).

@@ -12,12 +12,14 @@ _Learn GitHub and CI/CD by directly updating this website._
    1. [Overview](#overview)
    2. [How-To](#how-to)
 2. [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
-3. [Clone your repo and open it in VS Code](#clone-your-repo-and-open-it-in-vs-code)
+3. [Clone your forked repo and open it in VS Code](#clone-your-forked-repo-and-open-it-in-vs-code)
 4. [Create a new branch](#create-a-new-branch)
-5. [Make some changes](#make-some-changes)
-6. [Commit your changes](#commit-your-changes)
-7. [Create a new Pull Request (PR)](#create-a-new-pull-request-pr)
-8. [Wait for your PR to be approved](#wait-for-your-pr-to-be-approved)
+5. [Now... Make some changes!](#now-make-some-changes)
+   1. [What will you change?](#what-will-you-change)
+6. [Extra Credit](#extra-credit)
+7. [Commit your changes](#commit-your-changes)
+8. [Create a PR (Pull Request)](#create-a-pr-pull-request)
+9. [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
 
 ## Install Prereqs
 
@@ -130,6 +132,6 @@ A pull request tells the repo maintainers that you are ready for them to review 
 2. Select "New Pull Request" and follow the prompts to submit your proposed changes in a new PR.
 3. Find the 'Checks' tab and confirm that all your tests have completed successfully. If needed, return to VS Code and push a new commit to fix any issues.
 
-## Wait for your PR to be approved (and merged!)
+## Wait for your PR to be approved and merged
 
 Once your PR is approved, the code will be automatically merged into master and released into the production website.
