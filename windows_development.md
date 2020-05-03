@@ -4,21 +4,29 @@
 
 <a href="chocolatey.org"><img src="https://chocolatey.org/content/images/logo_square.svg" alt="drawing" width="100" style="float: right"/></a>
 
-_These scripts leverage Chocolatey, the package manager for windows. [Click here](https://chocolatey.org/why-chocolatey) to learn more about Chocolatey._
-
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 <!-- markdownlint-restore -->
 
+_These scripts leverage Chocolatey, the package manager for windows. [Click here](https://chocolatey.org/why-chocolatey) to learn more about Chocolatey._
+
+## QuickStart Overview
+
+Starting out in DataOps requires a new set of tools from what developers may have used previously. Thankfully, package managers like Chocolatey and Homebrew exist to streamline the process of getting new software installed (and keeping it updated) on your machine.
+
+The package manager reduces the time to get software installed, saving hours of time and ensuring everyone's machines are setup correctly with minimal effort. Here's a quick overview of the tools you'll install in the next section:
+
+1. A **package manager**: Chocolatey (for Windows) or Homebrew (for Mac)
+2. **Docker** - to run containerized apps and create your own.
+3. **Git** - a version control platform used to store and manage code.
+4. **GitHub Desktop** - a friendly GUI which works with Git and GitHub.com.
+5. **Python** - a software language useful for developing new programs and scripts, and also used for its popular package manager `pip`, which allows users to install Python programs written by others.
+6. **Terraform** - the leading cross-platform solution for automating Infrastructure as Code (IaC).
+7. **VS Code** - a robust, fast, and lightweight development environment (IDE).
+
 ## Installing Chocolatey and Core Tools
 
-_**NOTE:**_
-
-- _You can alternatively click any of the URLs below to download and run the automated setup:_
-  - [https://docs.dataops.tk/choco_min.bat](choco_min.bat) - Installs the bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
-  - [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) - Installs the above, plus additional development tools: `vscode`, `terraform`, and `docker`
-
-1. Open "cmd.exe" as an adminstrator.
+1. Open "cmd.exe" as an administrator.
 2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:
 
     ```cmd
@@ -43,7 +51,7 @@ _**NOTE:**_
 
 ## Installing additional tools
 
-Click to install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages).
+Now that you have the core tools installed, you can click to install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages).
 
 - [choco://7zip](choco://7zip)
 - [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)
@@ -63,6 +71,12 @@ Click to install any of the below that would be useful for your project, or find
 - [choco://wsl](choco://wsl)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
 
+## Extra Credit: Create a GitHub Account
+
+For extra credit, visit GitHub.com and register a new account. Once you've created a GitHub account and installed the core software, you are all all set to contribute to open source projects in GitHub, including this one!
+
+- _Tip: We recommend a single account for both work and personal development projects._
+
 ## Troubleshooting
 
 If you run into issues during this process, here are some tips which might help:
@@ -74,3 +88,6 @@ If you run into issues during this process, here are some tips which might help:
 ## Related Links
 
 - [Mac Development](mac_development.md)
+- _You can alternatively try any of the URLs below to download and run the automated setup:_
+  - [https://docs.dataops.tk/choco_min.bat](choco_min.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/choco_min.bat)) - Installs a bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
+  - [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/choco_devops.bat)) - The above, plus additional development tools: `vscode`, `terraform`, and `docker`

@@ -12,10 +12,6 @@ _These scripts leverage Homebrew, the package manager for Mac. [Click here](http
 
 ## Installing Homebrew and Core Tools
 
-_**NOTE:**_
-
-- _You can alternatively click here ([https://docs.dataops.tk/brew_install.sh](brew_install.sh)) to download and run the automated Homebrew install script._
-
 1. Open "Terminal".
 2. Paste and run the [Homebrew](https://brew.sh) install script:
 
@@ -56,6 +52,13 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install r`
 - `brew cask install slack`
 
+## Extra Credit: Create a GitHub Account
+
+For extra credit, visit GitHub.com and register a new account. Once you've created a GitHub account and installed the core software, you are all all set to contribute to open source projects in GitHub, including this one!
+
+- _Tip: We recommend a single account for both work and personal development projects._
+
 ## Related Links
 
 - [Windows Development](windows_development.md)
+- Brew QuickSetup Script: [https://docs.dataops.tk/brew_install.sh](brew_install.sh) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/brew_install.sh))
