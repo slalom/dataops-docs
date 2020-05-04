@@ -61,4 +61,4 @@ For extra credit, visit [GitHub.com](https://github.com/) and register a new acc
 ## Related Links
 
 - [Windows Setup QuickStart](windows.md)
-- Brew QuickSetup Script: [https://docs.dataops.tk/setup/brew_install.sh](setup/brew_install.sh) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/setup/brew_install.sh))
+- Brew QuickSetup Script: [https://docs.dataops.tk/setup/brew_install.sh](brew_install.sh) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/setup/brew_install.sh))
