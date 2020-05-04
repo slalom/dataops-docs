@@ -8,18 +8,18 @@ _Learn GitHub and CI/CD by directly updating this website._
 
 **Table of Contents:**
 
-1. [Install Prereqs](#install-prereqs)
-   1. [Overview](#overview)
-   2. [How-To](#how-to)
-2. [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
-3. [Clone your forked repo and open it in VS Code](#clone-your-forked-repo-and-open-it-in-vs-code)
-4. [Create a new branch](#create-a-new-branch)
-5. [Now... Make some changes!](#now-make-some-changes)
-   1. [What will you change?](#what-will-you-change)
-6. [Extra Credit](#extra-credit)
-7. [Commit your changes](#commit-your-changes)
-8. [Create a PR (Pull Request)](#create-a-pr-pull-request)
-9. [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
+- [Install Prereqs](#install-prereqs)
+  - [Overview](#overview)
+  - [How-To](#how-to)
+- [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
+- [Clone your forked repo and open it in VS Code](#clone-your-forked-repo-and-open-it-in-vs-code)
+- [Create a new branch](#create-a-new-branch)
+- [Now... Make some changes!](#now-make-some-changes)
+  - [What will you change?](#what-will-you-change)
+- [Extra Credit](#extra-credit)
+- [Commit your changes](#commit-your-changes)
+- [Create a PR (Pull Request)](#create-a-pr-pull-request)
+- [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
 
 ## Install Prereqs
 
@@ -69,6 +69,7 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
 1. Within VS Code, press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command pallete. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
 2. In the command prompt, type `create branch` and then select the option entitled `Git: create branch...`.
 3. Give your branch a name. For example, how about `janesmith-cool-new-updates`?
+4. If prompted, choose the `upstream/master` branch as the source of your branch.
 
 ## Now... Make some changes!
 
