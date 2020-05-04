@@ -1,4 +1,4 @@
-# `Into to CI/CD` - Lab Graduates
+# `Intro to CI/CD` - Lab Graduates
 
 The GitHub users below ***killed it*** on their [CI/CD lab](intro.md)! 😎
 
