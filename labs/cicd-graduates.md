@@ -4,7 +4,8 @@ The GitHub users below ***killed it*** on their [CI/CD lab](intro.md)! 😎
 
 [//]: # (Add your username below, in alphabetical order to prevent conflicts and duplication.)
 
-- @aaronsteers
+- Aaron Steers
+- Jo Mahoney
 
 ## Commence the celebration!
 
