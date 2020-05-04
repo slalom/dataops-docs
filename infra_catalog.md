@@ -4,7 +4,7 @@ _**NOTE:** This is an early preview of the D&A Infrastucture catalog. Additional
 
 ## Install prereqs
 
-1. Visit the quickstart for [mac_development](mac_development.md) or [windows_development](windows_development.md) to get your machine setup with python, terraform, and VS Code.
+1. Visit the QuickStart for [Mac](setup/mac.md) or [Windows](setup/windows.md) to get your machine setup with Python, Terraform, and VS Code.
 2. Install the Slalom DataOps tools library: `pip install slalom.dataops`
 
 ## Getting started from the project template

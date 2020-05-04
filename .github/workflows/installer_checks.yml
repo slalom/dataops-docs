@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test setup script
-      run: ./choco_min.bat
+      run: ./setup/choco_min.bat
     - uses: actions/upload-artifact@master
       if: always()
       with:
@@ -26,8 +26,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Test brew script
       run: |
-        chmod 777 ./brew_install.sh
-        ./brew_install.sh
+        chmod 777 ./setup/brew_install.sh
+        ./setup/brew_install.sh
     - name: Test brew installs
       run: |
         brew install \
@@ -47,7 +47,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test setup script
-      run: ./choco_devops.bat
+      run: ./setup/choco_devops.bat
     - uses: actions/upload-artifact@master
       if: always()
       with:

@@ -7,7 +7,7 @@
 ## Prep and Prereqs
 
 * **Prep:** For this lab, you'll need:
-  1. [Installed DevOps Tools](../setup.html):
+  1. [Installed DevOps Tools](../setup/index.html):
      * VS Code, Python, Docker, and Terraform
   2. [A GitHub account](./intro.md)
 * **Prereqs:**

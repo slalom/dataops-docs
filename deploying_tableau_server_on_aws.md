@@ -28,7 +28,7 @@ _**Overview:** This section walks through getting software installed and getting
       choco install -y awscli terraform vscode
       ```
 
-    - Or install the full set of recommended tools using the [Windows Development Quickstart](windows_development.md)
+    - Or install the full set of recommended tools using the [Windows Development QuickStart](setup/windows.md)
 
 1. **Clone the git repo: `dataops-tools`**
     - The following commands will clone the dataops-tools repo into `c:\Files\Source\dataops-tools`:

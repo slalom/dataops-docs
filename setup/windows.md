@@ -1,4 +1,4 @@
-# [Docs](./README.md) > Windows Development QuickStart
+# [Docs](../README.md) > [Setup](../setup/index.html) > Windows Development QuickStart
 
 <!-- markdownlint-disable MD033 - no-inline-html -->
 
@@ -44,14 +44,16 @@ The package manager reduces the time to get software installed, saving hours of 
 4. Install core tools:
 
     ```cmd
-    choco install -y choco-protocol-support chocolateygui docker-desktop python3 sudo terraform vscode
+    choco install -y choco-protocol-support chocolateygui sudo terraform vscode
+    choco install -y python3
+    choco install -y docker-desktop
     ```
 
 - **NOTE:** See the [Troubleshooting](#troubleshooting) tips below if you run into any difficulties during this process.
 
 ## Installing additional tools
 
-Now that you have the core tools installed, you can click to install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages).
+Now that you have the core tools installed, you can click to install any of the below that would be useful for your project, or find additional packages using [chocolatey.org/packages](https://chocolatey.org/packages) index or the **ChocolateyGUI** Windows app.
 
 - [choco://7zip](choco://7zip)
 - [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)
@@ -73,9 +75,9 @@ Now that you have the core tools installed, you can click to install any of the 
 
 ## Extra Credit: Create a GitHub Account
 
-For extra credit, visit GitHub.com and register a new account. Once you've created a GitHub account and installed the core software, you are all all set to contribute to open source projects in GitHub, including this one!
+For extra credit, visit [GitHub.com](https://github.com/) and register a new account. Once you've created a GitHub account and installed the core software, you are all all set to contribute to open source projects in GitHub, including this one!
 
-- _Tip: We recommend a single account for both work and personal development projects._
+- _Tip: Rather than create multiple accounts, we recommend using a single GitHub account for both work and personal development projects._
 
 ## Troubleshooting
 
@@ -87,7 +89,7 @@ If you run into issues during this process, here are some tips which might help:
 
 ## Related Links
 
-- [Mac Development](mac_development.md)
+- [Mac Setup QuickStart](mac.md)
 - _You can alternatively try any of the URLs below to download and run the automated setup:_
-  - [https://docs.dataops.tk/choco_min.bat](choco_min.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/choco_min.bat)) - Installs a bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
-  - [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/choco_devops.bat)) - The above, plus additional development tools: `vscode`, `terraform`, and `docker`
+  - [https://docs.dataops.tk/setup/choco_min.bat](choco_min.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/setup/choco_min.bat)) - Installs a bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
+  - [https://docs.dataops.tk/setup/choco_devops.bat](choco_devops.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/setup/choco_devops.bat)) - The above, plus additional development tools: `vscode`, `terraform`, and `docker`
