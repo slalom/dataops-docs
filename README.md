@@ -26,3 +26,4 @@ See the [Labs Page](./labs) for all of the **Slalom DataOps Labs**.
 * [dataops-docs](https://github.com/slalom-ggp/dataops-docs) - Link to this documentation repo. _(Submit documentation bugs and enhancement request here!)_
 * [dataops-infra](https://github.com/slalom-ggp/dataops-docs) - Link to the Infrastructure Catalog repo.
 * [docs.dataops.tk/backlog](https://docs.dataops.tk/backlog) - DataOps backlog and current development status.
+* [rstudio lectures](https://youtu.be/dQw4w9WgXcQ?t=2) - RStudio Lectures.
