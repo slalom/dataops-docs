@@ -89,5 +89,5 @@ If you run into issues during this process, here are some tips which might help:
 
 - [Mac Setup QuickStart](mac.md)
 - _You can alternatively try any of the URLs below to download and run the automated setup:_
-  - [https://docs.dataops.tk/choco_min.bat](choco_min.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/choco_min.bat)) - Installs a bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
-  - [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/choco_devops.bat)) - The above, plus additional development tools: `vscode`, `terraform`, and `docker`
+  - [https://docs.dataops.tk/setup/choco_min.bat](setup/choco_min.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/setup/choco_min.bat)) - Installs a bare-minimum set of tools to get started: `Chocolatey`, `python`, and `git`
+  - [https://docs.dataops.tk/setup/choco_devops.bat](setup/choco_devops.bat) ([source](https://github.com/slalom-ggp/dataops-docs/blob/master/setup/choco_devops.bat)) - The above, plus additional development tools: `vscode`, `terraform`, and `docker`
