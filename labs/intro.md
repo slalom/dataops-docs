@@ -31,7 +31,7 @@ To complete this lab, you will at least need the following components installed 
 - Git
 - GitHub Desktop
 
-_TIP: If you have not yet installed these, please visit the [DevOps QuickStart page](../setup.html) for automated installation instructions._
+_TIP: If you have not yet installed these, please visit the [DevOps QuickStart page](../setup/index.html) for automated installation instructions._
 
 ### How-To
 

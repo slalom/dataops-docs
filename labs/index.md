@@ -1,6 +1,6 @@
 # [Docs](../README.md) > Slalom DataOps Labs
 
-1. [DataOps Tools QuickStart](../setup.html)
+1. [DataOps Tools QuickStart](../setup/index.html)
    * **Duration:** _30m_
    * **Description:** _Quickly configure your local workstation with all the tools you will need._
 2. [DevOps Intro](./intro.md)
