@@ -44,14 +44,16 @@ The package manager reduces the time to get software installed, saving hours of 
 4. Install core tools:
 
     ```cmd
-    choco install -y choco-protocol-support chocolateygui docker-desktop python3 sudo terraform vscode
+    choco install -y choco-protocol-support chocolateygui sudo terraform vscode
+    choco install -y python3
+    choco install -y docker-desktop
     ```
 
 - **NOTE:** See the [Troubleshooting](#troubleshooting) tips below if you run into any difficulties during this process.
 
 ## Installing additional tools
 
-Now that you have the core tools installed, you can click to install any of the below that would be useful for your project, or find additional packages at [chocolatey.org/packages](https://chocolatey.org/packages).
+Now that you have the core tools installed, you can click to install any of the below that would be useful for your project, or find additional packages using [chocolatey.org/packages](https://chocolatey.org/packages) index or the **ChocolateyGUI** Windows app.
 
 - [choco://7zip](choco://7zip)
 - [choco://anaconda3](choco://anaconda3) or [choco://miniconda](choco://miniconda)

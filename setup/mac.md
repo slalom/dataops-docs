@@ -4,11 +4,25 @@
 
 <a href="https://brew.sh"><img src="https://brew.sh/assets/img/linuxbrew.png" alt="drawing" width="100" style="float: right"/></a>
 
-_These scripts leverage Homebrew, the package manager for Mac. [Click here](https://brew.sh) to learn more about Homebrew._
-
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 <!-- markdownlint-restore -->
+
+_These scripts leverage Homebrew, the package manager for Mac. [Click here](https://brew.sh) to learn more about Homebrew._
+
+## QuickStart Overview
+
+Starting out in DataOps requires a new set of tools from what developers may have used previously. Thankfully, package managers like Chocolatey and Homebrew exist to streamline the process of getting new software installed (and keeping it updated) on your machine.
+
+The package manager reduces the time to get software installed, saving hours of time and ensuring everyone's machines are setup correctly with minimal effort. Here's a quick overview of the tools you'll install in the next section:
+
+1. A **package manager**: Chocolatey (for Windows) or Homebrew (for Mac)
+2. **Docker** - to run containerized apps and create your own.
+3. **Git** - a version control platform used to store and manage code.
+4. **GitHub Desktop** - a friendly GUI which works with Git and GitHub.com.
+5. **Python** - a software language useful for developing new programs and scripts, and also used for its popular package manager `pip`, which allows users to install Python programs written by others.
+6. **Terraform** - the leading cross-platform solution for automating Infrastructure as Code (IaC).
+7. **VS Code** - a robust, fast, and lightweight development environment (IDE).
 
 ## Installing Homebrew and Core Tools
 
