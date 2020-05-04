@@ -84,7 +84,7 @@ _Here are some options of changes you can submit:_
 
 #### Option 1. Add your favorite software packages _(Recommended!)_
 
-Everyone has a favorite app! What could you add to the package lists on the [Mac](../mac_development.md) or [Windows](../windows_development.md) QuickStart pages to make them even more awesome for the next round of students?
+Everyone has a favorite app! What could you add to the package lists on the [Mac](../setup/mac.md) or [Windows](../setup/windows.md) QuickStart pages to make them even more awesome for the next round of students?
 
 #### Option 2. Add your own username to the list of lab graduates
 
