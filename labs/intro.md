@@ -4,8 +4,6 @@ _Learn GitHub and CI/CD by directly updating this website._
 
 `A Slalom DataOps Lab`
 
-> _**WARNING: Lab Still Under Construction**_
-
 **Table of Contents:**
 
 1. [Install Prereqs](#install-prereqs)
