@@ -72,6 +72,7 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
 - [choco://wsl](choco://wsl)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+- [choco://autohotkey.portable](choco://autohotkey.portable)
 
 ## Extra Credit: Create a GitHub Account
 
