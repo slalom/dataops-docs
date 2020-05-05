@@ -4,16 +4,11 @@
 
 This walkthrough is divided into four parts:
 
-- [Install Prereqs](#install-prereqs) _(20 minutes)_
-- [Deploy](#deploy) _(5 minutes)_
-- [Connect and Test](#connect-and-test) _(10 minutes)_
-- [Shut It Down](#shut-it-down) _(1 minute)_
 
 _**Time Requirement:** <45 minutes (total)_
 
 ## Install Prereqs
 
-_**Time Requirement:** 20 minutes_
 
 _**Overview:** This section walks through getting software installed and getting AWS-related credentials stored correctly. **These steps only need to be done once.** Complete this section before continuing to the next section._
 

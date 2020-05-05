@@ -3,7 +3,7 @@ name: Documentation Checks
 on:
   push:
     paths:
-      - .github/workflows/*.yml
+      - .github/workflows/oops/*.yml
       - "**.md"
 
 jobs:
