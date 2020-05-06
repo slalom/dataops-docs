@@ -50,7 +50,8 @@
 - [ ] Delete the two extra files in `infra`:
   - `02_singer-taps.tf`.
   - `03_data-build-tool.tf`
-- [ ] Run `terraform init` and `terraform apply`, then type 'yes' to deploy.
+- [ ] Right-click the `infra` folder and select "Open in Terminal" (or from an existing terminal window, run `cd infra`).
+- [ ] In the terminal windows that opens, run `terraform init` and `terraform apply`, then type 'yes' to deploy.
 - [ ] Wait for `terraform apply` to complete (approx. 2 minutes).
 - [ ] In the web browser, browse your AWS console to S3 buckets and confirm the new data lake buckets are created.
 
@@ -74,6 +75,23 @@ _These bonus exercises are optional._
 - [ ] Rerun terraform apply and note the error message.
 - [ ] Rerun terraform init and then run terraform apply again.
 - [ ] In the web browser, browse to your new airflow instance.
+
+## Troubleshooting
+
+1. "Error 403 ... MalformedPolicyDocument"
+    - To resolve this issue, first run `terraform init --upgrade`, then rerun `terraform apply`
+2. "Error 400"
+    - This often means there's a problem with the AWS credentials file.
+    - If the `aws-credentials` file is still open, make sure you use `ctrl+s` to save the file if it is not yet saved.
+    - If the above does not resolve the issue, you may need to return to Linux Academy Playground and make sure your AWS Sandbox is still running.
+    - As a last check, it is a good idea to double-check that the AWS key pair pasted matches the Linux Academy AWS credentials.
+3. Errors after restarting the Linux Academy Playground
+    - If you run out of time on your playground account (4 hour limit), you will have to create a new environment.
+    - In this case, you will also have to delete the `terraform.tfstate` file - since otherwise terraform will unsuccessfully try to manage objects which no longer exist and which are not accessible from the new AWS account.
+    - Warning: in normal environments (aka when not using Linux Academy Playground), you you should not delete the `tfstate` file and instead you can simply run `terraform destroy`.
+4. PowerShell (PS) Terminal issues (Windows only)
+    - The `AWS User Switch` command is in the syntax of Command Prompt and does not work properly in PowerShell.
+    - If you are running in PowerShell, either: (option A) run `cmd` to switch to command prompt before running the commands, or (option B) within PowerShell, replace `SET AWS_SHARED_CREDENTIALS_FILE=...` with `$env:AWS_SHARED_CREDENTIALS_FILE="..."`.
 
 ## See Also
 
