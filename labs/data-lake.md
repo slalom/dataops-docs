@@ -78,14 +78,17 @@ _These bonus exercises are optional._
 
 ## Troubleshooting
 
-1. "Error 403 ... MalformedPolicyDocument"
-    - To resolve this issue, first run `terraform init --upgrade`, then rerun `terraform apply`
-2. "Error 400"
-    - This often means there's a problem with the AWS credentials file.
+1. "Error 400 ... Policy Document Must Contain Resources"
+    - This was an interim issue caused by an unneeded (empty) policy being created.
+    - In general, you can ignore this error and proceed with the next steps to validate the environment.
+    - To resolve the issue, first run `terraform init --upgrade`, then rerun `terraform apply`.
+    - If you are using Linux Academy Playground, please also consult the AWS Sandbox troubleshooting tip #3 (below) on how to restart a fresh environment if yours has timed out.
+2. "Error 403 ... InvalidClientTokenId"
+    - This most often means there's a problem with your AWS credentials file.
     - If the `aws-credentials` file is still open, make sure you use `ctrl+s` to save the file if it is not yet saved.
     - If the above does not resolve the issue, you may need to return to Linux Academy Playground and make sure your AWS Sandbox is still running.
     - As a last check, it is a good idea to double-check that the AWS key pair pasted matches the Linux Academy AWS credentials.
-3. Errors after restarting the Linux Academy Playground
+3. Errors after restarting the AWS Sandbox in Linux Academy Playground
     - If you run out of time on your playground account (4 hour limit), you will have to create a new environment.
     - In this case, you will also have to delete the `terraform.tfstate` file - since otherwise terraform will unsuccessfully try to manage objects which no longer exist and which are not accessible from the new AWS account.
     - Warning: in normal environments (aka when not using Linux Academy Playground), you you should not delete the `tfstate` file and instead you can simply run `terraform destroy`.
