@@ -116,7 +116,7 @@ the details of that plan file._
        `covid-19` tap.
 2. Open a terminal in the folder `data/tap` by right-clicking the folder and selecting
    "Open in Terminal".
-3. Run `s-tep plan covid-19` in the new terminal to update the extract plan file
+3. Run `s-tap plan covid-19` in the new terminal to update the extract plan file
      - If you do not have docker setup, or if docker is not able to access your local
        filesystem. First confirm docker is installed (`choco install docker-desktop` or
        `brew install docker`) and then check the Troubleshooting guide if you still
