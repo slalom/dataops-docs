@@ -5,14 +5,15 @@
 **Table of Contents:**
 
 1. [Setup](#setup)
-2. [Step 1: Configure Extract Authentication Credentials](#step-1-configure-extract-authentication-credentials)
-   1. [Identify your source tap and required settings](#identify-your-source-tap-and-required-settings)
-   2. [Create our new GitHub API token and store the token in `tap-covid-19-config.json`](#create-our-new-github-api-token-and-store-the-token-in-tap-covid-19-configjson)
-3. [Step 2: Create and test our rules file](#step-2-create-and-test-our-rules-file)
-4. [Step 3: Configure and deploy our infrastructure using Terraform](#step-3-configure-and-deploy-our-infrastructure-using-terraform)
-5. [Step 4: Explore the deployed AWS infrastructure using Terraform](#step-4-explore-the-deployed-aws-infrastructure-using-terraform)
-6. [Step 4: Run a sync test](#step-4-run-a-sync-test)
-7. [See Also](#see-also)
+2. [Lab Instructions](#lab-instructions)
+   1. [Step 1: Configure source system authentication](#step-1-configure-source-system-authentication)
+   2. [Step 2: Create and test our rules file](#step-2-create-and-test-our-rules-file)
+   3. [Step 3: Configure and deploy our infrastructure using Terraform](#step-3-configure-and-deploy-our-infrastructure-using-terraform)
+   4. [Step 4: Explore the deployed AWS infrastructure using Terraform](#step-4-explore-the-deployed-aws-infrastructure-using-terraform)
+   5. [Step 5: Run a sync test](#step-5-run-a-sync-test)
+3. [Summary](#summary)
+4. [Extra Credit](#extra-credit)
+5. [See Also](#see-also)
 
 ## Setup
 
@@ -23,25 +24,29 @@
         - `choco install awscli` (Windows)
         - `brew install awscli` (Mac)
     3. Tapdance extract tool:
-        - `pip3 install tapdance` (TK)
+        - `pip3 install slalom.dataops`
 - Environment setup (each time):
   - Open browser tabs:
     1. The lab checklist (this page)
     2. [linux academy](https://app.linuxacademy.com/dashboard)
     3. [slalom-ggp/dataops-project-template](https://github.com/slalom-ggp/dataops-project-template)
 
-## Step 1: Configure source system authentication
+## Lab Instructions
 
-### Identify our source tap and required settings
+### Step 1: Configure source system authentication
+
+#### Identify source and required settings
 
 _For this lab, you will be extracting data from the Covid 19 tap `tap-covid-19` as
-documented [here](TK) in this repo. Before you start, take a moment to become familiar
-with the tap and it's [required settings](TK)._
+documented [here](https://github.com/singer-io/tap-covid-19). Before you start, take a
+moment to become familiar with the provided documentation._
 
-As documented on the provided link, the `covid-19` tap requires at minimum the following settings:
+As documented on the Covid-19 Quick Start link
+[here](https://github.com/singer-io/tap-covid-19#user-content-quick-start), the `covid-19`
+tap requires at minimum the following settings:
 
 - `api_token` - This is a GitHub token you will create which allows the tap to authenticate
-  on your behalf and extract data from the [John Hopkins Covid-19 repo](TK).
+  on your behalf and extract data from the [John Hopkins Covid-19 repo](https://github.com/CSSEGISandData/COVID-19).
 - `user_agent` - This is simply any name and email address (e.g.
   `tap-covid-19 <api_user_email@your_company.com>`), which is again used to identify the
   tap as it uses the GitHub API to extract source data from the upstream source.
@@ -74,28 +79,32 @@ All together, a sample config file for this tap looks like:
   `.secrets` folder are explicitly and automatically excluded from Git using the
   `.gitignore` file, which is stored in the root of your repo.
 
-### Create our new GitHub API token and store the token in `tap-covid-19-config.json`
+#### Create a GitHub API token and save to `tap-covid-19-config.json`
 
 _In this section, you will create a new GitHub token. As described above, this token allows
 the tap to authenticate as you whenever it reads data from the Covid-19 dataset. Since it
 only needs to read data from a public repo, we can give the token restricted permissions so
 that it can only perform read-only actions._
 
-1. Navigate to your [GitHub Tokens](TK) screen in GitHub.
-2. Create a new Token and grant the token `Read` access on `Public Repos`.
+
+1. Navigate to your [GitHub Tokens](https://github.com/settings/tokens) screen in GitHub.
+2. Generate a new Token and grant the token `Read` access on `Public Repos`. In the 'Note'
+   space, you can provide any text. For example, `covid-19 extracts` or `Cloud DE lab`.
+       ![generate-token](resources/generate-covid-19-token.png)
 3. Once created, copy the new key and paste it in as the `api_token` in your json config
    file.
 4. Remember to save and close your config file once you have updated it with all three
    required settings.
 
-## Step 2: Create and test our rules file
+### Step 2: Create and test a rules file
 
-_The `tapdance` (TK) extract tool is based on the [Singer.io](https://singer.io) taps
-and targets paradigm, and it requires a rules file to specify which tables and fields
-should be captured. In this section, you will create a very simple rules file and then you
-will test the rules by creating a **plan** and confirming the details of that plan file._
+_The `tapdance` extract tool (part of `slalom.dataops`) is based on the
+[Singer.io](https://singer.io) taps and targets paradigm, and it requires a rules file to
+specify which tables and fields should be captured. In this section, you will create a very
+simple rules file and then you will test the rules by creating a **plan** and confirming
+the details of that plan file._
 
-1. Open the sample file `data/taps/data.select` (TK), delete the entire file contents,
+1. Open the sample rules file at `data/taps/data.select`, delete the entire file contents,
    including all Salesforce and Pardot references, and replace with the following single
    line:
 
@@ -107,7 +116,7 @@ will test the rules by creating a **plan** and confirming the details of that pl
        `covid-19` tap.
 2. Open a terminal in the folder `data/tap` by right-clicking the folder and selecting
    "Open in Terminal".
-3. Run `tapdance plan covid-19` (TK) in the new terminal to update the extract plan file
+3. Run `s-tep plan covid-19` in the new terminal to update the extract plan file
      - If you do not have docker setup, or if docker is not able to access your local
        filesystem. First confirm docker is installed (`choco install docker-desktop` or
        `brew install docker`) and then check the Troubleshooting guide if you still
@@ -118,15 +127,15 @@ will test the rules by creating a **plan** and confirming the details of that pl
    of to-be-extracted tables and columns.
      - Since we specified `covid-19.*.*` in our rules file, the resulting plan will include
        _all_ tables and columns.
-5. Note that all of the tables contain a column called `git_url` (TK) and a column called
-   `git_repo` (TK) - neither of which is needed for our analysis.
-6. Re-open the file `data/taps/data.select` (TK) and add the following three lines to
+5. Note that all of the tables contain a column called `git_owner` and a column called
+   `git_html_url` - neither of which is needed for our analysis.
+6. Re-open the file `data/taps/data.select` and add the following three lines to
    the bottom of the file:
 
       ```txt
       # Let's exclude the extra columns we don't need:
-      !covid-19.*.git_url
-      !covid-19.*.git_repo
+      !covid-19.*.git_owner
+      !covid-19.*.git_html_url
       ```
 
      - The "`!`" symbols at the beginning of each line tells tapdance that we want to
@@ -134,10 +143,10 @@ will test the rules by creating a **plan** and confirming the details of that pl
      - The `*` symbol in the second part of each rule specifies that we want this exclusion
        to be performed for any and all tables from the `covid-19` source that might have
        these columns.
-7. Finally, ru-run the command `tapdance plan covid-19` (TK) and confirm the column
+7. Finally, ru-run the command `s-tap plan covid-19` and confirm the column
    exclusions in the extract plan file.
 
-## Step 3: Configure and deploy our infrastructure using Terraform
+### Step 3: Configure and deploy our infrastructure using Terraform
 
 _In this section, we will use a module from the Slalom Infrastructure Catalog which can
 orchestrate Singer taps on AWS using ECS. We will need to provide the terraform module the
@@ -155,20 +164,23 @@ should be run, and (4) which target should be used to land the data._
         need to delete the state file to avoid running into errors when trying to access
         now-expired credentials and resources. The state file is called `terraform.tfstate`
         and will be inside the `infra` folder.
-2. Copy the sample `singer-taps` file  from the template project [here]() into your `infra`
-   folder (assuming you have previously deleted it per instructions in the prior lab).
-3. Use `Ctrl+f` to find all instances of `tap-sample` and replace with `tap-covid-19`.
-4. Use `Ctrl+f` to find all instances of `sample-tap` and replace with `covid-19` (without
-   the `tap` prefix).
-5. In the `secrets` section of the configuration, map in the two sensitive config values
-   (aka "secrets") from our json config file. These are `user_agent` and `api_token`.
-6. Confirm your file against the sample here: `TK`
-7. Open a terminal in the `infra` folder and run `terraform init --upgrade`. The
+2. Copy the sample `02_singer-taps.tf` file from the template project
+   [here](https://github.com/slalom-ggp/dataops-project-template/blob/master/infra/02_singer-taps.tf)
+   into your `infra` folder (assuming you have previously deleted it per instructions in
+   the prior lab).
+3. In the space provided for for `tap_id` (line 3), enter the text "covid-19". This
+   indicates the source plugin `tap-covid-19`, which maps to
+   [this repo](https://github.com/singer-io/tap-covid-19).
+4. In the `secrets` section of the configuration, replace 'username' and 'password' with
+   the name of two secrets in our json config file: `user_agent` and `api_token`,
+   respectively.
+5. Confirm your file against the sample [here](resources/covid-19-tap-sample-tf).
+6. Open a terminal in the `infra` folder and run `terraform init --upgrade`. The
    `--upgrade` flag tells Terraform to pull down the latest versions of all upstream
    modules.
-8. Run `terraform apply` to deploy the infrastructure.
+7. Run `terraform apply` to deploy the infrastructure.
 
-## Step 4: Explore the deployed AWS infrastructure using Terraform
+### Step 4: Explore the deployed AWS infrastructure using Terraform
 
 _At this point, your infrastructure has deployed successfully to AWS using Terraform. Let's
 take a quick pause to investigate and review what has been deployed._
@@ -186,7 +198,7 @@ take a quick pause to investigate and review what has been deployed._
    is likewise automatically excluded from git based upon rules in our project's
    `.gitignore` file.
 
-## Step 4: Run a sync test
+### Step 5: Run a sync test
 
 _At this point, your infrastructure has deployed successfully to AWS using Terraform.
 According to the schedule defined, it will run automatically each day. However, instead of waiting until the next execution, we will now kick off the extract manually using ECS and the AWS command line ("awscli")._
@@ -219,13 +231,22 @@ upstream changes. Similarly, we've avoided any hard-coding of data types and our
 will therefor be resilient to any upstream data type changes which may occur in the
 future._
 
+<!--
 ## Extra Credit
 
 _The below exercises are NOT required for the lab completion. These are designed for those
 individuals who might want additional practice or who want to try out additional
 experiments._
 
-[TK] - Remove or add EC exercises
+-->
+
+## Troubleshooting
+
+1. Error during `terraform apply`: `The given key does not identify an element in this collection value. ...  )[split(":", location)[1]]`
+    - This is most likely due to missing overrides for the Covid-19 secrets (aka credentials).
+    - To resolve, double check that you have replaced all instances of `username` and `password` with `api_token` and `user_agent`, respectively, in `02_singer-taps.tf`.
+2. `TaskDefinition not found.`
+    - This is most likely due to not having run the `AWS Switch Command`. Or it is not running properly.
 
 ## See Also
 
