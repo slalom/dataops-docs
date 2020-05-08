@@ -7,12 +7,12 @@
 1. [Setup](#setup)
 2. [Lab Instructions](#lab-instructions)
    1. [Step 1: Configure source system authentication](#step-1-configure-source-system-authentication)
-   2. [Step 2: Create and test our rules file](#step-2-create-and-test-our-rules-file)
+   2. [Step 2: Create and test a rules file](#step-2-create-and-test-a-rules-file)
    3. [Step 3: Configure and deploy our infrastructure using Terraform](#step-3-configure-and-deploy-our-infrastructure-using-terraform)
    4. [Step 4: Explore the deployed AWS infrastructure using Terraform](#step-4-explore-the-deployed-aws-infrastructure-using-terraform)
    5. [Step 5: Run a sync test](#step-5-run-a-sync-test)
 3. [Summary](#summary)
-4. [Extra Credit](#extra-credit)
+4. [Troubleshooting](#troubleshooting)
 5. [See Also](#see-also)
 
 ## Setup
