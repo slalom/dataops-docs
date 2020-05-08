@@ -23,6 +23,7 @@
    * [postgres sample](https://github.com/slalom-ggp/dataops-infra/blob/master/samples/postgres-on-aws/01_rds_postgres.tf)
    * [redshift sample](https://github.com/slalom-ggp/dataops-infra/blob/master/samples/redshift-dw/02_redshift.tf)
 2. Customize the configuration variables in the module.
+   * For module reference, you can refer the the documentation at [https://infra.dataops.tk/catalog/#aws-catalog](https://infra.dataops.tk/catalog/#aws-catalog)
 3. Delete any unused/unwanted configuration options or comments.
 
 ### Step 2: Deploy using Terraform
