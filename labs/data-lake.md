@@ -95,6 +95,12 @@ _These bonus exercises are optional._
 4. PowerShell (PS) Terminal issues (Windows only)
     - The `AWS User Switch` command is in the syntax of Command Prompt and does not work properly in PowerShell.
     - If you are running in PowerShell, either: (option A) run `cmd` to switch to command prompt before running the commands, or (option B) within PowerShell, replace `SET AWS_SHARED_CREDENTIALS_FILE=...` with `$env:AWS_SHARED_CREDENTIALS_FILE="..."`.
+5. Unwanted email notifications due to scheduled CI/CD jobs failing.
+    - Earlier versions of this lab had daily jobs scheduled by default, which would fail and send unwanted failure notifications.
+    - To disable these notifications, perform any one of the three options below:
+      1. Navigate to the folder `.github/workflows` and delete the file `daily_refresh.yml` and then commit and push the change to GitHub.
+      2. Navigate to the GitHub repo on GitHub.com, open the "Settings", then under "Actions" select the option to disable all actions in the repo.
+      3. Navigate to your personal [GitHub Notification Settings page](https://github.com/settings/notifications) and uncheck "Email" in the "GitHub Actions" section.
 
 ## See Also
 
