@@ -116,7 +116,7 @@ the details of that plan file._
        `covid-19` tap.
 2. Open a terminal in the folder `data/tap` by right-clicking the folder and selecting
    "Open in Terminal".
-3. Run `s-tap plan covid-19` in the new terminal to update the extract plan file
+3. Run `tapdance plan covid-19` in the new terminal to update the extract plan file
      - If you do not have docker setup, or if docker is not able to access your local
        filesystem. First confirm docker is installed (`choco install docker-desktop` or
        `brew install docker`) and then check the Troubleshooting guide if you still
@@ -143,7 +143,7 @@ the details of that plan file._
      - The `*` symbol in the second part of each rule specifies that we want this exclusion
        to be performed for any and all tables from the `covid-19` source that might have
        these columns.
-7. Finally, ru-run the command `s-tap plan covid-19` and confirm the column
+7. Finally, ru-run the command `tapdance plan covid-19` and confirm the column
    exclusions in the extract plan file.
 
 ### Step 3: Configure and deploy our infrastructure using Terraform
@@ -242,11 +242,7 @@ experiments._
 
 ## Troubleshooting
 
-1. Error during `terraform apply`: `The given key does not identify an element in this collection value. ...  )[split(":", location)[1]]`
-    - This is most likely due to missing overrides for the Covid-19 secrets (aka credentials).
-    - To resolve, double check that you have replaced all instances of `username` and `password` with `api_token` and `user_agent`, respectively, in `02_singer-taps.tf`.
-2. `TaskDefinition not found.`
-    - This is most likely due to not having run the `AWS Switch Command`. Or it is not running properly.
+For troubleshooting tips, please see the [Lab Troubleshooting Guide](troubleshooting.md).
 
 ## See Also
 

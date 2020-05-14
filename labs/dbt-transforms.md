@@ -79,3 +79,7 @@ SELECT
 3. Navigate to your project in GitHub and click the "Actions" tab.
 4. Monitor each CI/CD task, noting which are successful and which have errors.
 5. Open and debug any errors you see in the Actions CI/CD log.
+
+## Troubleshooting
+
+For troubleshooting tips, please see the [Lab Troubleshooting Guide](troubleshooting.md).

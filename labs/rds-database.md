@@ -55,3 +55,7 @@
 4. Copy-paste and run the singer database load command.
 
 -->
+
+## Troubleshooting
+
+For troubleshooting tips, please see the [Lab Troubleshooting Guide](troubleshooting.md).
