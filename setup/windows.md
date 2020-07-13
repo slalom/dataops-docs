@@ -75,7 +75,7 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://microsoft-windows-terminal](choco://microsoft-windows-terminal)
 - [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
 - [choco://powerbi](choco://powerbi)
-- [choco://tableau-desktop](choco://tableau-desktop)
+- [choco://tableau-desktop ](choco://tableau-desktop)
 - [choco://r.project](choco://r.project)
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
 - [choco://wsl](choco://wsl)
