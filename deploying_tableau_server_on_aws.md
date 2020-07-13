@@ -150,7 +150,7 @@ _This section contains additional information which might be helpful, but is not
 <p><p>
 
 - To get a better understanding of how this works to deploy a full environment in terraform, explore the code files in the `infra` folder of the `dataops-tools` repo, starting the files `infra/main.tf` and `infra/components/aws-tableau/main.tf`.
-- For information specifically on the Tableau Server config, see `infra/components/aws-tableau/userdata_win.bat` (Windows) and `infra/components/aws-tableau/userdata_lin.sh` (Linux).
+- For information specifically on the Tableau Server config, see `infra/components/aws-tableau/bootstrap.bat` (Windows) and `infra/components/aws-tableau/bootstrap.sh` (Linux).
 
 </details>
 <p>
