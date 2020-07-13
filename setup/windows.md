@@ -81,6 +81,9 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://wsl2](choco://wsl2)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
 
+Samrat Update here (Ubuntu 2004)
+- [choco://wsl-ubuntu-2004](choco://wsl-ubuntu-2004)
+
 ## Extra Credit: Create a GitHub Account
 
 For extra credit, visit [GitHub.com](https://github.com/) and register a new account. Once you've created a GitHub account and installed the core software, you are all all set to contribute to open source projects in GitHub, including this one!
