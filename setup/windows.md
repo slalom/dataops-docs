@@ -81,6 +81,7 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://wsl](choco://wsl)
 - [choco://wsl2](choco://wsl2)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+- [choco://wsl-ubuntu-2004](choco://wsl-ubuntu-2004) (Samrat Update, Ubuntu 2004)
 
 ## Extra Credit: Create a GitHub Account
 
