@@ -74,6 +74,7 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://microsoft-teams.install](choco://microsoft-teams.install)
 - [choco://microsoft-windows-terminal](choco://microsoft-windows-terminal)
 - [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
+- [choco://my-cool-tool](choco://my-cool-tool)
 - [choco://powerbi](choco://powerbi)
 - [choco://r.project](choco://r.project)
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
