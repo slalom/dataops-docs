@@ -66,6 +66,7 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install r`
 - `brew cask install slack`
 - `brew install aws-sam-cli`
+- `brew cask install selenium-server-standalone`
 
 ## Extra Credit: Create a GitHub Account
 
