@@ -6,6 +6,7 @@ The GitHub users below ***killed it*** on their [CI/CD lab](intro.md)! 😎
 
 - @aaronsteers
 - @datapun
+- @egelnoteagle
 
 ## Commence the celebration!
 
