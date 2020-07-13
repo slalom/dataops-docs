@@ -38,7 +38,7 @@ The package manager reduces the time to get software installed, saving hours of 
 
     <a href="https://git-scm.com/"><img src="https://git-scm.com/images/logo@2x.png" alt="drawing" width="45" style="float: right"/></a>
 
-3. Install git.
+3. Install git:
 
     ```cmd
     choco install -y git.install --params "/GitOnlyOnPath /SChannel /NoAutoCrlf /WindowsTerminal"
