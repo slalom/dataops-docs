@@ -7,6 +7,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @aaronsteers
 - @bbainsslalom
 - @datapun
+- @domedwards
 - @egelnoteagle
 - @jpbradle
 - @matthewrohleder
