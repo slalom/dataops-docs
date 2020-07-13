@@ -65,6 +65,7 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install microsoft-teams`
 - `brew cask install r`
 - `brew cask install slack`
+- `brew install aws-sam-cli`
 
 ## Extra Credit: Create a GitHub Account
 
