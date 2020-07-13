@@ -6,19 +6,19 @@ _Learn GitHub and CI/CD by directly updating this website._
 
 **Table of Contents:**
 
-1. [Setup](#setup)
-   1. [Install Prereqs](#install-prereqs)
-   2. [Login to GitHub.com](#login-to-githubcom)
-   3. [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
-   4. [Clone your forked repo in GitHub Desktop](#clone-your-forked-repo-in-github-desktop)
-   5. [Open repo in VS Code](#open-repo-in-vs-code)
-2. [Develop](#develop)
-   1. [Create a new branch](#create-a-new-branch)
-   2. [Make some changes!](#make-some-changes)
-   3. [Commit your changes](#commit-your-changes)
-3. [Submit](#submit)
-   1. [Create a PR (Pull Request)](#create-a-pr-pull-request)
-   2. [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
+- [Setup](#setup)
+  - [Install Prereqs](#install-prereqs)
+  - [Login to GitHub.com](#login-to-githubcom)
+  - [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
+  - [Clone your forked repo in GitHub Desktop](#clone-your-forked-repo-in-github-desktop)
+  - [Open repo in VS Code](#open-repo-in-vs-code)
+- [Develop](#develop)
+  - [Create a new branch](#create-a-new-branch)
+  - [Make some changes!](#make-some-changes)
+  - [Commit your changes](#commit-your-changes)
+- [Submit](#submit)
+  - [Create a PR (Pull Request)](#create-a-pr-pull-request)
+  - [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
 
 ## Setup
 
@@ -76,6 +76,12 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
    - When prompted for a location for the new folder,  click "Choose..." and then create a new root-level folder called `Source` (for example, `c:\Source` on Windows).
    - After selecting the new `Source` folder, GitHub will suggest a subfolder called `c:\Source\dataops-docs`.
    - Click `Clone` to complete the process and download all of the files to your local workstation.
+4. Choose **Parent** for "How are you planning to use this forks?"
+
+
+	
+parent 
+	own purpose
 
 ### Open repo in VS Code
 
