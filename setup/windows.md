@@ -76,12 +76,14 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
 - [choco://notepad++](choco://notepadplusplus)
 - [choco://powerbi](choco://powerbi)
+- [choco://tableau-desktop](choco://tableau-desktop)
 - [choco://r.project](choco://r.project)
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
 - [choco://winmerge](choco://winmerge)
 - [choco://wsl](choco://wsl)
 - [choco://wsl2](choco://wsl2)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+- [choco://wsl-ubuntu-2004](choco://wsl-ubuntu-2004) (Samrat Update, Ubuntu 2004)
 
 ## Extra Credit: Create a GitHub Account
 
