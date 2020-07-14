@@ -23,7 +23,16 @@
    * [postgres sample](https://github.com/slalom-ggp/dataops-infra/blob/master/samples/postgres-on-aws/01_rds_postgres.tf)
    * [redshift sample](https://github.com/slalom-ggp/dataops-infra/blob/master/samples/redshift-dw/02_redshift.tf)
 2. Customize the configuration variables in the module.
+   * For module reference, you can refer the the documentation at [https://infra.dataops.tk/catalog/#aws-catalog](https://infra.dataops.tk/catalog/#aws-catalog)
 3. Delete any unused/unwanted configuration options or comments.
+
+### Step 2: Deploy using Terraform
+
+1. Open a new terminal in the `infra` folder.
+2. Run `terraform init --upgrade` and then run `terraform apply` to apply the schema changes.
+3. Log into the AWS Console to confirm the database is created successfully.
+
+<!--
 
 ### Step 3: Add an automated load to the new database
 
@@ -44,3 +53,9 @@
 2. Run `terraform init && terraform apply`. When asked to confirm, type 'yes' to deploy the changes.
 3. Run `terraform output`.
 4. Copy-paste and run the singer database load command.
+
+-->
+
+## Troubleshooting
+
+For troubleshooting tips, please see the [Lab Troubleshooting Guide](troubleshooting.md).
