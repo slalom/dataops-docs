@@ -28,7 +28,7 @@ _**Overview:** This section walks through getting software installed and getting
       choco install -y awscli terraform vscode
       ```
 
-    - Or install the full set of recommended tools using the [Windows Development Quickstart](windows_development.md)
+    - Or install the full set of recommended tools using the [Windows Development QuickStart](setup/windows.md)
 
 1. **Clone the git repo: `dataops-tools`**
     - The following commands will clone the dataops-tools repo into `c:\Files\Source\dataops-tools`:
@@ -150,7 +150,7 @@ _This section contains additional information which might be helpful, but is not
 <p><p>
 
 - To get a better understanding of how this works to deploy a full environment in terraform, explore the code files in the `infra` folder of the `dataops-tools` repo, starting the files `infra/main.tf` and `infra/components/aws-tableau/main.tf`.
-- For information specifically on the Tableau Server config, see `infra/components/aws-tableau/userdata_win.bat` (Windows) and `infra/components/aws-tableau/userdata_lin.sh` (Linux).
+- For information specifically on the Tableau Server config, see `infra/components/aws-tableau/bootstrap.bat` (Windows) and `infra/components/aws-tableau/bootstrap.sh` (Linux).
 
 </details>
 <p>

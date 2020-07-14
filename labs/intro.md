@@ -4,26 +4,27 @@ _Learn GitHub and CI/CD by directly updating this website._
 
 `A Slalom DataOps Lab`
 
-> _**WARNING: Lab Still Under Construction**_
-
 **Table of Contents:**
 
-1. [Install Prereqs](#install-prereqs)
-   1. [Overview](#overview)
-   2. [How-To](#how-to)
-2. [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
-3. [Clone your forked repo and open it in VS Code](#clone-your-forked-repo-and-open-it-in-vs-code)
-4. [Create a new branch](#create-a-new-branch)
-5. [Now... Make some changes!](#now-make-some-changes)
-   1. [What will you change?](#what-will-you-change)
-6. [Extra Credit](#extra-credit)
-7. [Commit your changes](#commit-your-changes)
-8. [Create a PR (Pull Request)](#create-a-pr-pull-request)
-9. [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
+1. [Setup](#setup)
+   1. [Install Prereqs](#install-prereqs)
+   2. [Login to GitHub.com](#login-to-githubcom)
+   3. [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
+   4. [Clone your forked repo in GitHub Desktop](#clone-your-forked-repo-in-github-desktop)
+   5. [Open repo in VS Code](#open-repo-in-vs-code)
+2. [Develop](#develop)
+   1. [Create a new branch](#create-a-new-branch)
+   2. [Make some changes!](#make-some-changes)
+   3. [Commit your changes](#commit-your-changes)
+3. [Submit](#submit)
+   1. [Create a PR (Pull Request)](#create-a-pr-pull-request)
+   2. [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
 
-## Install Prereqs
+## Setup
 
-### Overview
+### Install Prereqs
+
+**Overview**
 
 To complete this lab, you will at least need the following components installed on your local machine:
 
@@ -31,16 +32,28 @@ To complete this lab, you will at least need the following components installed 
 - Git
 - GitHub Desktop
 
-_TIP: If you have not yet installed these, please visit the [DevOps QuickStart page](../setup.html) for automated installation instructions._
+_TIP: If you have not yet installed these, please visit the [DevOps QuickStart page](../setup/index.html) for automated installation instructions._
 
-### How-To
+**How-To**
 
 1. To install these on your local workstation, follow the instructions located at the following links:
 
 - Mac OSX: [docs.dataops.tk/brew](https://docs.dataops.tk/brew)
 - Windows: [docs.dataops.tk/choco](https://docs.dataops.tk/choco)
 
-## Fork your own personal copy of the repo
+### Login to GitHub.com
+
+**Login via Web**
+
+1. If you don't yet have a GitHub account, create your free personal GitHub account [here](https://github.com/join).
+   - _**Tip**: Rather than create multiple accounts, we recommend using a single GitHub account for both work and personal development projects._
+2. Once you have an account created, login or reset your password with the links provided [here](https://github.com/login).
+
+**Login via GitHub Desktop**
+
+3. Open the GitHub Desktop application and repeat the login process within the app.
+
+### Fork your own personal copy of the repo
 
 **Understanding Forks and Pull Requests:**
 
@@ -52,45 +65,57 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
 1. In a new browser tab, navigate to the GitHub repository: [https://github.com/slalom-ggp/dataops-docs](https://github.com/slalom-ggp/dataops-docs).
 2. At the top-right of the page, click "Fork".
    - _If asked where to create the new fork, select your GitHub to create your own personal copy._
+   - **NOTE:** This fork is your own personal copy of the full code repository used in this site. Since the code is open source, you can do anything you want with it.
 
-## Clone your forked repo and open it in VS Code
+### Clone your forked repo in GitHub Desktop
 
-1. Navigate to your new personal fork (`https://github.com/<your-username>/dataops-docs`) in GitHub and select `Clone or Download` > `Open in Desktop`.
+1. Navigate to your new personal fork (`https://github.com/<your-username>/dataops-docs`).
+2. After browsing to your personal fork, click on the green `Code` button and select `Open with GitHub Desktop`.
    - _**Do not** select `Download Zip`, as this will not register your repo properly with git._
-2. Follow the wizard to clone the repo to your local machine. If this is the first time you've used GitHub Desktop, you might want to override the default clone location.
-   - Recommended source code root location on Windows is `c:\Source`.
-3. Open your newly cloned `dataops-docs` folder in VS Code. You should see an `Open in VS Code` option in **GitHub Desktop**, but if not, you can also open **VS Code** directly and select `Open Folder`.
-4. The first time you open the repo, VS Code should prompt you to install recommended plugins (aka "extensions"). Review the recommendations and then install each one. These add recommended functionality to VS Code for this project, each developer has similar user interface and similar development experience.
-5. To test the markdown preview feature, open any file ending in `.md` and look on the right hand side for the preview window. If you don't see a preview, click the magnifying glass at the top right of the file pane.
-   - If you still are not able to preview the Markdown, try going back to step 4 (recommended plugins) or just search VS Code extensions for "Markdown" and install the top result.
+3. Follow the wizard to clone the repo to your local machine.
+   - When prompted for a location for the new folder,  click "Choose..." and then create a new root-level folder called `Source` (for example, `c:\Source` on Windows).
+   - After selecting the new `Source` folder, GitHub will suggest a subfolder called `c:\Source\dataops-docs`.
+   - Click `Clone` to complete the process and download all of the files to your local workstation.
 
-## Create a new branch
+### Open repo in VS Code
+
+1. Open your newly cloned `dataops-docs` folder in VS Code. You should see an `Open in VS Code` option in **GitHub Desktop**, but if not, you can also open **VS Code** directly and select `Open Folder`.
+2. The first time you open the repo, VS Code should prompt you to install recommended plugins (aka "extensions"). Review the recommendations and then install each one. These add recommended functionality to VS Code for this project, each developer has similar user interface and similar development experience.
+
+   ![install-vs-code-recs](./resources/vs-code-install-recs.png)
+
+3. To test the markdown preview feature, open any file ending in `.md` and look on the right hand side for the preview window. If you don't see a preview, click the magnifying glass at the top right of the file pane.
+   - _If you still are not able to preview the Markdown, try going back to step 4 (recommended plugins) or just search VS Code extensions for "Markdown" and install the top result._
+
+## Develop
+
+### Create a new branch
 
 1. Within VS Code, press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command pallete. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
 2. In the command prompt, type `create branch` and then select the option entitled `Git: create branch...`.
 3. Give your branch a name. For example, how about `janesmith-cool-new-updates`?
 
-## Now... Make some changes!
+### Make some changes!
 
 _You are now ready to make your own changes to the code of this website. Go ahead and make changes to any files you want. Remember to save them and use the preview feature to see if the result looks like you expected. When you are done, go ahead to the next step._
 
 > **Tip:** The vast majority of software documentation runs on a text formatting language called "markdown" - which is a lightweight, easy-to-read way to add formatting to plain text. If you aren't familiar with Markdown, or if it's been a while, there's a helpful Markdown CheatSheet [here](https://res.cloudinary.com/practicaldev/image/fetch/s--2rTn_7XO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/5zhubbpov3m3ly9a1t9c.png).
 
-### What will you change?
+**What will you change?**
 
 Will you engage your creativity, share your favorite app, or fix something that bugged you? The choice is yours! To complete this lab, make any change at all that makes this site better. No change is too small: add a single line, fix a single typo, or update an out of place character - these are all fantastic additions.
 
-_Here are some options of changes you can submit:_
+_Here are some ideas of changes you can submit:_
 
-#### Option 1. Add your favorite software packages _(Recommended!)_
+_**Option 1. Add your favorite software packages _(Recommended!)**_
 
-Everyone has a favorite app! What could you add to the package lists on the [Mac](../mac_development.md) or [Windows](../windows_development.md) QuickStart pages to make them even more awesome for the next round of students?
+Everyone has a favorite app! What could you add to the package lists on the [Mac](../setup/mac.md) or [Windows](../setup/windows.md) QuickStart pages to make them even more awesome for the next round of students?
 
-#### Option 2. Add your own username to the list of lab graduates
+_**Option 2. Add your own username to the list of lab graduates**_
 
 Optionally, either in addition to or in place of other updates, why not add your GitHub username to the [cicd-graduates](cicd-graduates.md) page?! A small piece of immortality in exchange for only a few minutes' effort...
 
-#### Option 3. Make this lab better!
+_**Option 3. Make this lab better!**_
 
 Everything on docs.dataops.tk is auto-published from this repo. How about submitting...
 
@@ -98,17 +123,15 @@ Everything on docs.dataops.tk is auto-published from this repo. How about submit
 2. Complicated explanations which you can make simpler.
 3. Missing explanations that you can provide.
 
-#### Option 4. Add or modify any content on [docs.dataops.tk](https://docs.dataops.tk)
+_**Option 4. Add or modify any content on [docs.dataops.tk](https://docs.dataops.tk)**_
 
 Everything on docs.dataops.tk is auto-published from this repo. How about submitting...
 
 1. New or updated content.
 2. Links to to external sites.
-3. Cooler graphics or gifs?
+3. Cooler graphics or GIFs?
 
-## Extra Credit
-
-**Want to see what happens when the CI/CD tests fail?**
+_**Extra Credit: What happens when CI/CD tests fail?**_
 
 As an experiment, try committing a change with the uppercase text "T<!--- splitter -->K" anywhere on a markdown page. The text "[T<!--- splitter -->K](https://en.wikipedia.org/wiki/To_come_(publishing))" is short for "to come" in the publishing world, and it serves like a "To-Do" marker which signals that your page is not yet ready to publish.
 
@@ -116,13 +139,15 @@ If the CI/CD engine finds this text anywhere in your change, it will fail tests 
 
 *👉 Just don't forget to remove the "T<!--- splitter -->K" text afterwards so your PR does not stay blocked!*
 
-## Commit your changes
+### Commit your changes
 
 1. Press `Ctrl+Shift+G` to move to the source control view in the left hand pane.
 2. In the 'Message' box, provide a short description and then click the check icon to commit your change.
 3. Finally, push your branch containing the new changes to git using the `Push` option in the drop-down menu.
 
-## Create a PR (Pull Request)
+## Submit
+
+### Create a PR (Pull Request)
 
 A pull request tells the repo maintainers that you are ready for them to review your proposed changes.
 
@@ -132,6 +157,6 @@ A pull request tells the repo maintainers that you are ready for them to review 
 2. Select "New Pull Request" and follow the prompts to submit your proposed changes in a new PR.
 3. Find the 'Checks' tab and confirm that all your tests have completed successfully. If needed, return to VS Code and push a new commit to fix any issues.
 
-## Wait for your PR to be approved and merged
+### Wait for your PR to be approved and merged
 
 Once your PR is approved, the code will be automatically merged into master and released into the production website.

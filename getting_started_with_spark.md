@@ -4,9 +4,9 @@ _This document will walk you through how to quickly get started with local devel
 
 ## Prereqs
 
-Before you proceed, you will need a few things, specifically: Git, Docker, Python, and VS Code. Please use our [Windows Dev Getting Started Guide](windows_development.md) or using this script:
+Before you proceed, you will need a few things, specifically: Git, Docker, Python, and VS Code. Please use our [Windows Dev Getting Started Guide](setup/windows.md) or using this script:
 
-* [https://docs.dataops.tk/choco_devops.bat](choco_devops.bat)
+* [https://docs.dataops.tk/setup/choco_devops.bat](setup/choco_devops.bat)
 
 ## Launching Spark on your local machine
 
@@ -42,7 +42,7 @@ After launching the server, you can connect spark applications using the followi
 _This quick tutorial shows you how to run Spark as a SQL database and connect and run queries using a GUI JDBC-compliant query tool._
 
 1. Download the DBeaver SQL application from Chocolatey by clicking here: [choco://dbeaver](choco://dbeaver).
-   * If you have not yet installed chocolatey, you can install it now from [https://docs.dataops.tk/choco_min.bat](choco_min.bat) or click [here](windows_development.md) for more information.
+   * If you have not yet installed chocolatey, you can install it now from [https://docs.dataops.tk/setup/choco_min.bat](setup/choco_min.bat) or click [here](setup/windows.md) for more information.
 2. After installing the DBeaver app, create a new "Spark" connection and connect to `localhost:10000` with a blank username and password.
 3. Open a new query window and try executing the following SQL commands:
 
