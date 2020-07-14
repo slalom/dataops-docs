@@ -26,7 +26,10 @@ The package manager reduces the time to get software installed, saving hours of 
 
 ## Installing Chocolatey and Core Tools
 
-1. Open "cmd.exe" as an administrator.
+1. Open Command Prompt ("cmd.exe") as Administrator.
+
+    ![command-prompt-admin](../labs/resources/command-prompt-admin.gif)
+
 2. Paste and run the [Chocolatey.org](https://chocolatey.org/docs/installation#install-with-cmdexe) install script:
 
     ```cmd
@@ -35,7 +38,7 @@ The package manager reduces the time to get software installed, saving hours of 
 
     <a href="https://git-scm.com/"><img src="https://git-scm.com/images/logo@2x.png" alt="drawing" width="45" style="float: right"/></a>
 
-3. Install git.
+3. Install git:
 
     ```cmd
     choco install -y git.install --params "/GitOnlyOnPath /SChannel /NoAutoCrlf /WindowsTerminal"
@@ -44,7 +47,7 @@ The package manager reduces the time to get software installed, saving hours of 
 4. Install core tools:
 
     ```cmd
-    choco install -y choco-protocol-support chocolateygui sudo terraform vscode
+    choco install -y choco-protocol-support chocolateygui sudo terraform vscode github-desktop
     choco install -y python3
     choco install -y docker-desktop
     ```
@@ -65,13 +68,22 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://github-desktop](choco://github-desktop)
 - [choco://GoogleChrome](choco://GoogleChrome)
 - [choco://gradle](choco://gradle)
+- [choco://javaruntime](choco://javaruntime)
+- [choco://jdk8](choco://jdk8)
+- [choco://jdk11](choco://jdk11)
 - [choco://microsoft-teams.install](choco://microsoft-teams.install)
+- [choco://microsoft-windows-terminal](choco://microsoft-windows-terminal)
 - [choco://microsoftazurestorageexplorer](choco://microsoftazurestorageexplorer)
+- [choco://notepad++](choco://notepadplusplus)
 - [choco://powerbi](choco://powerbi)
+- [choco://tableau-desktop](choco://tableau-desktop)
 - [choco://r.project](choco://r.project)
 - [choco://sql-server-management-studio](choco://sql-server-management-studio)
+- [choco://winmerge](choco://winmerge)
 - [choco://wsl](choco://wsl)
+- [choco://wsl2](choco://wsl2)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
+- [choco://wsl-ubuntu-2004](choco://wsl-ubuntu-2004) (Samrat Update, Ubuntu 2004)
 
 ## Extra Credit: Create a GitHub Account
 
