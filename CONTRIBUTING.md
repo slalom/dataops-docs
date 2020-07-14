@@ -1,6 +1,5 @@
 # [Docs](./README.md) > Contributing to DataOps Docs
 
-
 There are two main options for contributing to this repo: issues and pull requests.
 
 ## Issues
