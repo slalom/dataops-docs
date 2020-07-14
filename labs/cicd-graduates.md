@@ -18,6 +18,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @matthewrohleder
 - @sanketninawe
 - @sarkarsam
+- @ShahrukhZarir
 
 ## Commence the celebration
 
@@ -26,3 +27,5 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 ![gif](resources/congrats01.gif) ![gif](resources/grad-backflip.gif) ![gif](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif) 
 
 ![gif](resources/elmo.gif)
+
+![Alt text](resources/awsmeme.jpg)
