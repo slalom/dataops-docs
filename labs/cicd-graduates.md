@@ -18,6 +18,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @matthewrohleder
 - @sanketninawe
 - @sarkarsam
+- @mikemusi
 
 ## Commence the celebration
 
