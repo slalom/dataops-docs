@@ -101,10 +101,8 @@ that it can only perform read-only actions._
 2. Generate a new Token and grant the token `Read` access on `Public Repos`. In the 'Note'
    space, you can provide any text. For example, `Covid-19 Extracts` or `Cloud DE lab`.
        ![generate-token](resources/generate-covid-19-token.png)
-3. Once created, copy the new key and paste it in as the `api_token` in your json config
-   file.
-4. Remember to save and close your config file once you have updated it with all three
-   required settings.
+3. Once created, note the new key shown on the screen - you will need this key to complete
+   the next step.
 
 #### Create a `config.json` Text File
 
@@ -119,11 +117,10 @@ that it can only perform read-only actions._
    }
    ```
 
-2. Paste in your new github token in the `api_token` field.
-   your own email for purposes of identification.
+2. Paste your new github token into the `api_token` field.
 3. Override the second part of the `user_agent` string, replacing the sample email with
-   your own email for purposes of identification.
-4. **Important:** Don't forget to save your new file (`Ctrl+s` or `File` > `Save`).
+   your own email (for purposes of identification during data extraction).
+4. **Important:** Don't forget to save the new file (`Ctrl+s` or `File` > `Save`).
 
 > **Note:** It is important this this file - and any other file containing secret keys -
   should not be committed to source control. In VS Code, you con confirm that your new file
@@ -199,9 +196,8 @@ should be run, and (4) which target should be used to land the data._
         now-expired credentials and resources. The state file is called `terraform.tfstate`
         and will be inside the `infra` folder.
 2. Copy the sample `02_singer-taps.tf` file from the template project
-   [here](https://github.com/slalom-ggp/dataops-project-template/blob/master/infra/02_singer-taps.tf)
-   into your `infra` folder (assuming you have previously deleted it per instructions in
-   the prior lab).
+   [here](https://github.com/slalom-ggp/dataops-project-template/blob/main/infra/02_singer-taps.tf)
+   into your `infra` folder.
 3. In the space provided for for `tap_id` (line 3), enter the text "covid-19". This
    indicates the source plugin `tap-covid-19`, which maps to
    [this repo](https://github.com/singer-io/tap-covid-19).
