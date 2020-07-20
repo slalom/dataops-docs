@@ -4,18 +4,23 @@
 
 **Table of Contents:**
 
-1. [Setup](#setup)
+1. [Setup and Prereqs](#setup-and-prereqs)
+   1. [Local Workstation Setup](#local-workstation-setup)
+   2. [Prereqs Prep: Initialize Your Project and Configure AWS Credentials](#prereqs-prep-initialize-your-project-and-configure-aws-credentials)
 2. [Lab Instructions](#lab-instructions)
-   1. [Step 1: Configure source system authentication](#step-1-configure-source-system-authentication)
-   2. [Step 2: Create and test a rules file](#step-2-create-and-test-a-rules-file)
-   3. [Step 3: Configure and deploy our infrastructure using Terraform](#step-3-configure-and-deploy-our-infrastructure-using-terraform)
-   4. [Step 4: Explore the deployed AWS infrastructure using Terraform](#step-4-explore-the-deployed-aws-infrastructure-using-terraform)
-   5. [Step 5: Run a sync test](#step-5-run-a-sync-test)
-3. [Summary](#summary)
-4. [Troubleshooting](#troubleshooting)
-5. [See Also](#see-also)
+   1. [Step 1: Create Data Source Credentials and `config.json` Text File](#step-1-create-data-source-credentials-and-configjson-text-file)
+   2. [Step 2: Create a `rules.txt` Text File](#step-2-create-a-rulestxt-text-file)
+   3. [Step 3: Configure Terraform and Deploy Infrastructure](#step-3-configure-terraform-and-deploy-infrastructure)
+   4. [Step 4: Run the Extract-Load Pipeline](#step-4-run-the-extract-load-pipeline)
+3. [Extra Credit Options](#extra-credit-options)
+   1. [Optional Exercise: Explore the new AWS Infrastructure](#optional-exercise-explore-the-new-aws-infrastructure)
+4. [Summary](#summary)
+5. [Troubleshooting](#troubleshooting)
+6. [See Also](#see-also)
 
-## Setup
+## Setup and Prereqs
+
+### Local Workstation Setup
 
 - One-time setup:
   - Installed software via:
@@ -24,16 +29,48 @@
         - `choco install awscli` (Windows)
         - `brew install awscli` (Mac)
     3. Tapdance extract tool:
-        - `pip3 install slalom.dataops`
-- Environment setup (each time):
+        - `pip3 install tapdance`
+- Environment setup:
   - Open browser tabs:
     1. The lab checklist (this page)
     2. [linux academy](https://app.linuxacademy.com/dashboard)
     3. [slalom-ggp/dataops-project-template](https://github.com/slalom-ggp/dataops-project-template)
 
+### Prereqs Prep: Initialize Your Project and Configure AWS Credentials
+
+**Option A: Start from Previous Lab (Recommended):**
+
+> Use this option if you've already completed the previous lab, and have successfully
+run `terraform apply`.
+
+_If you've completed the previous lab, and if you used the recommended [Linux Academy
+Playground](https://playground.linuxacademy.com) to do so, you're 4-hour limited AWS
+environment has likely been reset. Follow these instructions to get a new environment
+and reset your git repo to use this new account._
+
+1. Create a new AWS Sandbox environment at
+   [playground.linuxacademy.com](https://playground.linuxacademy.com).
+2. Update your credentials file (`.secrets/aws-credentials`) with the newly provided
+   Access Key ID and Secret Access Key.
+3. Navigate to your `infra` folder and delete the file named `terraform.tfstate`.
+   - _**IMPORTANT:** In a real-world environment, you never want to delete or corrupt your
+     "tfstate" file, since that is the means Terraform uses to keep track of the
+     infrastructure it has created. In this unique case, however, our environment has been
+     already been purged by the Linux Academy 4-hour time limit, and by deleting this file
+     we are able to start fresh in a new account._
+
+_That's it! You should now be able to run `terraform apply` again, which will
+recreate the same baseline environment you created in the previous
+"[data-lake](./data-lake.md)" lab._
+
+**Option B: Starting from Scratch:**
+
+_If you've not yet completed the [data lake lab](./data-lake.md), go back and do so now. (You
+can safely skip all exercises labeled "Extra Credit".)_
+
 ## Lab Instructions
 
-### Step 1: Configure source system authentication
+### Step 1: Create Data Source Credentials and `config.json` Text File
 
 #### Identify source and required settings
 
@@ -53,80 +90,75 @@ tap requires at minimum the following settings:
 - `start_date` - A datetime stamp (e.g. `2019-01-01T00:00:00Z`) which is the _earliest_ date from which to
   start extracting data from the source.
 
-All together, a sample config file for this tap looks like:
+#### Create a GitHub API Token
 
-`covid-19-tap-config.json`
-
-```json
-{
-    "api_token": "YOUR_GITHUB_API_TOKEN",
-    "start_date": "2019-01-01T00:00:00Z",
-    "user_agent": "tap-covid-19 <api_user_email@your_company.com>"
-}
-```
-
-1. Navigate to the folder `data/taps/.secrets` and create a file called
-   `tap-covid-19-config.json`.
-2. Paste into the sample file config from above.
-3. Override the second part of the `user_agent` string, replacing the sample email with
-   your own email for purposes of identification.
-4. Save the new file (`Ctrl+s`).
-
-- **Note:** It is important this this file - and any other file containing secret keys -
-  should not be committed to source control. In VS Code, you con confirm that your new file
-  should appear grey in the file explorer and it _should not_ appear in the Git changes
-  panel. This exclusion from git is accomplished due to the fact that contents of
-  `.secrets` folder are explicitly and automatically excluded from Git using the
-  `.gitignore` file, which is stored in the root of your repo.
-
-#### Create a GitHub API token and save to `tap-covid-19-config.json`
-
-_In this section, you will create a new GitHub token. As described above, this token allows
-the tap to authenticate as you whenever it reads data from the Covid-19 dataset. Since it
-only needs to read data from a public repo, we can give the token restricted permissions so
+_In this section, you will create a new GitHub token. This token allows the tap to
+authenticate as you whenever it reads data from the Covid-19 dataset. Since it only needs
+to read data from a public repo, we can give the token restricted permissions so
 that it can only perform read-only actions._
-
 
 1. Navigate to your [GitHub Tokens](https://github.com/settings/tokens) screen in GitHub.
 2. Generate a new Token and grant the token `Read` access on `Public Repos`. In the 'Note'
-   space, you can provide any text. For example, `covid-19 extracts` or `Cloud DE lab`.
+   space, you can provide any text. For example, `Covid-19 Extracts` or `Cloud DE lab`.
        ![generate-token](resources/generate-covid-19-token.png)
 3. Once created, copy the new key and paste it in as the `api_token` in your json config
    file.
 4. Remember to save and close your config file once you have updated it with all three
    required settings.
 
-### Step 2: Create and test a rules file
+#### Create a `config.json` Text File
 
-_The `tapdance` extract tool (part of `slalom.dataops`) is based on the
-[Singer.io](https://singer.io) taps and targets paradigm, and it requires a rules file to
-specify which tables and fields should be captured. In this section, you will create a very
-simple rules file and then you will test the rules by creating a **plan** and confirming
-the details of that plan file._
+1. Navigate to the folder `data/taps/.secrets` and create a file called
+   `tap-covid-19-config.json` with the following text:
 
-1. Open the sample rules file at `data/taps/data.select`, delete the entire file contents,
-   including all Salesforce and Pardot references, and replace with the following single
-   line:
+   ```json
+   {
+      "api_token": "YOUR_GITHUB_API_TOKEN",
+      "start_date": "2019-01-01T00:00:00Z",
+      "user_agent": "tap-covid-19 <api_user_email@your_company.com>"
+   }
+   ```
+
+2. Paste in your new github token in the `api_token` field.
+   your own email for purposes of identification.
+3. Override the second part of the `user_agent` string, replacing the sample email with
+   your own email for purposes of identification.
+4. **Important:** Don't forget to save your new file (`Ctrl+s` or `File` > `Save`).
+
+> **Note:** It is important this this file - and any other file containing secret keys -
+  should not be committed to source control. In VS Code, you con confirm that your new file
+  should appear grey in the file explorer and it _should not_ appear in the Git changes
+  panel. This exclusion from git is accomplished due to the fact that contents of
+  `.secrets` folder are explicitly and automatically excluded from Git using the
+  `.gitignore` file, which is stored in the root of your repo.
+
+### Step 2: Create a `rules.txt` Text File
+
+_The `tapdance` extract tool is a wrapper for the open source [Singer.io](https://singer.io) taps and targets framework, and it requires a rules file to specify which tables and fields should be captured. In this section, you will create a very simple rules file and then you will
+test the rules by creating a **plan** and confirming the details of that plan file._
+
+1. Create a simple rules file at `data/taps/covid-19.rules.txt` and paste in the following
+   single line:
 
       ```txt
-      covid-19.*.*
+      *.*
       ```
 
      - This tells the `tapdance` tool we want to pull all tables and all columns from the
        `covid-19` tap.
 2. Open a terminal in the folder `data/tap` by right-clicking the folder and selecting
-   "Open in Terminal".
+   "Open in Integrated Terminal".
 3. Run `tapdance plan covid-19` in the new terminal to update the extract plan file
+     - **_Important: If docker is not working on your machine, you do not have to
+       complete this step. You can safely continue on to [step 3](#step-3-configure-terraform-and-deploy-infrastructure)._**
      - If you do not have docker setup, or if docker is not able to access your local
        filesystem. First confirm docker is installed (`choco install docker-desktop` or
        `brew install docker`) and then check the Troubleshooting guide if you still
        receive an error.
-     - Important: If docker is _still_ not working, you **do not** have to complete this
-       step. You can safely continue on to the next steps and
 4. Open the new file `tap-covid-19-plan.yml` and review the contents. You should see a list
    of to-be-extracted tables and columns.
-     - Since we specified `covid-19.*.*` in our rules file, the resulting plan will include
-       _all_ tables and columns.
+     - Since we specified `*.*` in our rules file, the resulting plan will include
+       _all_ tables and all columns.
 5. Note that all of the tables contain a column called `git_owner` and a column called
    `git_html_url` - neither of which is needed for our analysis.
 6. Re-open the file `data/taps/data.select` and add the following three lines to
@@ -134,8 +166,8 @@ the details of that plan file._
 
       ```txt
       # Let's exclude the extra columns we don't need:
-      !covid-19.*.git_owner
-      !covid-19.*.git_html_url
+      !*.git_owner
+      !*.git_html_url
       ```
 
      - The "`!`" symbols at the beginning of each line tells tapdance that we want to
@@ -143,10 +175,12 @@ the details of that plan file._
      - The `*` symbol in the second part of each rule specifies that we want this exclusion
        to be performed for any and all tables from the `covid-19` source that might have
        these columns.
+     - The `#` symbol indicates a comment - which makes your file easier to understand, but
+       otherwise does not change any functionality.
 7. Finally, ru-run the command `tapdance plan covid-19` and confirm the column
    exclusions in the extract plan file.
 
-### Step 3: Configure and deploy our infrastructure using Terraform
+### Step 3: Configure Terraform and Deploy Infrastructure
 
 _In this section, we will use a module from the Slalom Infrastructure Catalog which can
 orchestrate Singer taps on AWS using ECS. We will need to provide the terraform module the
@@ -180,25 +214,7 @@ should be run, and (4) which target should be used to land the data._
    modules.
 7. Run `terraform apply` to deploy the infrastructure.
 
-### Step 4: Explore the deployed AWS infrastructure using Terraform
-
-_At this point, your infrastructure has deployed successfully to AWS using Terraform. Let's
-take a quick pause to investigate and review what has been deployed._
-
-1. Open a new Terminal in the `infra` folder (or reuse an existing one).
-2. Run `terraform show` to print a full output of the tracked Terraform resources.
-3. Search (Ctrl+f) to find each of the following AWS resource types:
-   - `aws_s3_bucket`
-   - `aws_iam_role`
-   - `aws_subnet`
-4. In the file explorer, navigate to the file `terraform.tfstate` in the `infra` folder and
-   open it. Search again for the above components, this time from within the state file.
-5. Once you are done exploring, close the `terraform.tfstate` file and note that the file
-   is greyed out in the file explorer. Just as with the secrets files we created, this file
-   is likewise automatically excluded from git based upon rules in our project's
-   `.gitignore` file.
-
-### Step 5: Run a sync test
+### Step 4: Run the Extract-Load Pipeline
 
 _At this point, your infrastructure has deployed successfully to AWS using Terraform.
 According to the schedule defined, it will run automatically each day. However, instead of waiting until the next execution, we will now kick off the extract manually using ECS and the AWS command line ("awscli")._
@@ -212,7 +228,7 @@ According to the schedule defined, it will run automatically each day. However, 
 4. From the terraform output, copy-paste and then run the provided `AWS User Switch`
    command. (This helps the AWS CLI locate our credentials.)
 5. Copy-paste and run the `Sync command` from the Terraform output. This will manually
-   execute the Pardot sync in ECS.
+   execute the sync (extract and load) in ECS.
 6. Click on the `Logging URL` link in the Terraform output to open CloudWatch logs in a
    web browser.
 7. Wait one or two minutes for the ECS task to start.
@@ -220,6 +236,25 @@ According to the schedule defined, it will run automatically each day. However, 
 9. Once logs are coming through into CloudWatch, navigate to the S3 Service in your AWS Web
    Console and open the data bucket. Explore the new data files and folder which are landing
    there in S3.
+
+## Extra Credit Options
+
+### Optional Exercise: Explore the new AWS Infrastructure
+
+_At this point, your infrastructure has deployed successfully to AWS using Terraform. In this optional exercise, you'll explore more deeply and review what has been deployed._
+
+1. Open a new Terminal in the `infra` folder (or reuse an existing one).
+2. Run `terraform show` to print a full output of the tracked Terraform resources.
+3. Search (Ctrl+f) to find each of the following AWS resource types:
+   - `aws_s3_bucket`
+   - `aws_iam_role`
+   - `aws_subnet`
+4. In the file explorer, navigate to the file `terraform.tfstate` in the `infra` folder and
+   open it. Search again for the above components, this time from within the state file.
+5. Once you are done exploring, close the `terraform.tfstate` file and note that the file
+   is greyed out in the file explorer. Just as with the secrets files we created, this file
+   is likewise automatically excluded from git based upon rules in our project's
+   `.gitignore` file.
 
 ## Summary
 
