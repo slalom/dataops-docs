@@ -54,7 +54,7 @@
 
 ### Extra Credit Options
 
-_These bonus exercises are optional._
+_These bonus exercises are **optional**._
 
 #### EC Option #1: Upload a sample file to the data lake
 
@@ -66,7 +66,7 @@ _These bonus exercises are optional._
 
 #### EC Option #2: Spin up Airflow on EC2
 
-- [ ] Copy the contents of the [airflow sample file](https://github.com/slalom-ggp/dataops-infra/blob/master/samples/airflow-on-aws/02_airflow.tf) into a new `.tf` file in the infra folder.
+- [ ] Copy the contents of the [airflow sample file](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/airflow-on-aws/02_airflow.tf) into a new `.tf` file in the infra folder.
 - [ ] Review the airflow module configuration and update the `source` value in the airflow file so that it matches the source prefix for the github repo (replacing the `../..` relative references).
   - _Tip: You can use the file `01_data-lake.tf` as a sample for what `source` should look like when referencing an external module._
 - [ ] Rerun terraform apply and note the error message.

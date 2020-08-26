@@ -151,4 +151,4 @@ A pull request tells the repo maintainers that you are ready for them to review 
 
 ### Wait for your PR to be approved and merged
 
-Once your PR is approved, the code will be automatically merged into master and released into the production website.
+Once your PR is approved, the code will be automatically merged into the main branch and released into the production website.
