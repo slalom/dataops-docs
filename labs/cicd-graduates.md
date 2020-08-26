@@ -21,6 +21,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @sanketninawe
 - @sarkarsam
 - @mikemusi
+- @muhamedsukkar-slalom
 - @joemcfarren
 
 ## Commence the celebration

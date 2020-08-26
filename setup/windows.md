@@ -84,6 +84,8 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://wsl2](choco://wsl2)
 - [choco://wsl-ubuntu-1804](choco://wsl-ubuntu-1804)
 - [choco://wsl-ubuntu-2004](choco://wsl-ubuntu-2004) (Samrat Update, Ubuntu 2004)
+- [choco://azure-data-studio](choco://azure-data-studio)
+- [choco://db-visualizer](choco://db-visualizer)
 - [choco://ditto](choco://ditto)
 
 ## Extra Credit: Create a GitHub Account
