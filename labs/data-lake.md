@@ -47,9 +47,6 @@
 - [ ] Open the `infra` folder, review the contents of the two files:
   - `00_environment.tf`
   - `01_data-lake.tf`
-- [ ] Delete the two extra files in `infra`:
-  - `02_singer-taps.tf`.
-  - `03_data-build-tool.tf`
 - [ ] Right-click the `infra` folder and select "Open in Terminal" (or from an existing terminal window, run `cd infra`).
 - [ ] In the terminal windows that opens, run `terraform init` and `terraform apply`, then type 'yes' to deploy.
 - [ ] Wait for `terraform apply` to complete (approx. 2 minutes).

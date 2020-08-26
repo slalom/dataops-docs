@@ -107,7 +107,7 @@ Will you engage your creativity, share your favorite app, or fix something that 
 
 _Here are some ideas of changes you can submit:_
 
-_**Option 1. Add your favorite software packages _(Recommended!)**_
+_**Option 1. Add your favorite software packages (Recommended!)**_
 
 Everyone has a favorite app! What could you add to the package lists on the [Mac](../setup/mac.md) or [Windows](../setup/windows.md) QuickStart pages to make them even more awesome for the next round of students?
 
@@ -131,17 +131,9 @@ Everything on docs.dataops.tk is auto-published from this repo. How about submit
 2. Links to to external sites.
 3. Cooler graphics or GIFs?
 
-_**Extra Credit: What happens when CI/CD tests fail?**_
-
-As an experiment, try committing a change with the uppercase text "T<!--- splitter -->K" anywhere on a markdown page. The text "[T<!--- splitter -->K](https://en.wikipedia.org/wiki/To_come_(publishing))" is short for "to come" in the publishing world, and it serves like a "To-Do" marker which signals that your page is not yet ready to publish.
-
-If the CI/CD engine finds this text anywhere in your change, it will fail tests and prevent your code from being merged. The same type of CI/CD failure would occur if you try to include a broken URL or a bad web link.
-
-*👉 Just don't forget to remove the "T<!--- splitter -->K" text afterwards so your PR does not stay blocked!*
-
 ### Commit your changes
 
-1. Press `Ctrl+Shift+G` to move to the source control view in the left hand pane.
+1. Move to the source control view in the left hand pane. (Shortcut is `Ctrl+Shift+G`.)
 2. In the 'Message' box, provide a short description and then click the check icon to commit your change.
 3. Finally, push your branch containing the new changes to git using the `Push` option in the drop-down menu.
 
