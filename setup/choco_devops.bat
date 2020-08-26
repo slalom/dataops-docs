@@ -55,5 +55,6 @@ REM     choco://powerbi
 REM     choco://r.project
 REM     choco://wsl
 REM     choco://wsl-ubuntu-1804
+REM     choco://ditto
 
 pause
