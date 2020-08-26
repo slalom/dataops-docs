@@ -15,6 +15,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @jpbradle
 - @kevincifone
 - [@kgalvin-slalom](https://github.com/kgalvin-slalom)
+- @kgalvin
 - @malikmubeen1
 - @matthewrohleder
 - @sanketninawe
