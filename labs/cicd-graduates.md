@@ -14,6 +14,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @etishtalreja140
 - @jpbradle
 - @kevincifone
+- [@kgalvin-slalom](https://github.com/kgalvin-slalom)
 - @malikmubeen1
 - @matthewrohleder
 - @sanketninawe
@@ -24,6 +25,6 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 
 [//]: # (Psst - feel free to add more art or GIFs here if you are so inclined!)
 
-![gif](resources/congrats01.gif) ![gif](resources/grad-backflip.gif) ![gif](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif) 
+![gif](resources/congrats01.gif) ![gif](resources/grad-backflip.gif) ![gif](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif)
 
 ![gif](resources/elmo.gif)
