@@ -6,20 +6,19 @@ _Learn GitHub and CI/CD by directly updating this website._
 
 **Table of Contents:**
 
-- [Docs > [Labs](./index.md) > **Intro to DevOps Lab**](#docs--labs--intro-to-devops-lab)
-  - [Setup](#setup)
-    - [Install Prereqs](#install-prereqs)
-    - [Login to GitHub.com](#login-to-githubcom)
-    - [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
-    - [Clone your forked repo in GitHub Desktop](#clone-your-forked-repo-in-github-desktop)
-    - [Open repo in VS Code](#open-repo-in-vs-code)
-  - [Develop](#develop)
-    - [Create a new branch](#create-a-new-branch)
-    - [Make some changes!](#make-some-changes)
-    - [Commit your changes](#commit-your-changes)
-  - [Submit](#submit)
-    - [Create a PR (Pull Request)](#create-a-pr-pull-request)
-    - [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
+- [Setup](#setup)
+  - [Install Prereqs](#install-prereqs)
+  - [Login to GitHub.com](#login-to-githubcom)
+  - [Fork your own personal copy of the repo](#fork-your-own-personal-copy-of-the-repo)
+  - [Clone your forked repo in GitHub Desktop](#clone-your-forked-repo-in-github-desktop)
+  - [Open repo in VS Code](#open-repo-in-vs-code)
+- [Develop](#develop)
+  - [Create a new branch](#create-a-new-branch)
+  - [Make some changes!](#make-some-changes)
+  - [Commit your changes](#commit-your-changes)
+- [Submit](#submit)
+  - [Create a PR (Pull Request)](#create-a-pr-pull-request)
+  - [Wait for your PR to be approved and merged](#wait-for-your-pr-to-be-approved-and-merged)
 
 ## Setup
 
@@ -93,7 +92,7 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
 
 ### Create a new branch
 
-1. Within VS Code, press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command pallete. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
+1. Within VS Code, press `ctl+shift+p` (Windows) or `cmd+shift+p` (Mac) to open the command palette. This gives you a long list of available commands, with recommended and recently-used commands at top of the list.
 2. In the command prompt, type `create branch` and then select the option entitled `Git: create branch...`.
 3. Give your branch a name. For example, how about `janesmith-cool-new-updates`?
 
