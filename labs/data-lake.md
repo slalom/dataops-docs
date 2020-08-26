@@ -14,14 +14,14 @@
 - One-time setup:
   - Installed software via:
     1. Core DevOps Tools: [http://docs.dataops.tk/setup](http://docs.dataops.tk/setup)
-    2. AWS CLI:
+    2. AWS CLI (optional, for "extra credit" exercises):
         - `choco install awscli` (Windows)
         - `brew install awscli` (Mac)
 - Environment setup (each time):
   - Open browser tabs:
     1. The lab checklist (this page)
-    2. [linux academy](https://app.linuxacademy.com/dashboard)
-    3. [slalom-ggp/dataops-project-template](https://github.com/slalom-ggp/dataops-project-template)
+    2. [Linux Academy Playground](https://playground.linuxacademy.com) - to create the "AWS Sandbox"
+    3. [slalom-ggp/dataops-project-template](https://github.com/slalom-ggp/dataops-project-template) - starting point for your new repo
 
 ## Lab Steps
 
@@ -44,10 +44,11 @@
 
 ### Step 4: Configure and Deploy Terraform
 
-- [ ] Open the `infra` folder, review the contents of the two files:
+- [ ] Right-click the `infra` folder and select "Open in Terminal" (or from an existing terminal window, run `cd infra`).
+- [ ] In the terminal windows that opens, run `terraform init` and `terraform apply`, then type 'yes' to deploy.
+- [ ] While you are waiting for `terraform init` to complete, open the `infra` folder and _optionally_ review the contents of the two files:
   - `00_environment.tf`
   - `01_data-lake.tf`
-- [ ] Right-click the `infra` folder and select "Open in Terminal" (or from an existing terminal window, run `cd infra`).
 - [ ] In the terminal windows that opens, run `terraform init` and `terraform apply`, then type 'yes' to deploy.
 - [ ] Wait for `terraform apply` to complete (approx. 2 minutes).
 - [ ] In the web browser, browse your AWS console to S3 buckets and confirm the new data lake buckets are created.
