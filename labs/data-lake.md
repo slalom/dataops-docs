@@ -45,11 +45,12 @@
 ### Step 4: Configure and Deploy Terraform
 
 - [ ] Right-click the `infra` folder and select "Open in Terminal" (or from an existing terminal window, run `cd infra`).
-- [ ] In the terminal windows that opens, run `terraform init` and `terraform apply`, then type 'yes' to deploy.
-- [ ] While you are waiting for `terraform init` to complete, open the `infra` folder and _optionally_ review the contents of the two files:
-  - `00_environment.tf`
-  - `01_data-lake.tf`
-- [ ] In the terminal windows that opens, run `terraform init` and `terraform apply`, then type 'yes' to deploy.
+- [ ] In the terminal windows that opens, run `terraform init`.
+  - _(Expected wait: 2-5 minutes while modules and providers are downloaded.)_
+  - **Optional:** While you are waiting for `terraform init` to complete, you can open the `infra` folder and review the contents of these two files:
+    - `00_environment.tf`
+    - `01_data-lake.tf`
+- [ ] Once `terraform init` has completed, run `terraform apply` in the same terminal window. Review the suggested changes, then type 'yes' to deploy.
 - [ ] Wait for `terraform apply` to complete (approx. 2 minutes).
 - [ ] In the web browser, browse your AWS console to S3 buckets and confirm the new data lake buckets are created.
 
