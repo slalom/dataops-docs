@@ -26,4 +26,4 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 
 ![gif](resources/congrats01.gif) ![gif](resources/grad-backflip.gif) ![gif](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif) 
 
-![gif](resources/elmo.gif) ![gif](resources/virtual-grad.gif
+![gif](resources/elmo.gif) ![gif](resources/virtual-grad.gif)
