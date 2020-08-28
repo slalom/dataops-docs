@@ -29,24 +29,24 @@ The package manager reduces the time to get software installed, saving hours of 
 1. Open "Terminal".
 2. Paste and run the [Homebrew](https://brew.sh) install script:
 
-    ```bash
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
+   ```bash
+   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   ```
 
-    <a href="https://git-scm.com/"><img src="https://git-scm.com/images/logo@2x.png" alt="drawing" width="45" style="float: right"/></a>
+   <a href="https://git-scm.com/"><img src="https://git-scm.com/images/logo@2x.png" alt="drawing" width="45" style="float: right"/></a>
 
 3. Install git.
 
-    ```cmd
-    brew install git
-    ```
+   ```cmd
+   brew install git
+   ```
 
 4. Install core tools:
 
-    ```cmd
-    brew install cask docker python3 terraform
-    brew cask install cakebrew visual-studio-code
-    ```
+   ```cmd
+   brew install cask docker python3 terraform
+   brew cask install cakebrew visual-studio-code
+   ```
 
 ## Installing additional tools
 
@@ -65,8 +65,9 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install microsoft-teams`
 - `brew cask install r`
 - `brew cask install slack`
-- `brew install aws-sam-cli`
+- `brew install aws-sam-cli` **You might first need to run: `brew tap aws/tap`
 - `brew cask install selenium-server-standalone`
+- `brew cask install firefox`
 
 ## Extra Credit: Create a GitHub Account
 

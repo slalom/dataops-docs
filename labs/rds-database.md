@@ -63,7 +63,7 @@ can safely skip all exercises labeled "Extra Credit".)_
 
      identifier          = "my-postgres-db"
      admin_username      = "postgresadmin"
-     admin_password      = "asdfASDF12"
+     admin_password      = "asdf1234"
      skip_final_snapshot = true
    }
    output "postgres_summary" { value = module.postgres.summary }
@@ -74,7 +74,7 @@ can safely skip all exercises labeled "Extra Credit".)_
 ### Step 2: Deploy using Terraform
 
 1. Open a new terminal in the `infra` folder (Right-click `infra` folder and select `Open in Integrated Terminal`).
-2. Run `terraform init --upgrade` and then run `terraform apply` to deploy your changes changes.
+2. Run `terraform init` and then run `terraform apply` to deploy your changes changes.
    - Note that if you've already deployed the data lake lab, no changes will be proposed to S3 buckets, the VPC, or the Subnets.
 
 ### Step 3: Connect to Your New Database
@@ -93,14 +93,14 @@ _In this section, you will explore the Terraform source code used in the terrafo
 Redshift modules._
 
 1. Navigate to the Terraform doc to review the full set of options for RDS and Redshift:
-   1. [MySQL and Postgres RDS docs](https://www.terraform.io/docs/providers/aws/d/db_instance.html)
-   2. [Redshift docs](https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html)
-2. In a new tab, compare the above with the source code of the respective Infrastructure Catalog modules:
-   3. [RDS](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/rds/main.tf)
-   4. [Redshift](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/redshift/main.tf)
+   1. [MySQL and Postgres RDS docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance)
+   2. [Redshift docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/redshift_cluster)
+2. In a new tab, compare the above with the actual source code of the respective Infrastructure Catalog modules:
+   3. [RDS](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/rds/main.tf#L91)
+   4. [Redshift](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/redshift/main.tf#L83)
 3. Lastly, compare and contrast how the below two files each use the same "RDS" module to deploy the two different database platforms (note the difference in lines 21-22 of each file).
-   1. [MySQL](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/mysql/main.tf)
-   2. [Postgres](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/postgres/main.tf)
+   1. [MySQL](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/mysql/main.tf#L11)
+   2. [Postgres](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/postgres/main.tf#L11)
 
 ## Extra Credit Options
 
@@ -115,7 +115,7 @@ _In this step, you'll create a new Redshift cluster in the same way you created 
 1. In VS Code, click anywhere in the `02_databases.tf` file and use `Ctrl+H` to open the search-and-replace tool.
 2. Type "postgres" in the first box and "redshift" in the second box. Then use the `Replace` or `Replace All` buttons to modify your code.
 3. Remember to save your file with `Ctrl+S`.
-4. Run `terraform init` and `terraform apply` to deploy your new database.
+4. Run `terraform init` (because the module `source` has changed) and then `terraform apply` to deploy your new database.
 
 **Option 2: Add to Existing:**
 
@@ -130,7 +130,7 @@ _In this step, you'll create a new Redshift cluster in the same way you created 
 
      identifier          = "my-redshift-db"
      admin_username      = "redshiftadmin"
-     admin_password      = "asdfASDF12"
+     admin_password      = "asdf1234"
      skip_final_snapshot = true
    }
    output "redshift_summary" { value = module.redshift.summary }
@@ -143,7 +143,7 @@ similarities to your own configurations.
 
 - [mysql sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/mysql-on-aws/01_rds_mysql.tf)
 - [postgres sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/postgres-on-aws/01_rds_postgres.tf)
-- [redshift sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/redshift-dw/02_redshift.tf)
+- [redshift sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/redshift-on-aws/02_redshift.tf)
 
 ## Troubleshooting
 
