@@ -60,8 +60,8 @@ _**Overview:** This section walks through getting software installed and getting
         - The `~/.aws/credentials` file should look like:
 
           ```ini
-          AWS_ACCESS_KEY_ID=123132a******
-          AWS_SECRET_ACCESS_KEY=asdfasdfasd*****
+          AWS_ACCESS_KEY_ID=asdf1234******
+          AWS_SECRET_ACCESS_KEY=asdf1234*****
           ```
 
         - The `~/.aws/config` file should look like:
