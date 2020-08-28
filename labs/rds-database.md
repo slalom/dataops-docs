@@ -92,7 +92,7 @@ can safely skip all exercises labeled "Extra Credit".)_
    select * from test_table;
    ```
 
-   > Hitchhiker trivia: "Why [42](https://www.urbandictionary.com/define.php?term=42)?"_
+   > _Hitchhiker trivia: "Why [42](https://www.urbandictionary.com/define.php?term=42)?"_
 
 ### Step 3: Examine the Source Code and Documentation
 
