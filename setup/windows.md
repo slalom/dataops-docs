@@ -87,6 +87,7 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://azure-data-studio](choco://azure-data-studio)
 - [choco://db-visualizer](choco://db-visualizer)
 - [choco://ditto](choco://ditto)
+- [choco://sublimetext3](choco://sublimetext3)
 
 ## Extra Credit: Create a GitHub Account
 

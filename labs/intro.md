@@ -73,9 +73,10 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
 2. After browsing to your personal fork, click on the green `Code` button and select `Open with GitHub Desktop`.
    - _**Do not** select `Download Zip`, as this will not register your repo properly with git._
 3. Follow the wizard to clone the repo to your local machine.
-   - When prompted for a location for the new folder,  click "Choose..." and then create a new root-level folder called `Source` (for example, `c:\Source` on Windows).
+   - When prompted for a location for the new folder, click "Choose..." and then create a new root-level folder called `Source` (for example, `c:\Source` on Windows).
    - After selecting the new `Source` folder, GitHub will suggest a subfolder called `c:\Source\dataops-docs`.
    - Click `Clone` to complete the process and download all of the files to your local workstation.
+   - When prompted to contribute to the parent project or to your own repository, choose `For my own purposes`.
 
 ### Open repo in VS Code
 
