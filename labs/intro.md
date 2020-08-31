@@ -121,7 +121,7 @@ _**Option 3. Make this lab better!**_
 Everything on docs.dataops.tk is auto-published from this repo. How about submitting...
 
 1. Typo corrections or other fixes.
-2. Complicated explanations which you can make simpler.
+2. Simpler rewrites of more complicated instructions.
 3. Missing explanations that you can provide.
 
 _**Option 4. Add or modify any content on [docs.dataops.tk](https://docs.dataops.tk)**_
