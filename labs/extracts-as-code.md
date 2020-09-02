@@ -52,12 +52,12 @@ and reset your git repo to use this new account._
    [playground.linuxacademy.com](https://playground.linuxacademy.com).
 2. Update your credentials file (`.secrets/aws-credentials`) with the newly provided
    Access Key ID and Secret Access Key.
-3. Navigate to your `infra` folder and delete the file named `terraform.tfstate`.
+3. Navigate to your `infra` folder and rename the `terraform.tfstate` file to `terraform.tfstate.old`.
    - _**IMPORTANT:** In a real-world environment, you never want to delete or corrupt your
-     "tfstate" file, since that is the means Terraform uses to keep track of the
-     infrastructure it has created. In this unique case, however, our environment has been
-     already been purged by the Linux Academy 4-hour time limit, and by deleting this file
-     we are able to start fresh in a new account._
+     "tfstate" file, since the state file is Terraform's way of tracking the resources it
+     is responsible for. In this unique case, however, our environment has been already
+     been purged by the Linux Academy 4-hour time limit, and by renaming this file we are
+     able to start fresh in a new account._
 
 _That's it! You should now be able to run `terraform apply` again, which will
 recreate the same baseline environment you created in the previous
@@ -65,8 +65,7 @@ recreate the same baseline environment you created in the previous
 
 **Option B: Starting from Scratch:**
 
-_If you've not yet completed the [data lake lab](./data-lake.md), go back and do so now. (You
-can safely skip all exercises labeled "Extra Credit".)_
+_If you've not yet completed the [data lake lab](./data-lake.md), go back and do so now. (Skip all exercises labeled "Extra Credit".)_
 
 ## Lab Instructions
 
