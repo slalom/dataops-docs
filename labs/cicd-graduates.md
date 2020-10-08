@@ -30,6 +30,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - [@Peter-Griffin-Slalom](https://github.com/Peter-Griffin-Slalom)
 - @sanketninawe
 - @sarkarsam
+- @alialsadadi
 
 ## Commence the celebration
 
