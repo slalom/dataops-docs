@@ -85,8 +85,9 @@ _TIP: If you have not yet installed these, please visit the [DevOps QuickStart p
 
    ![install-vs-code-recs](./resources/vs-code-install-recs.png)
 
+<!-- fixed a typo on line 90 that referred to step 4 instead of step 2 -->
 3. To test the markdown preview feature, open any file ending in `.md` and look on the right hand side for the preview window. If you don't see a preview, click the magnifying glass at the top right of the file pane.
-   - _If you still are not able to preview the Markdown, try going back to step 4 (recommended plugins) or just search VS Code extensions for "Markdown" and install the top result._
+   - _If you still are not able to preview the Markdown, try going back to step 2  (recommended plugins) or just search VS Code extensions for "Markdown" and install the top result._
 
 ## Develop
 
