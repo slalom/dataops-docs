@@ -28,8 +28,10 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @nathaniellarson
 - @oso-caro
 - [@Peter-Griffin-Slalom](https://github.com/Peter-Griffin-Slalom)
+- @parkerjean
 - @sanketninawe
 - @sarkarsam
+  
 
 ## Commence the celebration
 
