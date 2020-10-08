@@ -94,23 +94,6 @@ can safely skip all exercises labeled "Extra Credit".)_
 
    > _Hitchhiker trivia: "Why [42](https://www.urbandictionary.com/define.php?term=42)?"_
 
-### Step 3: Examine the Source Code and Documentation
-
-_In this section, you will explore the Terraform source code used in the terraform RDS and
-Redshift modules._
-
-1. Navigate to the Terraform doc to review the full set of options for RDS and Redshift:
-   - [RDS docs (MySQL and Postgres)](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance)
-   - [Redshift docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/redshift_cluster)
-2. In a new tab, compare the above with the actual source code of the respective
-   Infrastructure Catalog modules:
-   - [RDS](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/rds/main.tf#L91)
-   - [Redshift](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/redshift/main.tf#L83)
-3. Lastly, compare and contrast how the below two files each use the same "RDS" module to
-   deploy the two different database platforms (note the difference in lines 23-24 of each file).
-   - [MySQL](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/mysql/main.tf#L23-L24)
-   - [Postgres](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/postgres/main.tf#L23-L24)
-
 ## Extra Credit Options
 
 ### EC Option 1: Migrate from Postgres to Redshift
@@ -162,6 +145,23 @@ similarities to your own configurations.
 - [mysql sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/mysql-on-aws/01_rds_mysql.tf)
 - [postgres sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/postgres-on-aws/01_rds_postgres.tf)
 - [redshift sample](https://github.com/slalom-ggp/dataops-infra/blob/main/samples/redshift-on-aws/02_redshift.tf)
+
+### EC Option 3: Examine the Source Code and Documentation
+
+_In this section, you will explore the Terraform source code used in the terraform RDS and
+Redshift modules._
+
+1. Navigate to the Terraform doc to review the full set of options for RDS and Redshift:
+   - [RDS docs (MySQL and Postgres)](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance)
+   - [Redshift docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/redshift_cluster)
+2. In a new tab, compare the above with the actual source code of the respective
+   Infrastructure Catalog modules:
+   - [RDS](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/rds/main.tf#L91)
+   - [Redshift](https://github.com/slalom-ggp/dataops-infra/blob/main/components/aws/redshift/main.tf#L83)
+3. Lastly, compare and contrast how the below two files each use the same "RDS" module to
+   deploy the two different database platforms (note the difference in lines 23-24 of each file).
+   - [MySQL](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/mysql/main.tf#L23-L24)
+   - [Postgres](https://github.com/slalom-ggp/dataops-infra/blob/main/catalog/aws/postgres/main.tf#L23-L24)
 
 ## Troubleshooting
 
