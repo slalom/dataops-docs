@@ -18,11 +18,12 @@ The package manager reduces the time to get software installed, saving hours of 
 
 1. A **package manager**: Chocolatey (for Windows) or Homebrew (for Mac)
 2. **Docker** - to run containerized apps and create your own.
-3. **Git** - a version control platform used to store and manage code.
-4. **GitHub Desktop** - a friendly GUI which works with Git and GitHub.com.
-5. **Python** - a software language useful for developing new programs and scripts, and also used for its popular package manager `pip`, which allows users to install Python programs written by others.
-6. **Terraform** - the leading cross-platform solution for automating Infrastructure as Code (IaC).
-7. **VS Code** - a robust, fast, and lightweight development environment (IDE).
+3. **WSL2** - Windows Subsystem for Linux 2
+4. **Git** - a version control platform used to store and manage code.
+5. **GitHub Desktop** - a friendly GUI which works with Git and GitHub.com.
+6. **Python** - a software language useful for developing new programs and scripts, and also used for its popular package manager `pip`, which allows users to install Python programs written by others.
+7. **Terraform** - the leading cross-platform solution for automating Infrastructure as Code (IaC).
+8. **VS Code** - a robust, fast, and lightweight development environment (IDE).
 
 ## Installing Chocolatey and Core Tools
 
@@ -49,6 +50,8 @@ The package manager reduces the time to get software installed, saving hours of 
     ```cmd
     choco install -y choco-protocol-support chocolateygui sudo terraform vscode github-desktop
     choco install -y python3
+    choco install -y wsl2
+    # <WSL2 install may require restart> 
     choco install -y docker-desktop
     ```
 
