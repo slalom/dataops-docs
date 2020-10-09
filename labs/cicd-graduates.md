@@ -7,6 +7,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @aaronsteers
 - @alex-b-griffin
 - @alexbcook
+- @alialsadadi
 - [@atopp-slalom](https://github.com/atopp-slalom)
 - @bbainsslalom
 - @biancaorozco
@@ -16,6 +17,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @domedwards
 - @egelnoteagle
 - @etishtalreja140
+- @JGlew
 - @joemcfarren
 - @jpbradle
 - @kevincifone
@@ -33,7 +35,6 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - [@Peter-Griffin-Slalom](https://github.com/Peter-Griffin-Slalom)
 - @sanketninawe
 - @sarkarsam
-- @JGlew
 
 ## Commence the celebration
 
