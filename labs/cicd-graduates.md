@@ -41,9 +41,13 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @sanketninawe
 - @sarkarsam
 - @Taylormerrick
+- [@Vamsi-Kurakula](https://github.com/Vamsi-Kurakula)
 
 
 ## Commence the celebration
+
+![gif](resources/sb_celebration.gif)
+
 
 [//]: # (Psst - feel free to add more art or GIFs here if you are so inclined!)
 
