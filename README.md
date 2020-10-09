@@ -20,7 +20,7 @@ The tools and documentation provided here are designed to accelerate data and an
 
 See the [Labs Page](./labs) for all of the **Slalom DataOps Labs**.
 
-## Other Importand Links
+## Other Important Links
 
 * [dataops-tools](https://github.com/slalom-ggp/dataops-tools) - The primary DataOps git repo for tools mentioned here in these docs.
 * [dataops-docs](https://github.com/slalom-ggp/dataops-docs) - Link to this documentation repo. _(Submit documentation bugs and enhancement request here!)_
