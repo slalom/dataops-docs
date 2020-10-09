@@ -16,6 +16,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @chewbacca
 - @cmgonzalezjr
 - @datapun
+- @david-holtkamp
 - @domedwards
 - @egelnoteagle
 - @etishtalreja140
@@ -39,6 +40,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @sanketninawe
 - @sarkarsam
   
+
 
 ## Commence the celebration
 
