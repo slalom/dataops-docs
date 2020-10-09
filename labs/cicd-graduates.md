@@ -39,7 +39,7 @@ The GitHub users below ***ACED it*** on their [CI/CD lab](intro.md)! 😎
 - @parkerjean
 - @sanketninawe
 - @sarkarsam
-  
+- @Taylormerrick
 
 
 ## Commence the celebration
