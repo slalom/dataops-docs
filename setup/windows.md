@@ -88,6 +88,7 @@ Now that you have the core tools installed, you can click to install any of the 
 - [choco://db-visualizer](choco://db-visualizer)
 - [choco://ditto](choco://ditto)
 - [choco://sublimetext3](choco://sublimetext3)
+- [choco://atom](choco://atom)
 
 ## Extra Credit: Create a GitHub Account
 
