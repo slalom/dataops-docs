@@ -51,6 +51,7 @@ The package manager reduces the time to get software installed, saving hours of 
     choco install -y choco-protocol-support chocolateygui sudo terraform vscode github-desktop
     choco install -y python3
     choco install -y wsl2
+    # <WSL2 install may require restart> 
     choco install -y docker-desktop
     ```
 
