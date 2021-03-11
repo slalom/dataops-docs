@@ -69,6 +69,7 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew install aws-sam-cli` **You might first need to run: `brew tap aws/tap`
 - `brew cask install selenium-server-standalone`
 - `brew cask install firefox`
+- `brew install jupyterlab`
 
 ## Extra Credit: Create a GitHub Account
 
