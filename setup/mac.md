@@ -70,6 +70,7 @@ To install any additional programs, either open the **Cakebrew** app or copy-pas
 - `brew cask install selenium-server-standalone`
 - `brew cask install firefox`
 - `brew install jupyterlab`
+- `brew install jupyterlab`
 
 ## Extra Credit: Create a GitHub Account
 
