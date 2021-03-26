@@ -47,9 +47,20 @@ The package manager reduces the time to get software installed, saving hours of 
 4. Install core tools:
 
     ```cmd
-    choco install -y choco-protocol-support chocolateygui sudo terraform vscode github-desktop
-    choco install -y python3
+    choco install -y choco-protocol-support chocolateygui sudo terraform vscode github-desktop pyenv-win
     choco install -y docker-desktop
+    ```
+
+5. Install Python:
+
+    - In the previous step, you install pyenv, the Python Version manager. Now install one or more python versions and make one of them the default.
+
+    ```cmd
+    pyenv install 3.8    # you'll be prompted to pick a specific patch version
+    pyenv install 3.8.7  # picking the latest 3.8.x
+    pyenv install 3.9    # you'll be prompted to pick a specific patch version
+    pyenv install 3.9.1  # picking the latest 3.9.x
+    pyenv global 3.8.7   # default to 3.8.x
     ```
 
 - **NOTE:** See the [Troubleshooting](#troubleshooting) tips below if you run into any difficulties during this process.
